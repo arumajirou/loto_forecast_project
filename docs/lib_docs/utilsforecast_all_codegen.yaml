@@ -1,0 +1,2792 @@
+title: "CLE V10 batch codegen / module=utilsforecast / total=73"
+bundle_kind: code
+count: 73
+rows:
+  -
+    row_no: 115
+    id: 116
+    type: function
+    name: generate_series
+    path: utilsforecast.data.generate_series
+    module: utilsforecast.data
+    library: utilsforecast
+    top_group: utilsforecast.data
+    role: other
+    name_cluster: 78
+    event_like: False
+    return_type: pd.DataFrame
+    docstring: nan
+    params:
+      -
+        name: n_series
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'D'"
+      -
+        name: min_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 50
+      -
+        name: max_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 500
+      -
+        name: n_static_features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: equal_ends
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: with_trend
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: static_as_categorical
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: n_models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[float]]"
+        has_default: true
+        default_repr: None
+      -
+        name: engine
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Literal['pandas']"
+        has_default: true
+        default_repr: "'pandas'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.data import generate_series\n\nresult = generate_series(\n    n_series=None  # TODO: int,\n    freq='D',\n    min_length=50,\n    max_length=500,\n    n_static_features=0,\n    equal_ends=False,\n    with_trend=False,\n    static_as_categorical=True,\n    n_models=0,\n    level=None,\n    engine='pandas',\n)\n"
+  -
+    row_no: 131
+    id: 132
+    type: function
+    name: evaluate
+    path: utilsforecast.evaluation.evaluate
+    module: utilsforecast.evaluation
+    library: utilsforecast
+    top_group: utilsforecast.evaluation
+    role: evaluate
+    name_cluster: 85
+    event_like: False
+    return_type: AnyDFType
+    docstring: "Evaluate forecast using different metrics.\n\nParameters\n----------\ndf : pandas, polars, dask or spark DataFrame.\n    Forecasts to evaluate.\n    Must have `id_col`, `time_col`, `target_col` and models' predictions.\nmetrics : list of callable\n    Functions with arguments `df`, `models`, `id_col`, `target_col` and optionally `train_df`.\nmodels : list of str, optional (default=None)\n    Names of the models to evaluate.\n    If `None` will use every column in the dataframe after removing id, time and target.\ntrain_df : pandas, polars, dask or spark DataFrame, optional (default=None)\n    Training set. Used to evaluate metrics such as `mase`.\nlevel : list of int, optional (default=None)\n    Prediction interval levels. Used to compute losses that rely on quantiles.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\ntarget_col : str (default='y')\n    Column that contains the target.\nagg_fn : str, optional (default=None)\n    Statistic to compute on the scores by id to reduce them to a single number.\n\nReturns\n-------\npandas, polars, dask or spark DataFrame\n    Metrics with one row per (id, metric) combination and one column per model.\n    If `agg_fn` is not `None`, there is only one row per metric."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: AnyDFType
+        has_default: false
+        default_repr: ""
+      -
+        name: metrics
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[Callable]"
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[str]]"
+        has_default: true
+        default_repr: None
+      -
+        name: train_df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[AnyDFType]"
+        has_default: true
+        default_repr: None
+      -
+        name: level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[int]]"
+        has_default: true
+        default_repr: None
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+      -
+        name: agg_fn
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[str]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.evaluation import evaluate\n\nresult = evaluate(\n    df=None  # TODO: AnyDFType,\n    metrics=None  # TODO: List[Callable],\n    models=None,\n    train_df=None,\n    level=None,\n    id_col='unique_id',\n    time_col='ds',\n    target_col='y',\n    agg_fn=None,\n)\n"
+  -
+    row_no: 91
+    id: 92
+    type: function
+    name: fourier
+    path: utilsforecast.feature_engineering.fourier
+    module: utilsforecast.feature_engineering
+    library: utilsforecast
+    top_group: utilsforecast.feature_engineering
+    role: other
+    name_cluster: 64
+    event_like: False
+    return_type: "Tuple[DFType, DFType]"
+    docstring: "Compute fourier seasonal terms for training and forecasting\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Dataframe with ids, times and values for the exogenous regressors.\nfreq : str or int\n    Frequency of the data. Must be a valid pandas or polars offset alias, or an integer.\nseason_length : int\n    Number of observations per unit of time. Ex: 24 Hourly data.\nk : int\n    Maximum order of the fourier terms\nh : int (default=0)\n    Forecast horizon.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\n\nReturns\n-------\ntransformed_df : pandas or polars DataFrame\n    Original DataFrame with the computed features\nfuture_df : pandas or polars DataFrame\n    DataFrame with future values"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: k
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.feature_engineering import fourier\n\nresult = fourier(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    season_length=None  # TODO: int,\n    k=None  # TODO: int,\n    h=0,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 96
+    id: 97
+    type: function
+    name: future_exog_to_historic
+    path: utilsforecast.feature_engineering.future_exog_to_historic
+    module: utilsforecast.feature_engineering
+    library: utilsforecast
+    top_group: utilsforecast.feature_engineering
+    role: other
+    name_cluster: 69
+    event_like: False
+    return_type: "Tuple[DFType, DFType]"
+    docstring: "Turn future exogenous features into historic by shifting them `h` steps.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Dataframe with ids, times and values for the exogenous regressors.\nfreq : str or int\n    Frequency of the data. Must be a valid pandas or polars offset alias, or an integer.\nfeatures : list of str\n    Features to be converted into historic.\nh : int (default=0)\n    Forecast horizon.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\n\nReturns\n-------\ntransformed_df : pandas or polars DataFrame\n    Original DataFrame with the computed features\nfuture_df : pandas or polars DataFrame\n    DataFrame with future values"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.feature_engineering import future_exog_to_historic\n\nresult = future_exog_to_historic(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    features=None  # TODO: List[str],\n    h=0,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 97
+    id: 98
+    type: function
+    name: pipeline
+    path: utilsforecast.feature_engineering.pipeline
+    module: utilsforecast.feature_engineering
+    library: utilsforecast
+    top_group: utilsforecast.feature_engineering
+    role: other
+    name_cluster: 70
+    event_like: False
+    return_type: "Tuple[DFType, DFType]"
+    docstring: "Compute several features for training and forecasting\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Dataframe with ids, times and values for the exogenous regressors.\nfeatures : list of callable\n    List of features to compute. Must take only df, freq, h, id_col and time_col (other arguments must be fixed).\nfreq : str or int\n    Frequency of the data. Must be a valid pandas or polars offset alias, or an integer.\nh : int (default=0)\n    Forecast horizon.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\n\nReturns\n-------\ntransformed_df : pandas or polars DataFrame\n    Original DataFrame with the computed features\nfuture_df : pandas or polars DataFrame\n    DataFrame with future values"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[Callable]"
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.feature_engineering import pipeline\n\nresult = pipeline(\n    df=None  # TODO: DFType,\n    features=None  # TODO: List[Callable],\n    freq=None  # TODO: Union[str, int],\n    h=0,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 95
+    id: 96
+    type: function
+    name: time_features
+    path: utilsforecast.feature_engineering.time_features
+    module: utilsforecast.feature_engineering
+    library: utilsforecast
+    top_group: utilsforecast.feature_engineering
+    role: other
+    name_cluster: 68
+    event_like: False
+    return_type: "Tuple[DFType, DFType]"
+    docstring: "Compute timestamp-based features for training and forecasting\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Dataframe with ids, times and values for the exogenous regressors.\nfreq : str or int\n    Frequency of the data. Must be a valid pandas or polars offset alias, or an integer.\nfeatures : list of str or callable\n    Features to compute. Can be string aliases of timestamp attributes or functions to apply to the times.\nh : int (default=0)\n    Forecast horizon.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\n\nReturns\n-------\ntransformed_df : pandas or polars DataFrame\n    Original DataFrame with the computed features\nfuture_df : pandas or polars DataFrame\n    DataFrame with future values"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[Union[str, Callable]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.feature_engineering import time_features\n\nresult = time_features(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    features=None  # TODO: List[Union[str, Callable]],\n    h=0,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 92
+    id: 93
+    type: function
+    name: trend
+    path: utilsforecast.feature_engineering.trend
+    module: utilsforecast.feature_engineering
+    library: utilsforecast
+    top_group: utilsforecast.feature_engineering
+    role: other
+    name_cluster: 65
+    event_like: False
+    return_type: "Tuple[DFType, DFType]"
+    docstring: "Add a trend column with consecutive integers for training and forecasting\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Dataframe with ids, times and values for the exogenous regressors.\nfreq : str or int\n    Frequency of the data. Must be a valid pandas or polars offset alias, or an integer.\nh : int (default=0)\n    Forecast horizon.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\n\nReturns\n-------\ntransformed_df : pandas or polars DataFrame\n    Original DataFrame with the computed features\nfuture_df : pandas or polars DataFrame\n    DataFrame with future values"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.feature_engineering import trend\n\nresult = trend(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    h=0,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 70
+    id: 71
+    type: function
+    name: bias
+    path: utilsforecast.losses.bias
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 49
+    event_like: False
+    return_type: DFType
+    docstring: "Forecast estimator bias.\n\nDefined as prediction - actual"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import bias\n\nresult = bias(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 81
+    id: 82
+    type: function
+    name: calibration
+    path: utilsforecast.losses.calibration
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 60
+    event_like: False
+    return_type: DFType
+    docstring: "Fraction of y that is lower than the model's predictions.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : dict from str to str\n    Mapping from model name to the model predictions.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://www.jstor.org/stable/2629907"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import calibration\n\nresult = calibration(\n    df=None  # TODO: DFType,\n    models=None  # TODO: Dict[str, str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 80
+    id: 81
+    type: function
+    name: coverage
+    path: utilsforecast.losses.coverage
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 59
+    event_like: False
+    return_type: DFType
+    docstring: "Coverage of y with y_hat_lo and y_hat_hi.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : list of str\n    Columns that identify the models predictions.\nlevel : int\n    Confidence level used for intervals.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://www.jstor.org/stable/2629907"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import coverage\n\nresult = coverage(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    level=None  # TODO: int,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 67
+    id: 68
+    type: function
+    name: mae
+    path: utilsforecast.losses.mae
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 46
+    event_like: False
+    return_type: DFType
+    docstring: "Mean Absolute Error (MAE)\n\nMAE measures the relative prediction\naccuracy of a forecasting method by calculating the\ndeviation of the prediction and the true\nvalue at a given time and averages these devations\nover the length of the series."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import mae\n\nresult = mae(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 72
+    id: 73
+    type: function
+    name: mape
+    path: utilsforecast.losses.mape
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 51
+    event_like: False
+    return_type: DFType
+    docstring: "Mean Absolute Percentage Error (MAPE)\n\nMAPE measures the relative prediction\naccuracy of a forecasting method by calculating the percentual deviation\nof the prediction and the observed value at a given time and\naverages these devations over the length of the series.\nThe closer to zero an observed value is, the higher penalty MAPE loss\nassigns to the corresponding error."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import mape\n\nresult = mape(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 74
+    id: 75
+    type: function
+    name: mase
+    path: utilsforecast.losses.mase
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 53
+    event_like: False
+    return_type: DFType
+    docstring: "Mean Absolute Scaled Error (MASE)\n\nMASE measures the relative prediction\naccuracy of a forecasting method by comparinng the mean absolute errors\nof the prediction and the observed value against the mean\nabsolute errors of the seasonal naive model.\nThe MASE partially composed the Overall Weighted Average (OWA),\nused in the M4 Competition.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, actuals and predictions.\nmodels : list of str\n    Columns that identify the models predictions.\nseasonality : int\n    Main frequency of the time series;\n    Hourly 24, Daily 7, Weekly 52, Monthly 12, Quarterly 4, Yearly 1.\ntrain_df : pandas or polars DataFrame\n    Training dataframe with id and actual values. Must be sorted by time.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://robjhyndman.com/papers/mase.pdf"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonality
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: train_df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import mase\n\nresult = mase(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    seasonality=None  # TODO: int,\n    train_df=None  # TODO: DFType,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 79
+    id: 80
+    type: function
+    name: mqloss
+    path: utilsforecast.losses.mqloss
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 58
+    event_like: False
+    return_type: DFType
+    docstring: "Multi-Quantile loss (MQL)\n\nMQL calculates the average multi-quantile Loss for\na given set of quantiles, based on the absolute\ndifference between predicted quantiles and observed values.\n\nThe limit behavior of MQL allows to measure the accuracy\nof a full predictive distribution with\nthe continuous ranked probability score (CRPS). This can be achieved\nthrough a numerical integration technique, that discretizes the quantiles\nand treats the CRPS integral with a left Riemann approximation, averaging over\nuniformly distanced quantiles.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : dict from str to list of str\n    Mapping from model name to the model predictions for each quantile.\nquantiles : numpy array\n    Quantiles to compare against.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://www.jstor.org/stable/2629907"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, List[str]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: quantiles
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import mqloss\n\nresult = mqloss(\n    df=None  # TODO: DFType,\n    models=None  # TODO: Dict[str, List[str]],\n    quantiles=None  # TODO: np.ndarray,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 68
+    id: 69
+    type: function
+    name: mse
+    path: utilsforecast.losses.mse
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 47
+    event_like: False
+    return_type: DFType
+    docstring: "Mean Squared Error (MSE)\n\nMSE measures the relative prediction\naccuracy of a forecasting method by calculating the\nsquared deviation of the prediction and the true\nvalue at a given time, and averages these devations\nover the length of the series."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import mse\n\nresult = mse(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 76
+    id: 77
+    type: function
+    name: msse
+    path: utilsforecast.losses.msse
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 55
+    event_like: False
+    return_type: DFType
+    docstring: "Mean Squared Scaled Error (MSSE)\n\nMSSE measures the relative prediction\naccuracy of a forecasting method by comparinng the mean squared errors\nof the prediction and the observed value against the mean\nsquared errors of the seasonal naive model.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, actuals and predictions.\nmodels : list of str\n    Columns that identify the models predictions.\nseasonality : int\n    Main frequency of the time series;\n    Hourly 24, Daily 7, Weekly 52, Monthly 12, Quarterly 4, Yearly 1.\ntrain_df : pandas or polars DataFrame\n    Training dataframe with id and actual values. Must be sorted by time.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://otexts.com/fpp3/accuracy.html"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonality
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: train_df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import msse\n\nresult = msse(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    seasonality=None  # TODO: int,\n    train_df=None  # TODO: DFType,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 78
+    id: 79
+    type: function
+    name: quantile_loss
+    path: utilsforecast.losses.quantile_loss
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 57
+    event_like: False
+    return_type: DFType
+    docstring: "Quantile Loss (QL)\n\nQL measures the deviation of a quantile forecast.\nBy weighting the absolute deviation in a non symmetric way, the\nloss pays more attention to under or over estimation.\nA common value for q is 0.5 for the deviation from the median.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : dict from str to str\n    Mapping from model name to the model predictions for the specified quantile.\nq : float (default=0.5)\n    Quantile for the predictions' comparison.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: q
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: 0.5
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import quantile_loss\n\nresult = quantile_loss(\n    df=None  # TODO: DFType,\n    models=None  # TODO: Dict[str, str],\n    q=0.5,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 75
+    id: 76
+    type: function
+    name: rmae
+    path: utilsforecast.losses.rmae
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 54
+    event_like: False
+    return_type: DFType
+    docstring: "Relative Mean Absolute Error (RMAE)\n\nCalculates the RAME between two sets of forecasts (from two different forecasting methods).\nA number smaller than one implies that the forecast in the\nnumerator is better than the forecast in the denominator.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : list of str\n    Columns that identify the models predictions.\nbaseline : str\n    Column that identifies the baseline model predictions.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: baseline
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import rmae\n\nresult = rmae(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    baseline=None  # TODO: str,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 69
+    id: 70
+    type: function
+    name: rmse
+    path: utilsforecast.losses.rmse
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 48
+    event_like: False
+    return_type: DFType
+    docstring: "Root Mean Squared Error (RMSE)\n\nRMSE measures the relative prediction\naccuracy of a forecasting method by calculating the squared deviation\nof the prediction and the observed value at a given time and\naverages these devations over the length of the series.\nFinally the RMSE will be in the same scale\nas the original time series so its comparison with other\nseries is possible only if they share a common scale.\nRMSE has a direct connection to the L2 norm."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import rmse\n\nresult = rmse(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 77
+    id: 78
+    type: function
+    name: rmsse
+    path: utilsforecast.losses.rmsse
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 56
+    event_like: False
+    return_type: DFType
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonality
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: train_df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import rmsse\n\nresult = rmsse(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    seasonality=None  # TODO: int,\n    train_df=None  # TODO: DFType,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 82
+    id: 83
+    type: function
+    name: scaled_crps
+    path: utilsforecast.losses.scaled_crps
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 61
+    event_like: False
+    return_type: DFType
+    docstring: "Scaled Continues Ranked Probability Score\n\nCalculates a scaled variation of the CRPS, as proposed by Rangapuram (2021),\nto measure the accuracy of predicted quantiles `y_hat` compared to the observation `y`.\nThis metric averages percentual weighted absolute deviations as\ndefined by the quantile losses.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times, actuals and predictions.\nmodels : dict from str to list of str\n    Mapping from model name to the model predictions for each quantile.\nquantiles : numpy array\n    Quantiles to compare against.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntarget_col : str (default='y')\n    Column that contains the target.\n\nReturns\n-------\npandas or polars Dataframe\n    dataframe with one row per id and one column per model.\n\nReferences\n----------\n[1] https://proceedings.mlr.press/v139/rangapuram21a.html"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, List[str]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: quantiles
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import scaled_crps\n\nresult = scaled_crps(\n    df=None  # TODO: DFType,\n    models=None  # TODO: Dict[str, List[str]],\n    quantiles=None  # TODO: np.ndarray,\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 73
+    id: 74
+    type: function
+    name: smape
+    path: utilsforecast.losses.smape
+    module: utilsforecast.losses
+    library: utilsforecast
+    top_group: utilsforecast.losses
+    role: other
+    name_cluster: 52
+    event_like: False
+    return_type: DFType
+    docstring: "Symmetric Mean Absolute Percentage Error (SMAPE)\n\nSMAPE measures the relative prediction\naccuracy of a forecasting method by calculating the relative deviation\nof the prediction and the observed value scaled by the sum of the\nabsolute values for the prediction and observed value at a\ngiven time, then averages these devations over the length\nof the series. This allows the SMAPE to have bounds between\n0% and 100% which is desirable compared to normal MAPE that\nmay be undetermined when the target is zero."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.losses import smape\n\nresult = smape(\n    df=None  # TODO: DFType,\n    models=None  # TODO: List[str],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 156
+    id: 157
+    type: function
+    name: plot_series
+    path: utilsforecast.plotting.plot_series
+    module: utilsforecast.plotting
+    library: utilsforecast
+    top_group: utilsforecast.plotting
+    role: visualize
+    name_cluster: 89
+    event_like: False
+    return_type: nan
+    docstring: "Plot forecasts and insample values.\n\nParameters\n----------\ndf : pandas or polars DataFrame, optional (default=None)\n    DataFrame with columns [`id_col`, `time_col`, `target_col`].\nforecasts_df : pandas or polars DataFrame, optional (default=None)\n    DataFrame with columns [`id_col`, `time_col`] and models.\nids : list of str, optional (default=None)\n    Time Series to plot.\n    If None, time series are selected randomly.\nplot_random : bool (default=True)\n    Select time series to plot randomly.\nmax_ids : int (default=8)\n    Maximum number of ids to plot.\nmodels : list of str, optional (default=None)\n    Models to plot.\nlevel : list of float, optional (default=None)\n    Prediction intervals to plot.\nmax_insample_length : int, optional (default=None)\n    Maximum number of train/insample observations to be plotted.\nplot_anomalies : bool (default=False)\n    Plot anomalies for each prediction interval.\nengine : str (default='matplotlib')\n    Library used to plot. 'plotly', 'plotly-resampler' or 'matplotlib'.\npalette : str (default=None)\n    Name of the matplotlib colormap to use for the plots. If None, uses the current style.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestep, its values can be timestamps or integers.\ntarget_col : str (default='y')\n    Column that contains the target.\nseed : int (default=0)\n    Seed used for the random number generator. Only used if plot_random is True.\nresampler_kwargs : dict\n    Keyword arguments to be passed to plotly-resampler constructor.\n    For further custumization (\"show_dash\") call the method,\n    store the plotting object and add the extra arguments to\n    its `show_dash` method.\nax : matplotlib axes, array of matplotlib axes or plotly Figure, optional (default=None)\n    Object where plots will be added.\n\nReturns\n-------\nfig : matplotlib or plotly figure\n    Plot's figure"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[DFType]"
+        has_default: true
+        default_repr: None
+      -
+        name: forecasts_df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[DFType]"
+        has_default: true
+        default_repr: None
+      -
+        name: ids
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[str]]"
+        has_default: true
+        default_repr: None
+      -
+        name: plot_random
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: max_ids
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 8
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[str]]"
+        has_default: true
+        default_repr: None
+      -
+        name: level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[List[float]]"
+        has_default: true
+        default_repr: None
+      -
+        name: max_insample_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+      -
+        name: plot_anomalies
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: engine
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'matplotlib'"
+      -
+        name: palette
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[str]"
+        has_default: true
+        default_repr: None
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+      -
+        name: seed
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: resampler_kwargs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[Dict]"
+        has_default: true
+        default_repr: None
+      -
+        name: ax
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[Union[plt.Axes, np.ndarray, 'plotly.graph_objects.Figure']]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.plotting import plot_series\n\nresult = plot_series(\n    df=None,\n    forecasts_df=None,\n    ids=None,\n    plot_random=True,\n    max_ids=8,\n    models=None,\n    level=None,\n    max_insample_length=None,\n    plot_anomalies=False,\n    engine='matplotlib',\n    palette=None,\n    id_col='unique_id',\n    time_col='ds',\n    target_col='y',\n    seed=0,\n    resampler_kwargs=None,\n    ax=None,\n)\n"
+  -
+    row_no: 4
+    id: 5
+    type: function
+    name: fill_gaps
+    path: utilsforecast.preprocessing.fill_gaps
+    module: utilsforecast.preprocessing
+    library: utilsforecast
+    top_group: utilsforecast.preprocessing
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: DFType
+    docstring: "Enforce start and end datetimes for dataframe.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input data\nfreq : str or int\n    Series' frequency\nstart : str, int, date or datetime.\n    Initial timestamp for the series.\n        * 'per_serie' uses each serie's first timestamp\n        * 'global' uses the first timestamp seen in the data\n        * Can also be a specific timestamp or integer, e.g. '2000-01-01', 2000 or datetime(2000, 1, 1)\nend : str, int, date or datetime.\n    Initial timestamp for the series.\n        * 'per_serie' uses each serie's last timestamp\n        * 'global' uses the last timestamp seen in the data\n        * Can also be a specific timestamp or integer, e.g. '2000-01-01', 2000 or datetime(2000, 1, 1)\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestamp.\n\nReturns\n-------\nfilled_df : pandas or polars DataFrame\n    Dataframe with gaps filled."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: start
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int, date, datetime]"
+        has_default: true
+        default_repr: "'per_serie'"
+      -
+        name: end
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int, date, datetime]"
+        has_default: true
+        default_repr: "'global'"
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.preprocessing import fill_gaps\n\nresult = fill_gaps(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    start='per_serie',\n    end='global',\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 3
+    id: 4
+    type: function
+    name: id_time_grid
+    path: utilsforecast.preprocessing.id_time_grid
+    module: utilsforecast.preprocessing
+    library: utilsforecast
+    top_group: utilsforecast.preprocessing
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: DFType
+    docstring: "Generate all expected combiations of ids and times.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input data\nfreq : str or int\n    Series' frequency\nstart : str, int, date or datetime.\n    Initial timestamp for the series.\n        * 'per_serie' uses each serie's first timestamp\n        * 'global' uses the first timestamp seen in the data\n        * Can also be a specific timestamp or integer, e.g. '2000-01-01', 2000 or datetime(2000, 1, 1)\nend : str, int, date or datetime.\n    Initial timestamp for the series.\n        * 'per_serie' uses each serie's last timestamp\n        * 'global' uses the last timestamp seen in the data\n        * Can also be a specific timestamp or integer, e.g. '2000-01-01', 2000 or datetime(2000, 1, 1)\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestamp.\n\nReturns\n-------\npandas or polars DataFrame\n    Dataframe with expected ids and times."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+      -
+        name: start
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int, date, datetime]"
+        has_default: true
+        default_repr: "'per_serie'"
+      -
+        name: end
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int, date, datetime]"
+        has_default: true
+        default_repr: "'global'"
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.preprocessing import id_time_grid\n\nresult = id_time_grid(\n    df=None  # TODO: DFType,\n    freq=None  # TODO: Union[str, int],\n    start='per_serie',\n    end='global',\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 56
+    id: 57
+    type: function
+    name: add_insample_levels
+    path: utilsforecast.processing.add_insample_levels
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 43
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: models
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[str]"
+        has_default: false
+        default_repr: ""
+      -
+        name: level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[Union[int, float]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import add_insample_levels\n\nresult = add_insample_levels(\n    df=None  # TODO: DataFrame,\n    models=None  # TODO: List[str],\n    level=None  # TODO: List[Union[int, float]],\n    id_col='unique_id',\n    target_col='y',\n)\n"
+  -
+    row_no: 47
+    id: 48
+    type: function
+    name: anti_join
+    path: utilsforecast.processing.anti_join
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 38
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df1
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: df2
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: on
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, List[str]]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import anti_join\n\nresult = anti_join(\n    df1=None  # TODO: DataFrame,\n    df2=None  # TODO: DataFrame,\n    on=None  # TODO: Union[str, List[str]],\n)\n"
+  -
+    row_no: 17
+    id: 18
+    type: function
+    name: assign_columns
+    path: utilsforecast.processing.assign_columns
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: names
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, List[str]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: values
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[np.ndarray, pd.Series, pl_Series, List[float]]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import assign_columns\n\nresult = assign_columns(\n    df=None  # TODO: DataFrame,\n    names=None  # TODO: Union[str, List[str]],\n    values=None  # TODO: Union[np.ndarray, pd.Series, pl_Series, List[float]],\n)\n"
+  -
+    row_no: 42
+    id: 43
+    type: function
+    name: between
+    path: utilsforecast.processing.between
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 33
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: lower
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: upper
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import between\n\nresult = between(\n    s=None  # TODO: Series,\n    lower=None  # TODO: Series,\n    upper=None  # TODO: Series,\n)\n"
+  -
+    row_no: 44
+    id: 45
+    type: function
+    name: cast
+    path: utilsforecast.processing.cast
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 35
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: dtype
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: type
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import cast\n\nresult = cast(\n    s=None  # TODO: Series,\n    dtype=None  # TODO: type,\n)\n"
+  -
+    row_no: 27
+    id: 28
+    type: function
+    name: copy_if_pandas
+    path: utilsforecast.processing.copy_if_pandas
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: deep
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import copy_if_pandas\n\nresult = copy_if_pandas(\n    df=None  # TODO: DataFrame,\n    deep=False,\n)\n"
+  -
+    row_no: 15
+    id: 16
+    type: function
+    name: counts_by_id
+    path: utilsforecast.processing.counts_by_id
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import counts_by_id\n\nresult = counts_by_id(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n)\n"
+  -
+    row_no: 38
+    id: 39
+    type: function
+    name: cv_times
+    path: utilsforecast.processing.cv_times
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 29
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: times
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: uids
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: indptr
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: test_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: step_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import cv_times\n\nresult = cv_times(\n    times=None  # TODO: np.ndarray,\n    uids=None  # TODO: Union[Series, pd.Index],\n    indptr=None  # TODO: np.ndarray,\n    h=None  # TODO: int,\n    test_size=None  # TODO: int,\n    step_size=None  # TODO: int,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 18
+    id: 19
+    type: function
+    name: drop_columns
+    path: utilsforecast.processing.drop_columns
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: columns
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, List[str]]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import drop_columns\n\nresult = drop_columns(\n    df=None  # TODO: DataFrame,\n    columns=None  # TODO: Union[str, List[str]],\n)\n"
+  -
+    row_no: 29
+    id: 30
+    type: function
+    name: drop_index_if_pandas
+    path: utilsforecast.processing.drop_index_if_pandas
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import drop_index_if_pandas\n\nresult = drop_index_if_pandas(\n    df=None  # TODO: DataFrame,\n)\n"
+  -
+    row_no: 48
+    id: 49
+    type: function
+    name: ensure_sorted
+    path: utilsforecast.processing.ensure_sorted
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import ensure_sorted\n\nresult = ensure_sorted(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n    time_col=None  # TODO: str,\n)\n"
+  -
+    row_no: 43
+    id: 44
+    type: function
+    name: fill_null
+    path: utilsforecast.processing.fill_null
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 34
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: mapping
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, Any]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import fill_null\n\nresult = fill_null(\n    df=None  # TODO: DataFrame,\n    mapping=None  # TODO: Dict[str, Any],\n)\n"
+  -
+    row_no: 20
+    id: 21
+    type: function
+    name: filter_with_mask
+    path: utilsforecast.processing.filter_with_mask
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, DataFrame, pd.Index, np.ndarray]"
+        has_default: false
+        default_repr: ""
+      -
+        name: mask
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[np.ndarray, pd.Series, pl_Series]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import filter_with_mask\n\nresult = filter_with_mask(\n    df=None  # TODO: Union[Series, DataFrame, pd.Index, np.ndarray],\n    mask=None  # TODO: Union[np.ndarray, pd.Series, pl_Series],\n)\n"
+  -
+    row_no: 39
+    id: 40
+    type: function
+    name: group_by
+    path: utilsforecast.processing.group_by
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 30
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, DataFrame]"
+        has_default: false
+        default_repr: ""
+      -
+        name: by
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: maintain_order
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import group_by\n\nresult = group_by(\n    df=None  # TODO: Union[Series, DataFrame],\n    by=None  # TODO,\n    maintain_order=False,\n)\n"
+  -
+    row_no: 40
+    id: 41
+    type: function
+    name: group_by_agg
+    path: utilsforecast.processing.group_by_agg
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 31
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: by
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: aggs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: maintain_order
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import group_by_agg\n\nresult = group_by_agg(\n    df=None  # TODO: DataFrame,\n    by=None  # TODO,\n    aggs=None  # TODO,\n    maintain_order=False,\n)\n"
+  -
+    row_no: 26
+    id: 27
+    type: function
+    name: horizontal_concat
+    path: utilsforecast.processing.horizontal_concat
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: dfs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[DataFrame]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import horizontal_concat\n\nresult = horizontal_concat(\n    dfs=None  # TODO: List[DataFrame],\n)\n"
+  -
+    row_no: 41
+    id: 42
+    type: function
+    name: is_in
+    path: utilsforecast.processing.is_in
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 32
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: collection
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import is_in\n\nresult = is_in(\n    s=None  # TODO: Series,\n    collection=None  # TODO,\n)\n"
+  -
+    row_no: 21
+    id: 22
+    type: function
+    name: is_nan
+    path: utilsforecast.processing.is_nan
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import is_nan\n\nresult = is_nan(\n    s=None  # TODO: Series,\n)\n"
+  -
+    row_no: 23
+    id: 24
+    type: function
+    name: is_nan_or_none
+    path: utilsforecast.processing.is_nan_or_none
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import is_nan_or_none\n\nresult = is_nan_or_none(\n    s=None  # TODO: Series,\n)\n"
+  -
+    row_no: 22
+    id: 23
+    type: function
+    name: is_none
+    path: utilsforecast.processing.is_none
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import is_none\n\nresult = is_none(\n    s=None  # TODO: Series,\n)\n"
+  -
+    row_no: 28
+    id: 29
+    type: function
+    name: join
+    path: utilsforecast.processing.join
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df1
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[DataFrame, Series]"
+        has_default: false
+        default_repr: ""
+      -
+        name: df2
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[DataFrame, Series]"
+        has_default: false
+        default_repr: ""
+      -
+        name: on
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, List[str]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: how
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'inner'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import join\n\nresult = join(\n    df1=None  # TODO: Union[DataFrame, Series],\n    df2=None  # TODO: Union[DataFrame, Series],\n    on=None  # TODO: Union[str, List[str]],\n    how='inner',\n)\n"
+  -
+    row_no: 46
+    id: 47
+    type: function
+    name: make_future_dataframe
+    path: utilsforecast.processing.make_future_dataframe
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 37
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: uids
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: last_times
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, str, BaseOffset]"
+        has_default: false
+        default_repr: ""
+      -
+        name: h
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import make_future_dataframe\n\nresult = make_future_dataframe(\n    uids=None  # TODO: Series,\n    last_times=None  # TODO: Union[Series, pd.Index],\n    freq=None  # TODO: Union[int, str, BaseOffset],\n    h=None  # TODO: int,\n    id_col='unique_id',\n    time_col='ds',\n)\n"
+  -
+    row_no: 24
+    id: 25
+    type: function
+    name: match_if_categorical
+    path: utilsforecast.processing.match_if_categorical
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 15
+    event_like: False
+    return_type: "Tuple[Series, Series]"
+    docstring: nan
+    params:
+      -
+        name: s1
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: s2
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import match_if_categorical\n\nresult = match_if_categorical(\n    s1=None  # TODO: Union[Series, pd.Index],\n    s2=None  # TODO: Series,\n)\n"
+  -
+    row_no: 16
+    id: 17
+    type: function
+    name: maybe_compute_sort_indices
+    path: utilsforecast.processing.maybe_compute_sort_indices
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: "Optional[np.ndarray]"
+    docstring: "Compute indices that would sort the dataframe\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times and target values.\n\nReturns\n-------\nnumpy array or None\n    Array with indices to sort the dataframe or None if it's already sorted."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import maybe_compute_sort_indices\n\nresult = maybe_compute_sort_indices(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n    time_col=None  # TODO: str,\n)\n"
+  -
+    row_no: 35
+    id: 36
+    type: function
+    name: offset_dates
+    path: utilsforecast.processing.offset_dates
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: "Union[Series, pd.Index]"
+    docstring: nan
+    params:
+      -
+        name: dates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, str, BaseOffset]"
+        has_default: false
+        default_repr: ""
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, Series]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import offset_dates\n\nresult = offset_dates(\n    dates=None  # TODO: Union[Series, pd.Index],\n    freq=None  # TODO: Union[int, str, BaseOffset],\n    n=None  # TODO: Union[int, Series],\n)\n"
+  -
+    row_no: 34
+    id: 35
+    type: function
+    name: offset_times
+    path: utilsforecast.processing.offset_times
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: "Union[Series, pd.Index]"
+    docstring: nan
+    params:
+      -
+        name: times
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, str, BaseOffset]"
+        has_default: false
+        default_repr: ""
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, np.ndarray]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import offset_times\n\nresult = offset_times(\n    times=None  # TODO: Union[Series, pd.Index],\n    freq=None  # TODO: Union[int, str, BaseOffset],\n    n=None  # TODO: Union[int, np.ndarray],\n)\n"
+  -
+    row_no: 50
+    id: 51
+    type: function
+    name: process_df
+    path: utilsforecast.processing.process_df
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 40
+    event_like: False
+    return_type: ProcessedDF
+    docstring: "Extract components from dataframe\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    Input dataframe with id, times and target values.\n\nReturns\n-------\nids : pandas or polars Serie\n    serie with the sorted unique ids present in the data.\nlast_times : numpy array\n    array with the last time for each serie.\ndata : numpy ndarray\n    2d array with target plus features values.\nindptr : numpy ndarray\n    1d array with indices to the start and end of each serie.\nsort_idxs : numpy array or None\n    array with the indices that would sort the original data.\n    If the data is already sorted this is `None`."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[str]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import process_df\n\nresult = process_df(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n    time_col=None  # TODO: str,\n    target_col=None  # TODO: Optional[str],\n)\n"
+  -
+    row_no: 30
+    id: 31
+    type: function
+    name: rename
+    path: utilsforecast.processing.rename
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: mapping
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Dict[str, str]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import rename\n\nresult = rename(\n    df=None  # TODO: DataFrame,\n    mapping=None  # TODO: Dict[str, str],\n)\n"
+  -
+    row_no: 37
+    id: 38
+    type: function
+    name: repeat
+    path: utilsforecast.processing.repeat
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 28
+    event_like: False
+    return_type: "Union[Series, pd.Index, np.ndarray]"
+    docstring: nan
+    params:
+      -
+        name: s
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index, np.ndarray]"
+        has_default: false
+        default_repr: ""
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, np.ndarray, Series]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import repeat\n\nresult = repeat(\n    s=None  # TODO: Union[Series, pd.Index, np.ndarray],\n    n=None  # TODO: Union[int, np.ndarray, Series],\n)\n"
+  -
+    row_no: 31
+    id: 32
+    type: function
+    name: sort
+    path: utilsforecast.processing.sort
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 22
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: by
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[Union[str, List[str]]]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import sort\n\nresult = sort(\n    df=None  # TODO: DataFrame,\n    by=None,\n)\n"
+  -
+    row_no: 19
+    id: 20
+    type: function
+    name: take_rows
+    path: utilsforecast.processing.take_rows
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[DataFrame, Series, np.ndarray]"
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import take_rows\n\nresult = take_rows(\n    df=None  # TODO: Union[DataFrame, Series, np.ndarray],\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 36
+    id: 37
+    type: function
+    name: time_ranges
+    path: utilsforecast.processing.time_ranges
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 27
+    event_like: False
+    return_type: Series
+    docstring: nan
+    params:
+      -
+        name: starts
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[Series, pd.Index]"
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, str, BaseOffset]"
+        has_default: false
+        default_repr: ""
+      -
+        name: periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import time_ranges\n\nresult = time_ranges(\n    starts=None  # TODO: Union[Series, pd.Index],\n    freq=None  # TODO: Union[int, str, BaseOffset],\n    periods=None  # TODO: int,\n)\n"
+  -
+    row_no: 14
+    id: 15
+    type: function
+    name: to_numpy
+    path: utilsforecast.processing.to_numpy
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import to_numpy\n\nresult = to_numpy(\n    df=None  # TODO: DataFrame,\n)\n"
+  -
+    row_no: 45
+    id: 46
+    type: function
+    name: value_cols_to_numpy
+    path: utilsforecast.processing.value_cols_to_numpy
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 36
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[str]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import value_cols_to_numpy\n\nresult = value_cols_to_numpy(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n    time_col=None  # TODO: str,\n    target_col=None  # TODO: Optional[str],\n)\n"
+  -
+    row_no: 25
+    id: 26
+    type: function
+    name: vertical_concat
+    path: utilsforecast.processing.vertical_concat
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 16
+    event_like: False
+    return_type: "Union[DataFrame, Series]"
+    docstring: nan
+    params:
+      -
+        name: dfs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "List[Union[DataFrame, Series]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: match_categories
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import vertical_concat\n\nresult = vertical_concat(\n    dfs=None  # TODO: List[Union[DataFrame, Series]],\n    match_categories=True,\n)\n"
+  -
+    row_no: 106
+    id: 107
+    type: function
+    name: ensure_shallow_copy
+    path: utilsforecast.validation.ensure_shallow_copy
+    module: utilsforecast.validation
+    library: utilsforecast
+    top_group: utilsforecast.validation
+    role: other
+    name_cluster: 74
+    event_like: False
+    return_type: pd.DataFrame
+    docstring: nan
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: pd.DataFrame
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.validation import ensure_shallow_copy\n\nresult = ensure_shallow_copy(\n    df=None  # TODO: pd.DataFrame,\n)\n"
+  -
+    row_no: 107
+    id: 108
+    type: function
+    name: ensure_time_dtype
+    path: utilsforecast.validation.ensure_time_dtype
+    module: utilsforecast.validation
+    library: utilsforecast
+    top_group: utilsforecast.validation
+    role: other
+    name_cluster: 75
+    event_like: False
+    return_type: DFType
+    docstring: "Make sure that `time_col` contains timestamps or integers.\nIf it contains strings, try to cast them as timestamps."
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DFType
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.validation import ensure_time_dtype\n\nresult = ensure_time_dtype(\n    df=None  # TODO: DFType,\n    time_col='ds',\n)\n"
+  -
+    row_no: 108
+    id: 109
+    type: function
+    name: validate_format
+    path: utilsforecast.validation.validate_format
+    module: utilsforecast.validation
+    library: utilsforecast
+    top_group: utilsforecast.validation
+    role: other
+    name_cluster: 76
+    event_like: False
+    return_type: None
+    docstring: "Ensure DataFrame has expected format.\n\nParameters\n----------\ndf : pandas or polars DataFrame\n    DataFrame with time series in long format.\nid_col : str (default='unique_id')\n    Column that identifies each serie.\ntime_col : str (default='ds')\n    Column that identifies each timestamp.\ntarget_col : str, optional (default='y')\n    Column that contains the target.\n\nReturns\n-------\nNone"
+    params:
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'unique_id'"
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'ds'"
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[str]"
+        has_default: true
+        default_repr: "'y'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.validation import validate_format\n\nresult = validate_format(\n    df=None  # TODO: DataFrame,\n    id_col='unique_id',\n    time_col='ds',\n    target_col='y',\n)\n"
+  -
+    row_no: 109
+    id: 110
+    type: function
+    name: validate_freq
+    path: utilsforecast.validation.validate_freq
+    module: utilsforecast.validation
+    library: utilsforecast
+    top_group: utilsforecast.validation
+    role: other
+    name_cluster: 77
+    event_like: False
+    return_type: None
+    docstring: nan
+    params:
+      -
+        name: times
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: Series
+        has_default: false
+        default_repr: ""
+      -
+        name: freq
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[str, int]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.validation import validate_freq\n\nresult = validate_freq(\n    times=None  # TODO: Series,\n    freq=None  # TODO: Union[str, int],\n)\n"
+  -
+    row_no: 141
+    id: 142
+    type: class
+    name: GroupedArray
+    path: utilsforecast.grouped_array.GroupedArray
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray(\n    data=None  # TODO: ndarray,\n    indptr=None  # TODO: ndarray,\n)\n"
+  -
+    row_no: 51
+    id: 52
+    type: class
+    name: DataFrameProcessor
+    path: utilsforecast.processing.DataFrameProcessor
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import DataFrameProcessor\n\nobj = DataFrameProcessor(\n    id_col='unique_id',\n    time_col='ds',\n    target_col='y',\n)\n"
+  -
+    row_no: 49
+    id: 50
+    type: class
+    name: ProcessedDF
+    path: utilsforecast.processing.ProcessedDF
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import ProcessedDF\n\nobj = ProcessedDF(\n    uids=None  # TODO: Union,\n    last_times=None  # TODO: ndarray,\n    data=None  # TODO: ndarray,\n    indptr=None  # TODO: ndarray,\n    sort_idxs=None  # TODO: Optional,\n)\n"
+  -
+    row_no: 149
+    id: 150
+    type: method
+    name: append
+    path: utilsforecast.grouped_array.GroupedArray.append
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: "Tuple[np.ndarray, np.ndarray]"
+    docstring: "Appends each element of `new` to each existing group. Returns a copy."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: new
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray()  # TODO: __init__ args\n\nresult = obj.append(\n    new=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 150
+    id: 151
+    type: method
+    name: append_several
+    path: utilsforecast.grouped_array.GroupedArray.append_several
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: "Tuple[np.ndarray, np.ndarray]"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: new_sizes
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: new_values
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: new_groups
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray()  # TODO: __init__ args\n\nresult = obj.append_several(\n    new_sizes=None  # TODO: np.ndarray,\n    new_values=None  # TODO: np.ndarray,\n    new_groups=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 145
+    id: 146
+    type: method
+    name: from_sorted_df
+    path: utilsforecast.grouped_array.GroupedArray.from_sorted_df
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: "'GroupedArray'"
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: id_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: time_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: target_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray()  # TODO: __init__ args\n\nresult = obj.from_sorted_df(\n    df=None  # TODO: DataFrame,\n    id_col=None  # TODO: str,\n    time_col=None  # TODO: str,\n    target_col=None  # TODO: str,\n)\n"
+  -
+    row_no: 147
+    id: 148
+    type: method
+    name: take
+    path: utilsforecast.grouped_array.GroupedArray.take
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: "Tuple[np.ndarray, np.ndarray]"
+    docstring: "Subset specific groups by their indices."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence[int]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: Sequence[int],\n)\n"
+  -
+    row_no: 148
+    id: 149
+    type: method
+    name: take_from_groups
+    path: utilsforecast.grouped_array.GroupedArray.take_from_groups
+    module: utilsforecast.grouped_array
+    library: utilsforecast
+    top_group: utilsforecast.grouped_array
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: "Tuple[np.ndarray, np.ndarray]"
+    docstring: "Select a subset from each group."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idx
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Union[int, slice]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.grouped_array import GroupedArray\n\nobj = GroupedArray()  # TODO: __init__ args\n\nresult = obj.take_from_groups(\n    idx=None  # TODO: Union[int, slice],\n)\n"
+  -
+    row_no: 53
+    id: 54
+    type: method
+    name: process
+    path: utilsforecast.processing.DataFrameProcessor.process
+    module: utilsforecast.processing
+    library: utilsforecast
+    top_group: utilsforecast.processing
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: "Tuple[Series, np.ndarray, np.ndarray, np.ndarray, Optional[np.ndarray]]"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: df
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: DataFrame
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom utilsforecast.processing import DataFrameProcessor\n\nobj = DataFrameProcessor()  # TODO: __init__ args\n\nresult = obj.process(\n    df=None  # TODO: DataFrame,\n)\n"

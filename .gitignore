@@ -1,0 +1,78 @@
+# ログファイル
+logs/
+lightning_logs/
+*.log
+
+# Pythonキャッシュ・一時ファイル
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# データ・モデル関連アーティファクト（重いファイル等）
+artifacts/
+data/
+*.sqlite
+*.parquet
+*.ckpt
+*.pkl
+.ipynb_checkpoints/
+
+# local nested repo
+autoresearch/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# JavaScript dependencies
+node_modules/
+# Test/type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+# Generated outputs and local reports
+outputs/
+reports/
+results.tsv
+score_distribution_all.html
+*_export.csv
+uid_stats_summary_*.csv
+autotimebench_*.csv
+# Windows metadata and temporary probes
+*:Zone.Identifier
+tmp_windows_chrome*.js
+=70.0.0
+# Local agent settings containing absolute paths or credentials
+.claude/settings.local.json
+# local env / generated artifacts
+.env
+.venv/
+artifacts/
+logs/
+outputs/
+reports/
+traces/
+*.zip
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+*:Zone.Identifier
+
+# font binaries
+src/loto_forecast/api/streamlit/static/fonts/
+*.ttf
+*.otf
+*.woff
+*.woff2

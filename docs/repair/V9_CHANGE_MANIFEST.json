@@ -1,0 +1,37 @@
+{
+  "version": "v9",
+  "created_at": "2026-05-20T14:53:37.621792+00:00",
+  "source": "loto_forecast_project_uv_repaired_v8.zip",
+  "summary": "NeuralForecast UI/UX redesigned around DB-independent Cockpit with early error detection and duplicate inventory.",
+  "added": [
+    "src/loto_forecast/api/streamlit/nf_lab_cockpit.py",
+    "docs/repair/V9_UI_REDESIGN.md",
+    "docs/repair/V9_SETUP_AND_VERIFY_COMMANDS.md",
+    "docs/repair/V9_CHANGE_MANIFEST.json"
+  ],
+  "modified": [
+    "src/loto_forecast/api/streamlit/operations_dashboard.py"
+  ],
+  "checks_executed": [
+    "PYTHONPATH=src python -m compileall -q src tests tools evals scripts",
+    "PYTHONPATH=src python -m pytest tests/unit/test_observability_store.py -q --no-cov",
+    "custom source scan for panel registration"
+  ],
+  "checks_not_executed": [
+    "uv sync",
+    "ruff",
+    "mypy",
+    "bandit",
+    "streamlit browser startup",
+    "DB connection",
+    "db-init apply",
+    "training/E2E/grid-run"
+  ],
+  "safety": {
+    "db_write": false,
+    "dataset_write": false,
+    "db_init_apply": false,
+    "long_training": false,
+    "external_upload": false
+  }
+}

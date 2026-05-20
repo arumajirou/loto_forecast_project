@@ -1,0 +1,14 @@
+{
+  "version": "v16",
+  "summary": "Fix Playwright Locator.first usage and progress completion for browser screenshot capture.",
+  "changed_files": [
+    "scripts/collect_browser_observability.py",
+    "docs/repair/V16_PLAYWRIGHT_LOCATOR_FIX_REPORT.md"
+  ],
+  "safety": {
+    "db_write": false,
+    "db_init": false,
+    "dataset_write": false,
+    "browser_runtime_executed": false
+  }
+}

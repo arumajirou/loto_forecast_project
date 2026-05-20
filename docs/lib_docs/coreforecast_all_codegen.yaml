@@ -1,0 +1,2632 @@
+title: "CLE V10 batch codegen / module=coreforecast / total=102"
+bundle_kind: code
+count: 102
+rows:
+  -
+    row_no: 64
+    id: 65
+    type: function
+    name: diff
+    path: coreforecast.differences.diff
+    module: coreforecast.differences
+    library: coreforecast
+    top_group: coreforecast.differences
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Subtract previous values of the series\n\nArgs:\n    x (np.ndarray): Array with the time series.\n    d (int): Lag to subtract\n\nReturns:\n    np.ndarray: Differenced time series."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: d
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.differences import diff\n\nresult = diff(\n    x=None  # TODO: np.ndarray,\n    d=None  # TODO: int,\n)\n"
+  -
+    row_no: 62
+    id: 63
+    type: function
+    name: num_diffs
+    path: coreforecast.differences.num_diffs
+    module: coreforecast.differences
+    library: coreforecast
+    top_group: coreforecast.differences
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: int
+    docstring: "Find the optimal number of differences\n\nArgs:\n    x (np.ndarray): Array with the time series.\n    max_d (int, optional): Maximum number of differences to consider. Defaults to 1.\n\nReturns:\n    int: Optimal number of differences."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: max_d
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 1
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.differences import num_diffs\n\nresult = num_diffs(\n    x=None  # TODO: np.ndarray,\n    max_d=1,\n)\n"
+  -
+    row_no: 63
+    id: 64
+    type: function
+    name: num_seas_diffs
+    path: coreforecast.differences.num_seas_diffs
+    module: coreforecast.differences
+    library: coreforecast
+    top_group: coreforecast.differences
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: int
+    docstring: "Find the optimal number of seasonal differences\n\nArgs:\n    x (np.ndarray): Array with the time series.\n    season_length (int): Length of the seasonal pattern.\n    max_d (int, optional): Maximum number of differences to consider. Defaults to 1.\n\nReturns:\n    int: Optimal number of seasonal differences."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: max_d
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 1
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.differences import num_seas_diffs\n\nresult = num_seas_diffs(\n    x=None  # TODO: np.ndarray,\n    season_length=None  # TODO: int,\n    max_d=1,\n)\n"
+  -
+    row_no: 93
+    id: 94
+    type: function
+    name: expanding_max
+    path: coreforecast.expanding.expanding_max
+    module: coreforecast.expanding
+    library: coreforecast
+    top_group: coreforecast.expanding
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.expanding import expanding_max\n\nresult = expanding_max(\n    x=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 90
+    id: 91
+    type: function
+    name: expanding_mean
+    path: coreforecast.expanding.expanding_mean
+    module: coreforecast.expanding
+    library: coreforecast
+    top_group: coreforecast.expanding
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.expanding import expanding_mean\n\nresult = expanding_mean(\n    x=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 92
+    id: 93
+    type: function
+    name: expanding_min
+    path: coreforecast.expanding.expanding_min
+    module: coreforecast.expanding
+    library: coreforecast
+    top_group: coreforecast.expanding
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.expanding import expanding_min\n\nresult = expanding_min(\n    x=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 94
+    id: 95
+    type: function
+    name: expanding_quantile
+    path: coreforecast.expanding.expanding_quantile
+    module: coreforecast.expanding
+    library: coreforecast
+    top_group: coreforecast.expanding
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the expanding_quantile of the input array.\n\nArgs:\n    x (np.ndarray): Input array.\n    p (float): Quantile to compute.\n\nReturns:\n    np.ndarray: Array with the expanding statistic"
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: p
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.expanding import expanding_quantile\n\nresult = expanding_quantile(\n    x=None  # TODO: np.ndarray,\n    p=None  # TODO: float,\n)\n"
+  -
+    row_no: 91
+    id: 92
+    type: function
+    name: expanding_std
+    path: coreforecast.expanding.expanding_std
+    module: coreforecast.expanding
+    library: coreforecast
+    top_group: coreforecast.expanding
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.expanding import expanding_std\n\nresult = expanding_std(\n    x=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 154
+    id: 155
+    type: function
+    name: exponentially_weighted_mean
+    path: coreforecast.exponentially_weighted.exponentially_weighted_mean
+    module: coreforecast.exponentially_weighted
+    library: coreforecast
+    top_group: coreforecast.exponentially_weighted
+    role: other
+    name_cluster: 27
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the exponentially weighted mean of the input array.\n\nArgs:\n    x (np.ndarray): Input array.\n    alpha (float): Weight parameter.\n\nReturns:\n    np.ndarray: Array with the exponentially weighted mean."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: alpha
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.exponentially_weighted import exponentially_weighted_mean\n\nresult = exponentially_weighted_mean(\n    x=None  # TODO: np.ndarray,\n    alpha=None  # TODO: float,\n)\n"
+  -
+    row_no: 78
+    id: 79
+    type: function
+    name: rolling_max
+    path: coreforecast.rolling.rolling_max
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import rolling_max\n\nresult = rolling_max(\n    x=None  # TODO: np.ndarray,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 75
+    id: 76
+    type: function
+    name: rolling_mean
+    path: coreforecast.rolling.rolling_mean
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import rolling_mean\n\nresult = rolling_mean(\n    x=None  # TODO: np.ndarray,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 77
+    id: 78
+    type: function
+    name: rolling_min
+    path: coreforecast.rolling.rolling_min
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import rolling_min\n\nresult = rolling_min(\n    x=None  # TODO: np.ndarray,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 79
+    id: 80
+    type: function
+    name: rolling_quantile
+    path: coreforecast.rolling.rolling_quantile
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the rolling_quantile of the input array.\n\nArgs:\n    x (np.ndarray): Input array.\n    q (float): Quantile to compute.\n    window_size (int): The size of the rolling window.\n    min_samples (int, optional): The minimum number of samples required to compute the statistic.\n        If None, it is set to `window_size`.\n\nReturns:\n    np.ndarray: Array with rolling statistic"
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: p
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import rolling_quantile\n\nresult = rolling_quantile(\n    x=None  # TODO: np.ndarray,\n    p=None  # TODO: float,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 76
+    id: 77
+    type: function
+    name: rolling_std
+    path: coreforecast.rolling.rolling_std
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import rolling_std\n\nresult = rolling_std(\n    x=None  # TODO: np.ndarray,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 83
+    id: 84
+    type: function
+    name: seasonal_rolling_max
+    path: coreforecast.rolling.seasonal_rolling_max
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import seasonal_rolling_max\n\nresult = seasonal_rolling_max(\n    x=None  # TODO: np.ndarray,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 80
+    id: 81
+    type: function
+    name: seasonal_rolling_mean
+    path: coreforecast.rolling.seasonal_rolling_mean
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import seasonal_rolling_mean\n\nresult = seasonal_rolling_mean(\n    x=None  # TODO: np.ndarray,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 82
+    id: 83
+    type: function
+    name: seasonal_rolling_min
+    path: coreforecast.rolling.seasonal_rolling_min
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import seasonal_rolling_min\n\nresult = seasonal_rolling_min(\n    x=None  # TODO: np.ndarray,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 84
+    id: 85
+    type: function
+    name: seasonal_rolling_quantile
+    path: coreforecast.rolling.seasonal_rolling_quantile
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the seasonal_rolling_quantile of the input array.\n\nArgs:\n    x (np.ndarray): Input array.\n    q (float): Quantile to compute.\n    season_length (int): The length of the seasonal period.\n    window_size (int): The size of the rolling window.\n    min_samples (int, optional): The minimum number of samples required to compute the statistic.\n        If None, it is set to `window_size`.\n\nReturns:\n    np.ndarray: Array with rolling statistic"
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: p
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import seasonal_rolling_quantile\n\nresult = seasonal_rolling_quantile(\n    x=None  # TODO: np.ndarray,\n    p=None  # TODO: float,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 81
+    id: 82
+    type: function
+    name: seasonal_rolling_std
+    path: coreforecast.rolling.seasonal_rolling_std
+    module: coreforecast.rolling
+    library: coreforecast
+    top_group: coreforecast.rolling
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: min_samples
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.rolling import seasonal_rolling_std\n\nresult = seasonal_rolling_std(\n    x=None  # TODO: np.ndarray,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 100
+    id: 101
+    type: function
+    name: boxcox
+    path: coreforecast.scalers.boxcox
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Apply the Box-Cox transformation\n\nArgs:\n    x (np.ndarray): Array with data to transform.\n    lmbda (float): Lambda value to use.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: lmbda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import boxcox\n\nresult = boxcox(\n    x=None  # TODO: np.ndarray,\n    lmbda=None  # TODO: float,\n)\n"
+  -
+    row_no: 99
+    id: 100
+    type: function
+    name: boxcox_lambda
+    path: coreforecast.scalers.boxcox_lambda
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 23
+    event_like: False
+    return_type: float
+    docstring: "Find optimum lambda for the Box-Cox transformation\n\nArgs:\n    x (np.ndarray): Array with data to transform.\n    method (str): Method to use. Valid options are 'guerrero' and 'loglik'.\n        'guerrero' minimizes the coefficient of variation for subseries of `x` and supports negative values.\n        'loglik' maximizes the log-likelihood function.\n    season_length (int, optional): Length of the seasonal period.\n        Only required if method='guerrero'.\n    lower (float): Lower bound for the lambda.\n    upper (float): Upper bound for the lambda.\n\nReturns:\n    float: Optimum lambda."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: method
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Optional[int]"
+        has_default: true
+        default_repr: None
+      -
+        name: lower
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: -0.9
+      -
+        name: upper
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: 2.0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import boxcox_lambda\n\nresult = boxcox_lambda(\n    x=None  # TODO: np.ndarray,\n    method=None  # TODO: str,\n    season_length=None,\n    lower=-0.9,\n    upper=2.0,\n)\n"
+  -
+    row_no: 101
+    id: 102
+    type: function
+    name: inv_boxcox
+    path: coreforecast.scalers.inv_boxcox
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Invert the Box-Cox transformation\n\nArgs:\n    x (np.ndarray): Array with data to transform.\n    lmbda (float): Lambda value to use.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: lmbda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import inv_boxcox\n\nresult = inv_boxcox(\n    x=None  # TODO: np.ndarray,\n    lmbda=None  # TODO: float,\n)\n"
+  -
+    row_no: 158
+    id: 159
+    type: function
+    name: find_season_length
+    path: coreforecast.seasonal.find_season_length
+    module: coreforecast.seasonal
+    library: coreforecast
+    top_group: coreforecast.seasonal
+    role: other
+    name_cluster: 28
+    event_like: False
+    return_type: int
+    docstring: "Find the length of the seasonal period of the time series.\nReturns 0 if no seasonality is found.\n\nArgs:\n    x (np.ndarray): Array with the time series.\n\nReturns:\n    int: Season period."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+      -
+        name: max_season_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.seasonal import find_season_length\n\nresult = find_season_length(\n    x=None  # TODO: np.ndarray,\n    max_season_length=None  # TODO: int,\n)\n"
+  -
+    row_no: 47
+    id: 48
+    type: class
+    name: ExpandingMax
+    path: coreforecast.lag_transforms.ExpandingMax
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingMax\n\nobj = ExpandingMax(\n    lag=None  # TODO: int,\n)\n"
+  -
+    row_no: 37
+    id: 38
+    type: class
+    name: ExpandingMean
+    path: coreforecast.lag_transforms.ExpandingMean
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingMean\n\nobj = ExpandingMean(\n    lag=None  # TODO: int,\n)\n"
+  -
+    row_no: 46
+    id: 47
+    type: class
+    name: ExpandingMin
+    path: coreforecast.lag_transforms.ExpandingMin
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 16
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingMin\n\nobj = ExpandingMin(\n    lag=None  # TODO: int,\n)\n"
+  -
+    row_no: 48
+    id: 49
+    type: class
+    name: ExpandingQuantile
+    path: coreforecast.lag_transforms.ExpandingQuantile
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: nan
+    docstring: "Expanding quantile\n\nArgs:\n    lag (int):\n        Number of periods to offset by before applying the transformation\n    p (float):\n        Quantile to compute"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingQuantile\n\nobj = ExpandingQuantile(\n    lag=None  # TODO: int,\n    p=None  # TODO: float,\n)\n"
+  -
+    row_no: 40
+    id: 41
+    type: class
+    name: ExpandingStd
+    path: coreforecast.lag_transforms.ExpandingStd
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingStd\n\nobj = ExpandingStd(\n    lag=None  # TODO: int,\n)\n"
+  -
+    row_no: 52
+    id: 53
+    type: class
+    name: ExponentiallyWeightedMean
+    path: coreforecast.lag_transforms.ExponentiallyWeightedMean
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: nan
+    docstring: "Exponentially weighted mean\n\nArgs:\n    lag (int): Number of periods to offset by before applying the transformation\n    alpha (float): Smoothing factor"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExponentiallyWeightedMean\n\nobj = ExponentiallyWeightedMean(\n    lag=None  # TODO: int,\n    alpha=None  # TODO: float,\n)\n"
+  -
+    row_no: 6
+    id: 7
+    type: class
+    name: Lag
+    path: coreforecast.lag_transforms.Lag
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: nan
+    docstring: "Simple lag operator\n\nArgs:\n    lag (int): Number of periods to offset"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import Lag\n\nobj = Lag(\n    lag=None  # TODO: int,\n)\n"
+  -
+    row_no: 17
+    id: 18
+    type: class
+    name: RollingMax
+    path: coreforecast.lag_transforms.RollingMax
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingMax\n\nobj = RollingMax(\n    lag=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 14
+    id: 15
+    type: class
+    name: RollingMean
+    path: coreforecast.lag_transforms.RollingMean
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingMean\n\nobj = RollingMean(\n    lag=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 16
+    id: 17
+    type: class
+    name: RollingMin
+    path: coreforecast.lag_transforms.RollingMin
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingMin\n\nobj = RollingMin(\n    lag=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 18
+    id: 19
+    type: class
+    name: RollingQuantile
+    path: coreforecast.lag_transforms.RollingQuantile
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: "Rolling quantile\n\nArgs:\n    lag (int): Number of periods to offset by before applying the transformation\n    p (float): Quantile to compute\n    window_size (int): Length of the rolling window\n    min_samples (int, optional): Minimum number of samples required to compute the statistic.\n        If None, defaults to window_size."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingQuantile\n\nobj = RollingQuantile(\n    lag=None  # TODO: int,\n    p=None  # TODO: float,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 15
+    id: 16
+    type: class
+    name: RollingStd
+    path: coreforecast.lag_transforms.RollingStd
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingStd\n\nobj = RollingStd(\n    lag=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 29
+    id: 30
+    type: class
+    name: SeasonalRollingMax
+    path: coreforecast.lag_transforms.SeasonalRollingMax
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingMax\n\nobj = SeasonalRollingMax(\n    lag=None  # TODO: int,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 26
+    id: 27
+    type: class
+    name: SeasonalRollingMean
+    path: coreforecast.lag_transforms.SeasonalRollingMean
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingMean\n\nobj = SeasonalRollingMean(\n    lag=None  # TODO: int,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 28
+    id: 29
+    type: class
+    name: SeasonalRollingMin
+    path: coreforecast.lag_transforms.SeasonalRollingMin
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingMin\n\nobj = SeasonalRollingMin(\n    lag=None  # TODO: int,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 30
+    id: 31
+    type: class
+    name: SeasonalRollingQuantile
+    path: coreforecast.lag_transforms.SeasonalRollingQuantile
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Seasonal rolling statistic\n\nArgs:\n    lag (int): Number of periods to offset by before applying the transformation\n    p (float): Quantile to compute\n    season_length (int): Length of the seasonal period, e.g. 7 for weekly data\n    window_size (int): Length of the rolling window\n    min_samples (int, optional): Minimum number of samples required to compute the statistic.\n        If None, defaults to window_size."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingQuantile\n\nobj = SeasonalRollingQuantile(\n    lag=None  # TODO: int,\n    p=None  # TODO: float,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 27
+    id: 28
+    type: class
+    name: SeasonalRollingStd
+    path: coreforecast.lag_transforms.SeasonalRollingStd
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingStd\n\nobj = SeasonalRollingStd(\n    lag=None  # TODO: int,\n    season_length=None  # TODO: int,\n    window_size=None  # TODO: int,\n    min_samples=None,\n)\n"
+  -
+    row_no: 126
+    id: 127
+    type: class
+    name: AutoDifferences
+    path: coreforecast.scalers.AutoDifferences
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: nan
+    docstring: "Find and apply the optimal number of differences to each group.\n\nArgs:\n    max_diffs (int): Maximum number of differences to apply."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences(\n    max_diffs=None  # TODO: int,\n)\n"
+  -
+    row_no: 137
+    id: 138
+    type: class
+    name: AutoSeasonalDifferences
+    path: coreforecast.scalers.AutoSeasonalDifferences
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 27
+    event_like: False
+    return_type: nan
+    docstring: "Find and apply the optimal number of seasonal differences to each group.\n\nArgs:\n    season_length (int): Length of the seasonal period.\n    max_diffs (int): Maximum number of differences to apply.\n    n_seasons (int | None): Number of seasons to use to determine the number of differences. Defaults to 10.\n        If `None` will use all samples, otherwise `season_length` * `n_seasons` samples will be used for the test.\n        Smaller values will be faster but could be less accurate."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalDifferences\n\nobj = AutoSeasonalDifferences(\n    season_length=None  # TODO: int,\n    max_diffs=None  # TODO: int,\n    n_seasons=10,\n)\n"
+  -
+    row_no: 143
+    id: 144
+    type: class
+    name: AutoSeasonalityAndDifferences
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 28
+    event_like: False
+    return_type: nan
+    docstring: "Find the length of the seasonal period and apply the optimal number of differences to each group.\n\nArgs:\n    max_season_length (int): Maximum length of the seasonal period.\n    max_diffs (int): Maximum number of differences to apply.\n    n_seasons (int | None): Number of seasons to use to determine the number of differences. Defaults to 10.\n        If `None` will use all samples, otherwise `max_season_length` * `n_seasons` samples will be used for the test.\n        Smaller values will be faster but could be less accurate."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences(\n    max_season_length=None  # TODO: int,\n    max_diffs=None  # TODO: int,\n    n_seasons=10,\n)\n"
+  -
+    row_no: 119
+    id: 120
+    type: class
+    name: Difference
+    path: coreforecast.scalers.Difference
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: nan
+    docstring: "Subtract a lag to each group\n\nArgs:\n    d (int): Lag to subtract."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference(\n    d=None  # TODO: int,\n)\n"
+  -
+    row_no: 114
+    id: 115
+    type: class
+    name: LocalBoxCoxScaler
+    path: coreforecast.scalers.LocalBoxCoxScaler
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: nan
+    docstring: "Find the optimum lambda for the Box-Cox transformation by group and apply it\n\nArgs:\n    season_length (int, optional): Length of the seasonal period.\n        Only required if method='guerrero'.\n    lower (float): Lower bound for the lambda.\n    upper (float): Upper bound for the lambda.\n    method (str): Method to use. Valid options are 'guerrero' and 'loglik'.\n        'guerrero' minimizes the coefficient of variation for subseries of `x` and supports negative values.\n        'loglik' maximizes the log-likelihood function."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalBoxCoxScaler\n\nobj = LocalBoxCoxScaler(\n    method=None  # TODO: str,\n    season_length=None,\n    lower=-0.9,\n    upper=2.0,\n)\n"
+  -
+    row_no: 110
+    id: 111
+    type: class
+    name: LocalMinMaxScaler
+    path: coreforecast.scalers.LocalMinMaxScaler
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: nan
+    docstring: "Scale each group to the [0, 1] interval"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalMinMaxScaler\n\nobj = LocalMinMaxScaler(\n)\n"
+  -
+    row_no: 112
+    id: 113
+    type: class
+    name: LocalRobustScaler
+    path: coreforecast.scalers.LocalRobustScaler
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 23
+    event_like: False
+    return_type: nan
+    docstring: "Scale each group using robust statistics\n\nArgs:\n    scale (str): Type of robust scaling to use. Valid options are 'iqr' and 'mad'.\n        If 'iqr' will use the inter quartile range as the scale.\n        If 'mad' will use median absolute deviation as the scale."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalRobustScaler\n\nobj = LocalRobustScaler(\n    scale=None  # TODO: str,\n)\n"
+  -
+    row_no: 111
+    id: 112
+    type: class
+    name: LocalStandardScaler
+    path: coreforecast.scalers.LocalStandardScaler
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 22
+    event_like: False
+    return_type: nan
+    docstring: "Scale each group to have zero mean and unit variance"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalStandardScaler\n\nobj = LocalStandardScaler(\n)\n"
+  -
+    row_no: 38
+    id: 39
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.ExpandingMean.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingMean\n\nobj = ExpandingMean()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 39
+    id: 40
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.ExpandingMean.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingMean\n\nobj = ExpandingMean()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 50
+    id: 51
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.ExpandingQuantile.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingQuantile\n\nobj = ExpandingQuantile()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 51
+    id: 52
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.ExpandingQuantile.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingQuantile\n\nobj = ExpandingQuantile()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 41
+    id: 42
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.ExpandingStd.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingStd\n\nobj = ExpandingStd()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 42
+    id: 43
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.ExpandingStd.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExpandingStd\n\nobj = ExpandingStd()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 56
+    id: 57
+    type: method
+    name: take
+    path: coreforecast.lag_transforms.ExponentiallyWeightedMean.take
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'ExponentiallyWeightedMean'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExponentiallyWeightedMean\n\nobj = ExponentiallyWeightedMean()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 54
+    id: 55
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.ExponentiallyWeightedMean.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExponentiallyWeightedMean\n\nobj = ExponentiallyWeightedMean()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 55
+    id: 56
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.ExponentiallyWeightedMean.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import ExponentiallyWeightedMean\n\nobj = ExponentiallyWeightedMean()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 8
+    id: 9
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.Lag.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import Lag\n\nobj = Lag()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 9
+    id: 10
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.Lag.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import Lag\n\nobj = Lag()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 20
+    id: 21
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.RollingQuantile.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingQuantile\n\nobj = RollingQuantile()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 21
+    id: 22
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.RollingQuantile.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import RollingQuantile\n\nobj = RollingQuantile()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 32
+    id: 33
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms.SeasonalRollingQuantile.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingQuantile\n\nobj = SeasonalRollingQuantile()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 33
+    id: 34
+    type: method
+    name: update
+    path: coreforecast.lag_transforms.SeasonalRollingQuantile.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import SeasonalRollingQuantile\n\nobj = SeasonalRollingQuantile()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 5
+    id: 6
+    type: method
+    name: stack
+    path: coreforecast.lag_transforms._BaseLagTransform.stack
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "'_BaseLagTransform'"
+    docstring: nan
+    params:
+      -
+        name: transforms
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence['_BaseLagTransform']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _BaseLagTransform\n\nobj = _BaseLagTransform()  # TODO: __init__ args\n\nresult = obj.stack(\n    transforms=None  # TODO: Sequence['_BaseLagTransform'],\n)\n"
+  -
+    row_no: 4
+    id: 5
+    type: method
+    name: take
+    path: coreforecast.lag_transforms._BaseLagTransform.take
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'_BaseLagTransform'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: _idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _BaseLagTransform\n\nobj = _BaseLagTransform()  # TODO: __init__ args\n\nresult = obj.take(\n    _idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 2
+    id: 3
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms._BaseLagTransform.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Apply the transformation by group.\n\nArgs:\n    ga (GroupedArray): Array with the grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _BaseLagTransform\n\nobj = _BaseLagTransform()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 3
+    id: 4
+    type: method
+    name: update
+    path: coreforecast.lag_transforms._BaseLagTransform.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the most recent value of the transformation for each group.\n\nArgs:\n    ga (GroupedArray): Array with the grouped data.\n\nReturns:\n    np.ndarray: Array with the updates for each group."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _BaseLagTransform\n\nobj = _BaseLagTransform()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 36
+    id: 37
+    type: method
+    name: take
+    path: coreforecast.lag_transforms._ExpandingBase.take
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'_ExpandingBase'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _ExpandingBase\n\nobj = _ExpandingBase()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 44
+    id: 45
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms._ExpandingComp.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _ExpandingComp\n\nobj = _ExpandingComp()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 45
+    id: 46
+    type: method
+    name: update
+    path: coreforecast.lag_transforms._ExpandingComp.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _ExpandingComp\n\nobj = _ExpandingComp()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 12
+    id: 13
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms._RollingBase.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _RollingBase\n\nobj = _RollingBase()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 13
+    id: 14
+    type: method
+    name: update
+    path: coreforecast.lag_transforms._RollingBase.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _RollingBase\n\nobj = _RollingBase()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 24
+    id: 25
+    type: method
+    name: transform
+    path: coreforecast.lag_transforms._SeasonalRollingBase.transform
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _SeasonalRollingBase\n\nobj = _SeasonalRollingBase()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 25
+    id: 26
+    type: method
+    name: update
+    path: coreforecast.lag_transforms._SeasonalRollingBase.update
+    module: coreforecast.lag_transforms
+    library: coreforecast
+    top_group: coreforecast.lag_transforms
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArray'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.lag_transforms import _SeasonalRollingBase\n\nobj = _SeasonalRollingBase()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArray',\n)\n"
+  -
+    row_no: 129
+    id: 130
+    type: method
+    name: fit_transform
+    path: coreforecast.scalers.AutoDifferences.fit_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 6
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute and apply the optimal number of differences for each group\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences()  # TODO: __init__ args\n\nresult = obj.fit_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 131
+    id: 132
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers.AutoDifferences.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Invert the differences\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 136
+    id: 137
+    type: method
+    name: stack
+    path: coreforecast.scalers.AutoDifferences.stack
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "'AutoDifferences'"
+    docstring: nan
+    params:
+      -
+        name: scalers
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence['AutoDifferences']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences()  # TODO: __init__ args\n\nresult = obj.stack(\n    scalers=None  # TODO: Sequence['AutoDifferences'],\n)\n"
+  -
+    row_no: 135
+    id: 136
+    type: method
+    name: take
+    path: coreforecast.scalers.AutoDifferences.take
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'AutoDifferences'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 133
+    id: 134
+    type: method
+    name: update
+    path: coreforecast.scalers.AutoDifferences.update
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Update the last observations from each serie\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the updated data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoDifferences\n\nobj = AutoDifferences()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 139
+    id: 140
+    type: method
+    name: fit_transform
+    path: coreforecast.scalers.AutoSeasonalDifferences.fit_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 6
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute and apply the optimal number of seasonal differences for each group\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalDifferences\n\nobj = AutoSeasonalDifferences()  # TODO: __init__ args\n\nresult = obj.fit_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 140
+    id: 141
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers.AutoSeasonalDifferences.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Invert the seasonal differences\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalDifferences\n\nobj = AutoSeasonalDifferences()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 142
+    id: 143
+    type: method
+    name: take
+    path: coreforecast.scalers.AutoSeasonalDifferences.take
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'AutoDifferences'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalDifferences\n\nobj = AutoSeasonalDifferences()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 141
+    id: 142
+    type: method
+    name: update
+    path: coreforecast.scalers.AutoSeasonalDifferences.update
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Update the last observations from each serie\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the updated data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalDifferences\n\nobj = AutoSeasonalDifferences()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 145
+    id: 146
+    type: method
+    name: fit_transform
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences.fit_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 6
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Compute the optimal length of the seasonal period and apply the optimal number of differences for each group\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences()  # TODO: __init__ args\n\nresult = obj.fit_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 146
+    id: 147
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Invert the seasonal differences\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 149
+    id: 150
+    type: method
+    name: stack
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences.stack
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "'AutoSeasonalityAndDifferences'"
+    docstring: nan
+    params:
+      -
+        name: scalers
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence['AutoSeasonalityAndDifferences']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences()  # TODO: __init__ args\n\nresult = obj.stack(\n    scalers=None  # TODO: Sequence['AutoSeasonalityAndDifferences'],\n)\n"
+  -
+    row_no: 148
+    id: 149
+    type: method
+    name: take
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences.take
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'AutoSeasonalityAndDifferences'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 147
+    id: 148
+    type: method
+    name: update
+    path: coreforecast.scalers.AutoSeasonalityAndDifferences.update
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import AutoSeasonalityAndDifferences\n\nobj = AutoSeasonalityAndDifferences()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 121
+    id: 122
+    type: method
+    name: fit_transform
+    path: coreforecast.scalers.Difference.fit_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 6
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Apply the transformation\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference()  # TODO: __init__ args\n\nresult = obj.fit_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 122
+    id: 123
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers.Difference.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Invert the transformation\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 125
+    id: 126
+    type: method
+    name: stack
+    path: coreforecast.scalers.Difference.stack
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "'Difference'"
+    docstring: nan
+    params:
+      -
+        name: scalers
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence['Difference']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference()  # TODO: __init__ args\n\nresult = obj.stack(\n    scalers=None  # TODO: Sequence['Difference'],\n)\n"
+  -
+    row_no: 124
+    id: 125
+    type: method
+    name: take
+    path: coreforecast.scalers.Difference.take
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'Difference'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 123
+    id: 124
+    type: method
+    name: update
+    path: coreforecast.scalers.Difference.update
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Update the last observations from each serie\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the updated data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import Difference\n\nobj = Difference()  # TODO: __init__ args\n\nresult = obj.update(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 116
+    id: 117
+    type: method
+    name: fit
+    path: coreforecast.scalers.LocalBoxCoxScaler.fit
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 5
+    event_like: False
+    return_type: "'_BaseLocalScaler'"
+    docstring: "Compute the statistics for each group.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    self: The fitted scaler object."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalBoxCoxScaler\n\nobj = LocalBoxCoxScaler()  # TODO: __init__ args\n\nresult = obj.fit(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 118
+    id: 119
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers.LocalBoxCoxScaler.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Use the computed lambdas to invert the transformation.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalBoxCoxScaler\n\nobj = LocalBoxCoxScaler()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 117
+    id: 118
+    type: method
+    name: transform
+    path: coreforecast.scalers.LocalBoxCoxScaler.transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Use the computed lambdas to apply the transformation.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import LocalBoxCoxScaler\n\nobj = LocalBoxCoxScaler()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 104
+    id: 105
+    type: method
+    name: fit
+    path: coreforecast.scalers._BaseLocalScaler.fit
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 5
+    event_like: False
+    return_type: "'_BaseLocalScaler'"
+    docstring: "Compute the statistics for each group.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    self: The fitted scaler object."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.fit(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 106
+    id: 107
+    type: method
+    name: fit_transform
+    path: coreforecast.scalers._BaseLocalScaler.fit_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: model_fit
+    name_cluster: 6
+    event_like: False
+    return_type: np.ndarray
+    docstring: "\"Compute the statistics for each group and apply the transformation.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.fit_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 107
+    id: 108
+    type: method
+    name: inverse_transform
+    path: coreforecast.scalers._BaseLocalScaler.inverse_transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Use the computed statistics to invert the transformation.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the inverted transformation."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.inverse_transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"
+  -
+    row_no: 109
+    id: 110
+    type: method
+    name: stack
+    path: coreforecast.scalers._BaseLocalScaler.stack
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "'_BaseLocalScaler'"
+    docstring: nan
+    params:
+      -
+        name: scalers
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence['_BaseLocalScaler']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.stack(\n    scalers=None  # TODO: Sequence['_BaseLocalScaler'],\n)\n"
+  -
+    row_no: 108
+    id: 109
+    type: method
+    name: take
+    path: coreforecast.scalers._BaseLocalScaler.take
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "'_BaseLocalScaler'"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: idxs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: np.ndarray
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.take(\n    idxs=None  # TODO: np.ndarray,\n)\n"
+  -
+    row_no: 105
+    id: 106
+    type: method
+    name: transform
+    path: coreforecast.scalers._BaseLocalScaler.transform
+    module: coreforecast.scalers
+    library: coreforecast
+    top_group: coreforecast.scalers
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: np.ndarray
+    docstring: "Use the computed statistics to apply the transformation.\n\nArgs:\n    ga (GroupedArray): Array with grouped data.\n\nReturns:\n    np.ndarray: Array with the transformed data."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ga
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "'GroupedArrayT'"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom coreforecast.scalers import _BaseLocalScaler\n\nobj = _BaseLocalScaler()  # TODO: __init__ args\n\nresult = obj.transform(\n    ga=None  # TODO: 'GroupedArrayT',\n)\n"

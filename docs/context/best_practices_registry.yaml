@@ -1,0 +1,54 @@
+version: 1
+updated_at: "2026-03-31"
+sources:
+  - name: openai_agents_md
+    category: context_engineering
+    rule: "AGENTS.md を持続ルールの正本にする"
+    priority: high
+  - name: openai_skills_workflow
+    category: context_engineering
+    rule: "Skills は repo の通常ワークフローに統合し、決定的処理は scripts に寄せる"
+    priority: high
+  - name: openai_prompt_specificity
+    category: prompt_engineering
+    rule: "目的、制約、成果物、出力形式を明示し、曖昧さを減らす"
+    priority: high
+  - name: anthropic_context_engineering
+    category: context_engineering
+    rule: "context は単一プロンプトではなく、選択・順序・圧縮・再利用の設計対象とする"
+    priority: high
+  - name: openai_eval_skills
+    category: harness_engineering
+    rule: "成功条件を先に定義し、小さな eval で継続改善する"
+    priority: high
+required_files:
+  - ${PROJECT_ROOT}/AGENTS.md
+  - ${PROJECT_ROOT}/docs/context/00_context_index.md
+  - ${PROJECT_ROOT}/docs/context/01_execution_contract.md
+  - ${PROJECT_ROOT}/docs/context/02_decision_policy.md
+  - ${PROJECT_ROOT}/docs/context/03_context_packet.md
+  - ${PROJECT_ROOT}/docs/context/04_tooling_scope.md
+required_logs:
+  - ${PROJECT_ROOT}/artifacts/logs/coverage_matrix.md
+  - ${PROJECT_ROOT}/artifacts/logs/dynamic_trace.jsonl
+  - ${PROJECT_ROOT}/artifacts/logs/dynamic_trace.csv
+  - ${PROJECT_ROOT}/artifacts/logs/db_observation.json
+  - ${PROJECT_ROOT}/artifacts/logs/file_observation.json
+required_tests:
+  - ${PROJECT_ROOT}/tests/e2e/operations_dashboard_ui_check.mjs
+  - ${PROJECT_ROOT}/tests/streamlit/test_operations_dashboard_apptest.py
+  - ${PROJECT_ROOT}/tests/unit/test_operations_dashboard_ui_helpers.py
+required_mcp:
+  - chrome-devtools
+  - context7
+  - openaiDeveloperDocs
+  - github
+preferred_skills:
+  - sandbox-check
+  - log-triage
+  - streamlit-exhaustive-testing
+  - db-persistence-audit
+  - artifact-generation-audit
+  - dynamic-trace-recorder
+  - webapp-testing
+  - verification-before-completion

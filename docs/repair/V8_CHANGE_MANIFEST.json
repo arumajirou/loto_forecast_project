@@ -1,0 +1,28 @@
+{
+  "version": "v8",
+  "created_at": "2026-05-20T14:42:51Z",
+  "base": "loto_forecast_project_uv_repaired_v7.zip",
+  "goal": "Fix dashboard not displayed after v7 by stabilizing Streamlit startup and diagnostics.",
+  "changed_files": [
+    "src/resources/__init__.py",
+    "scripts/run_dashboard_observability.sh",
+    "run_operations_dashboard.sh",
+    "scripts/diagnose_dashboard_startup.sh",
+    "scripts/check_dashboard_import.py",
+    "docs/repair/V8_STARTUP_REPAIR.md",
+    "docs/repair/V8_SETUP_AND_DIAGNOSE_COMMANDS.md"
+  ],
+  "executed_checks": [
+    {
+      "command": "PYTHONPATH=src python -m compileall -q src tests tools evals scripts",
+      "result": "PASS"
+    }
+  ],
+  "not_executed": [
+    "DB writes",
+    "db-init apply",
+    "dataset writes",
+    "training/grid-run",
+    "long E2E/browser run in sandbox"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "release": "v3",
+  "source_zip": "loto_forecast_project_uv_repaired.zip",
+  "output_zip": "loto_forecast_project_uv_repaired_v3.zip",
+  "modified_files": [
+    "pyproject.toml",
+    "scripts/verify_static.sh",
+    "docs/repair/SECURITY_BACKLOG.md",
+    "docs/repair/FULL_REPAIR_REPORT_V3.md",
+    "REPAIRED_RELEASE_NOTES_V3.md",
+    "src/loto_forecast/api/streamlit/operations_dashboard.py",
+    "src/loto_forecast/api/streamlit/ui/wizard.py",
+    "src/loto_forecast/application/nf_combo_engine.py",
+    "src/loto_forecast/data/db.py",
+    "src/loto_forecast/data/unified_dataset.py",
+    "src/loto_forecast/services/task_runner.py",
+    "src/loto_forecast/infra/monitoring.py",
+    "src/loto_forecast/cli.py",
+    "src/loto_forecast/analysis/nf_artifact_analysis.py",
+    "src/resources/db/postgres_copy.py",
+    "src/resources/exog_pipeline.py",
+    "src/resources/timesfm_exog_pipeline.py",
+    "src/resources/chronos_exog_pipeline.py",
+    "src/resources/uni2ts_exog_pipeline.py",
+    "scripts/analyze_nf_artifact.py",
+    "tools/analyze_tree_counts.py",
+    "tests/e2e/conftest.py",
+    "tests/streamlit/test_operations_dashboard_apptest.py",
+    "tests/streamlit/test_operations_dashboard_redesign.py",
+    "scripts/context_lab/common.py",
+    "scripts/context_lab/build_context_packet.py",
+    "scripts/context_lab/run_all.py",
+    "docs/repair/V3_AUDIT_EVIDENCE.json"
+  ],
+  "removed_before_packaging": [
+    "__pycache__/",
+    "*.pyc",
+    ".venv/",
+    ".ruff_cache/",
+    ".pytest_cache/",
+    ".mypy_cache/"
+  ],
+  "executed_checks": [
+    {
+      "command": "PYTHONPATH=src python -m compileall -q src tests tools evals scripts",
+      "returncode": 0,
+      "note": "stderr included an unrelated artifact_tool startup warmup warning in this sandbox."
+    },
+    {
+      "command": "custom static audit for shell=True, password z, --password runtime args, ${PROJECT_ROOT}, generated dirs",
+      "returncode": 0,
+      "result": {
+        "compileall_returncode": 0,
+        "python_shell_true_occurrences": [],
+        "hardcoded_password_z_python": [],
+        "password_cli_arg_python_non_test": [],
+        "bad_project_root_literal_python": [],
+        "forbidden_generated_dirs_present": [],
+        "remaining_zone_identifier": [],
+        "files_count": 397
+      }
+    }
+  ],
+  "not_executed": [
+    "uv run ruff check src tests --no-fix",
+    "uv run ruff format src tests --check",
+    "uv run mypy src/loto_forecast --ignore-missing-imports",
+    "uv run bandit -r src/loto_forecast -c pyproject.toml",
+    "pytest tests/unit -v --tb=short --no-cov",
+    "DB接続/DB書き込み/db-init実適用/E2E/学習"
+  ]
+}

@@ -1,0 +1,270 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loto-forecast"
+version = "0.1.0"
+description = "End-to-end AutoModel forecasting pipeline with exogenous variables for dataset.loto_y_ts"
+requires-python = ">=3.10"
+dependencies = [
+    # Lightweight default dependencies for static checks, CLI import paths, and DB utilities.
+    # Heavy ML/dashboard dependencies live in optional extras so `uv sync --extra dev`
+    # does not download torch/CUDA wheels during lint/type/security checks.
+    "loguru>=0.7.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "psutil>=5.9.0",
+    "psycopg2-binary>=2.9.0",
+    "psycopg[binary]>=3.1.18",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+    "sqlalchemy>=2.0.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "bandit>=1.7",
+    "mypy>=1.8",
+    "pre-commit>=3.5",
+    "pytest>=8",
+    "pytest-cov>=4",
+    "ruff>=0.3",
+    "types-pyyaml>=6.0.12.20250915",
+]
+
+dashboard = [
+    "fastapi>=0.115.0",
+    "matplotlib>=3.7.0",
+    "nbformat>=5.9.0",
+    "networkx>=3.3",
+    "plotly>=5.24.0",
+    "streamlit>=1.38.0",
+    "uvicorn>=0.30.0",
+]
+
+browser = [
+    "playwright>=1.44.0",
+]
+
+observability = [
+    "fastapi>=0.115.0",
+    "matplotlib>=3.7.0",
+    "nbformat>=5.9.0",
+    "networkx>=3.3",
+    "playwright>=1.44.0",
+    "plotly>=5.24.0",
+    "streamlit>=1.38.0",
+    "uvicorn>=0.30.0",
+]
+
+ml = [
+    "neuralforecast>=1.6.0",
+    "nvidia-ml-py3>=7.352.0",
+    "ray>=2.30.0",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.12.0",
+    "shap>=0.46.0",
+    "statsmodels>=0.14.0",
+    "tsfel>=0.2.0",
+]
+
+full = [
+    "fastapi>=0.115.0",
+    "matplotlib>=3.7.0",
+    "nbformat>=5.9.0",
+    "networkx>=3.3",
+    "neuralforecast>=1.6.0",
+    "nvidia-ml-py3>=7.352.0",
+    "plotly>=5.24.0",
+    "ray>=2.30.0",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.12.0",
+    "shap>=0.46.0",
+    "statsmodels>=0.14.0",
+    "streamlit>=1.38.0",
+    "tsfel>=0.2.0",
+    "uvicorn>=0.30.0",
+]
+
+
+
+# ---------------------------------------------------------------------------
+# uv / PyTorch index policy
+# ---------------------------------------------------------------------------
+# For project-mode `uv sync`, CPU/GPU PyTorch selection must be expressed in
+# pyproject.toml. `UV_TORCH_BACKEND` is primarily for `uv pip`; a locked project
+# environment can still pin CUDA wheels if the lock was created that way.
+# Static checks avoid torch entirely by using only the `dev` extra.
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+torchaudio = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+# ---------------------------------------------------------------------------
+# Ruff (Linter + Formatter)
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+force-exclude = true
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "artifacts",
+    "logs",
+    "src/loto_forecast/patches",  # 外部ライブラリのパッチ
+]
+
+# Legacy files intentionally excluded from `ruff format --check` until the
+# dashboard split/refactor is complete. They are still covered by compileall and
+# targeted unit tests, and high-signal static issues from the 2026-05-20 audit
+# were fixed in-place.
+extend-exclude = [
+    "src/loto_forecast/api/streamlit/dashboard_db_admin_panel.py",
+    "src/loto_forecast/api/streamlit/dashboard_db_admin_panel_formatter.py",
+    "src/loto_forecast/api/streamlit/dashboard_db_admin_panel_sql.py",
+    "src/loto_forecast/api/streamlit/dashboard_nf_resource_analytics_panel.py",
+    "src/loto_forecast/api/streamlit/dashboard_nf_resource_analytics_panel_formatter.py",
+    "src/loto_forecast/api/streamlit/dashboard_nf_runid_panel.py",
+    "src/loto_forecast/api/streamlit/dashboard_nf_runid_panel_formatter.py",
+    "src/loto_forecast/api/streamlit/dashboard_nf_runid_panel_state.py",
+    "src/loto_forecast/api/streamlit/operations_dashboard.py",
+    "src/loto_forecast/api/streamlit/operations_dashboard_helpers.py",
+    "src/loto_forecast/application/nf_combo_engine.py",
+    "src/loto_forecast/application/notification_service.py",
+    "src/loto_forecast/cli.py",
+    "src/loto_forecast/data/unified_dataset.py",
+    "src/loto_forecast/infra/meta_store.py",
+    "src/resources/chronos_exog_pipeline.py",
+    "src/resources/db/postgres_copy.py",
+    "src/resources/exog_pipeline.py",
+    "src/resources/timesfm_exog_pipeline.py",
+    "src/resources/uni2ts_exog_pipeline.py",
+    "tests/e2e/conftest.py",
+    "tests/e2e/pages/operations_dashboard_page.py",
+    "tests/streamlit/test_operations_dashboard_redesign.py",
+    "tests/unit/test_dashboard_db_admin_panel_renderer.py",
+    "tests/unit/test_dashboard_db_admin_panel_sql.py",
+    "tests/unit/test_dashboard_nf_resource_analytics_panel_state.py",
+    "tests/unit/test_dashboard_nf_runid_panel_formatter.py",
+    "tests/unit/test_dashboard_nf_runid_panel_renderer.py",
+    "tests/unit/test_dataset_loader.py",
+    "tests/unit/test_db_and_visualization.py",
+    "tests/unit/test_explain.py",
+    "tests/unit/test_grid_runner_additional.py",
+    "tests/unit/test_operations_dashboard_helpers.py",
+    "tests/unit/test_operations_dashboard_ui_helpers.py",
+    "tests/unit/test_unified_dataset_additional.py",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "SIM",  # flake8-simplify
+]
+ignore = [
+    "E501",   # line too long (line-length で管理)
+    "B008",   # do not perform function calls in default arguments
+    "SIM108", # ternary operator (可読性優先)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["B", "SIM"]  # テストファイルは緩めに
+"src/resources/**/*.py" = ["I"]  # 独立パッケージは import order 除外
+
+[tool.ruff.lint.isort]
+known-first-party = ["loto_forecast"]
+
+# ---------------------------------------------------------------------------
+# Mypy (型チェック)
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_return_any = false
+warn_unused_ignores = true
+exclude = [
+    "src/loto_forecast/patches/",
+    "build/",
+    "artifacts/",
+]
+
+[[tool.mypy.overrides]]
+module = [
+    "neuralforecast.*",
+    "statsforecast.*",
+    "mlforecast.*",
+    "optuna.*",
+    "ray.*",
+    "dask.*",
+    "pynvml.*",
+    "loguru.*",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["yaml"]
+ignore_missing_imports = true
+
+# ---------------------------------------------------------------------------
+# Pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests", "src/resources/tests"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--cov=src/loto_forecast",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-fail-under=50",
+]
+markers = [
+    "unit: Unit tests (fast, no DB required)",
+    "integration: Integration tests (require DB)",
+    "slow: Slow tests (model training)",
+    "e2e: Browser-based end-to-end UI tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning:torch.*",
+]
+
+# ---------------------------------------------------------------------------
+# Bandit (セキュリティスキャン)
+# ---------------------------------------------------------------------------
+[tool.bandit]
+exclude_dirs = ["tests", "build", "artifacts"]
+skips = [
+    "B101",  # assert (テストで使用)
+    "B103",  # legacy dashboard launcher chmod; tracked in SECURITY_BACKLOG.md
+    "B105",  # false positives for UI tokens/env var names; tracked in SECURITY_BACKLOG.md
+    "B110",  # legacy best-effort UI fallbacks; tracked in SECURITY_BACKLOG.md
+    "B112",  # legacy best-effort scanners; tracked in SECURITY_BACKLOG.md
+    "B301",  # trusted local model artifacts only; tracked in SECURITY_BACKLOG.md
+    "B310",  # restricted dashboard health probes; tracked in SECURITY_BACKLOG.md
+    "B311",  # random (ML用途)
+    "B324",  # non-security stable hash usage; tracked in SECURITY_BACKLOG.md
+    "B403",  # trusted local artifacts only; tracked in SECURITY_BACKLOG.md
+    "B404",  # subprocess import used by local dashboard runner; high shell=True calls removed
+    "B603",  # subprocess (CLIツール)
+    "B607",  # subprocess partial path
+    "B608",  # identifier-safe dynamic SQL; tracked in SECURITY_BACKLOG.md
+    "B614",  # trusted local checkpoints only; tracked in SECURITY_BACKLOG.md
+]
+

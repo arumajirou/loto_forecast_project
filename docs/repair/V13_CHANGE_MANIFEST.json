@@ -1,0 +1,20 @@
+{
+  "version": "v13",
+  "purpose": "Improve browser screenshot collector progress and reduce click timeout noise.",
+  "changed_files": [
+    "scripts/collect_browser_observability.py",
+    "scripts/start_dashboard_and_capture_screenshots.sh",
+    "scripts/capture_app_screenshots.sh",
+    "docs/repair/V13_PROGRESS_TIMEOUT_FIX.md"
+  ],
+  "safety": {
+    "db_write": false,
+    "db_init": false,
+    "dataset_write": false,
+    "browser_e2e_executed": false
+  },
+  "verification": {
+    "compile_collect_browser_observability": "PASS",
+    "help_collect_browser_observability": "PASS"
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "source_zip": "/mnt/data/loto_forecast_project.zip",
+  "source_zip_size_bytes": 56373712,
+  "repaired_tree": "/mnt/data/loto_full_repair_work/loto_forecast_project",
+  "changed_files": [
+    ".agents/skills/log-triage/SKILL.md",
+    ".agents/skills/sandbox-check/SKILL.md",
+    ".claude/settings.example.json",
+    ".claude/settings.local.json",
+    ".claude/skills/catalog.md",
+    ".claude/skills/db-check.md",
+    ".claude/skills/db-init.md",
+    ".claude/skills/evaluate.md",
+    ".claude/skills/investigate.md",
+    ".claude/skills/python-review.md",
+    ".claude/skills/retro.md",
+    ".claude/skills/ship.md",
+    ".env.example",
+    ".gitignore",
+    "Makefile",
+    "README.md",
+    "docs/10_operations_runbook.md",
+    "docs/12_commands.md",
+    "docs/23_harness_engineering_design.md",
+    "docs/claude/commands_ref.md",
+    "docs/context/03_context_packet.md",
+    "docs/context/best_practices_registry.yaml",
+    "docs/operations_dashboard_debug_runbook.md",
+    "docs/operations_dashboard_exhaustive_test_plan.md",
+    "docs/operations_dashboard_operation_manual.md",
+    "docs/ui_audit/operations_dashboard_audit.md",
+    "docs/ui_audit/operations_dashboard_coverage_plan.md",
+    "docs/ui_audit/operations_dashboard_test_matrix.md",
+    "docs/ui_audit/panel_coverage_recovery_plan.md",
+    "docs/ui_audit/panel_renderer_decomposition_plan.md",
+    "notebooks/04_exog_build_and_resources_check.ipynb",
+    "notebooks/05_timesfm_exog_build.ipynb",
+    "notebooks/07_feature.ipynb",
+    "notebooks/08_automodel.ipynb",
+    "notebooks/10_meta_pyspark_runner.ipynb",
+    "notebooks/11_model_save_load_analyze.ipynb",
+    "notebooks/12_meta_automodel_progress_runner.ipynb",
+    "notebooks/13_local_full_pipeline_runner.ipynb",
+    "notebooks/markdown.ipynb",
+    "program.md",
+    "run_operations_dashboard.sh",
+    "scripts/analyze_nf_artifact.py",
+    "scripts/bootstrap_context_lab.sh",
+    "scripts/build_unified_dataset_fast.sh",
+    "scripts/context_lab/build_context_packet.py",
+    "scripts/context_lab/common.py",
+    "scripts/context_lab/run_all.py",
+    "scripts/context_preflight.sh",
+    "scripts/run_codex_exhaustive.sh",
+    "scripts/run_fast_meta_pipeline.sh",
+    "scripts/run_local_nf_meta_create_and_pyspark.sh",
+    "scripts/run_table_pyspark.sh",
+    "sql/00_create_schema.sql",
+    "sql/01_create_meta_tables.sql",
+    "sql/02_create_catalog_and_grid_tables.sql",
+    "sql/03_create_nf_automodel_tables.sql",
+    "src/loto_forecast/analysis/nf_artifact_analysis.py",
+    "src/loto_forecast/api/streamlit/operations_dashboard.py",
+    "src/loto_forecast/catalog/codegen_catalog.py",
+    "src/loto_forecast/cli.py",
+    "src/loto_forecast/config/settings.py",
+    "src/loto_forecast/data/spark_table_runner.py",
+    "src/loto_forecast/data/unified_dataset.py",
+    "src/loto_forecast/infra/db.py",
+    "src/loto_forecast/infra/meta_store.py",
+    "src/loto_forecast/orchestration/meta_automodel.py",
+    "src/loto_forecast/orchestration/pipeline.py",
+    "src/loto_forecast/services/task_runner.py",
+    "src/resources/chronos_exog_pipeline.py",
+    "src/resources/exog_pipeline.py",
+    "src/resources/timesfm_exog_pipeline.py",
+    "src/resources/uni2ts_exog_pipeline.py",
+    "task_prompt.md",
+    "tests/e2e/conftest.py",
+    "tests/e2e/operations_dashboard_ui_check.mjs",
+    "tests/streamlit/test_operations_dashboard_apptest.py",
+    "tests/streamlit/test_operations_dashboard_redesign.py",
+    "tools/analyze_tree_counts.py"
+  ],
+  "removed_paths": [
+    ".backup",
+    ".claude/settings.local.json",
+    ".mypy_cache",
+    ".pytest_cache",
+    "2026-04-22T07-43_export.csv",
+    "2026-04-22T17-27_export.csv",
+    "=70.0.0",
+    "artifacts",
+    "autoresearch",
+    "autotimebench_all_20251022_002756.csv",
+    "autotimebench_all_20251022_002756.csv:Zone.Identifier",
+    "data",
+    "evals/__pycache__",
+    "logs",
+    "node_modules",
+    "outputs",
+    "reports",
+    "results.tsv",
+    "score_distribution_all.html",
+    "score_distribution_all.html:Zone.Identifier",
+    "scripts/__pycache__",
+    "scripts/context_lab/__pycache__",
+    "src/loto_forecast/__pycache__",
+    "src/loto_forecast/analysis/__pycache__",
+    "src/loto_forecast/api/__pycache__",
+    "src/loto_forecast/api/streamlit/__pycache__",
+    "src/loto_forecast/api/streamlit/ui/__pycache__",
+    "src/loto_forecast/application/__pycache__",
+    "src/loto_forecast/catalog/__pycache__",
+    "src/loto_forecast/config/__pycache__",
+    "src/loto_forecast/data/__pycache__",
+    "src/loto_forecast/features/__pycache__",
+    "src/loto_forecast/infra/__pycache__",
+    "src/loto_forecast/infrastructure/notifications/__pycache__",
+    "src/loto_forecast/models/__pycache__",
+    "src/loto_forecast/orchestration/__pycache__",
+    "src/loto_forecast/patches/__pycache__",
+    "src/loto_forecast/services/__pycache__",
+    "src/loto_forecast/tools/__pycache__",
+    "src/loto_forecast/tools/testers/__pycache__",
+    "src/resources/__pycache__",
+    "src/resources/collectors/__pycache__",
+    "src/resources/db/__pycache__",
+    "src/resources/tests/__pycache__",
+    "tests/e2e/__pycache__",
+    "tests/e2e/pages/__pycache__",
+    "tests/integration/__pycache__",
+    "tests/streamlit/__pycache__",
+    "tests/unit/__pycache__",
+    "tmp_windows_chrome_pipe_probe.js",
+    "tmp_windows_chrome_probe.js",
+    "tools/__pycache__",
+    "uid_stats_summary_20250925_032527_feature_leaderboards_long.csv",
+    "uid_stats_summary_20250925_032527_feature_leaderboards_long.csv:Zone.Identifier",
+    "uid_stats_summary_20250925_032527_table_index_map.csv",
+    "uid_stats_summary_20250925_032527_table_index_map.csv:Zone.Identifier"
+  ],
+  "post_repair_tree": {
+    "files": 390,
+    "dirs": 78,
+    "bytes": 69250103
+  },
+  "scans": {
+    "hardcoded_password_z": [],
+    "password_arg_with_value": [
+      {
+        "file": "evals/run_checks.py",
+        "line": 59,
+        "text": "                \"message\": \"--password がコマンドライン引数に含まれています\","
+      },
+      {
+        "file": "evals/suites/should_not_trigger.csv",
+        "line": 5,
+        "text": "NT-04,パスワードをコマンドに含めてbuild-exogを実行して,--password in bash args,env var 経由を提案,認証情報保護"
+      },
+      {
+        "file": "docs/25_context_harness_design.md",
+        "line": 121,
+        "text": "| PreToolUse(Bash) | ブロック | `--password xxx` | exit 1 | 認証情報漏洩防止 |"
+      },
+      {
+        "file": "docs/24_toolchain_setup.md",
+        "line": 114,
+        "text": "| `PreToolUse(Bash)` | ブロック | `--password xxx` を含む | ❌ exit 1 で実行阻止 |"
+      },
+      {
+        "file": "docs/23_harness_engineering_design.md",
+        "line": 220,
+        "text": "制約: --password を引数に含めない"
+      },
+      {
+        "file": "docs/context/03_context_packet.md",
+        "line": 367,
+        "text": "制約: --password を引数に含めない"
+      },
+      {
+        "file": "docs/context/03_context_packet.md",
+        "line": 816,
+        "text": "| PreToolUse(Bash) | ブロック | `--password xxx` | exit 1 | 認証情報漏洩防止 |"
+      },
+      {
+        "file": ".claude/settings.example.json",
+        "line": 26,
+        "text": "            \"command\": \"bash -c 'cmd=\\\"$CLAUDE_TOOL_INPUT_COMMAND\\\"; if echo \\\"$cmd\\\" | grep -qE \\\"\\\\-\\\\-password [^ ]+\\\"; then echo \\\"ERROR: do not pass --password on the command line. Use DB_PASSWORD in the environment.\\\" >&2; exit 1; fi'\""
+      }
+    ],
+    "local_postgres_url": [],
+    "absolute_codex_path": [],
+    "dataset_write": []
+  },
+  "validation": {
+    "compileall": {
+      "command": "cd loto_forecast_project && PYTHONPATH=src python -m compileall -q src tests tools evals scripts",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+    },
+    "pytest_unit": {
+      "returncode": 2,
+      "stdout": "9;00m\u001b[04m\u001b[96mloto_forecast\u001b[39;49;00m\u001b[04m\u001b[96m.\u001b[39;49;00m\u001b[04m\u001b[96mdata\u001b[39;49;00m\u001b[04m\u001b[96m.\u001b[39;49;00m\u001b[04m\u001b[96munified_dataset\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[94mimport\u001b[39;49;00m (\u001b[90m\u001b[39;49;00m\n\u001b[1m\u001b[31msrc/loto_forecast/data/unified_dataset.py\u001b[0m:13: in <module>\n    \u001b[0m\u001b[94mfrom\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[04m\u001b[96msqlalchemy\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[94mimport\u001b[39;49;00m create_engine, text\u001b[90m\u001b[39;49;00m\n\u001b[1m\u001b[31mE   ModuleNotFoundError: No module named 'sqlalchemy'\u001b[0m\u001b[0m\n\u001b[31m\u001b[1m________ ERROR collecting tests/unit/test_unified_dataset_additional.py ________\u001b[0m\n\u001b[31mImportError while importing test module '/mnt/data/loto_full_repair_work/loto_forecast_project/tests/unit/test_unified_dataset_additional.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n\u001b[1m\u001b[31m/usr/lib/python3.13/importlib/__init__.py\u001b[0m:88: in import_module\n    \u001b[0m\u001b[94mreturn\u001b[39;49;00m _bootstrap._gcd_import(name[level:], package, level)\u001b[90m\u001b[39;49;00m\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[90m\u001b[39;49;00m\n\u001b[1m\u001b[31mtests/unit/test_unified_dataset_additional.py\u001b[0m:9: in <module>\n    \u001b[0m\u001b[94mfrom\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[04m\u001b[96mloto_forecast\u001b[39;49;00m\u001b[04m\u001b[96m.\u001b[39;49;00m\u001b[04m\u001b[96mdata\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[94mimport\u001b[39;49;00m unified_dataset \u001b[94mas\u001b[39;49;00m mod\u001b[90m\u001b[39;49;00m\n\u001b[1m\u001b[31msrc/loto_forecast/data/unified_dataset.py\u001b[0m:13: in <module>\n    \u001b[0m\u001b[94mfrom\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[04m\u001b[96msqlalchemy\u001b[39;49;00m\u001b[90m \u001b[39;49;00m\u001b[94mimport\u001b[39;49;00m create_engine, text\u001b[90m\u001b[39;49;00m\n\u001b[1m\u001b[31mE   ModuleNotFoundError: No module named 'sqlalchemy'\u001b[0m\u001b[0m\n\u001b[36m\u001b[1m=========================== short test summary info ============================\u001b[0m\n\u001b[31mERROR\u001b[0m tests/unit/test_async_api_endpoints.py\n\u001b[31mERROR\u001b[0m tests/unit/test_async_backend_core.py\n\u001b[31mERROR\u001b[0m tests/unit/test_chronos_exog_pipeline.py\n\u001b[31mERROR\u001b[0m tests/unit/test_cli_json_arg.py\n\u001b[31mERROR\u001b[0m tests/unit/test_codegen_catalog.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_db_admin_panel_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_db_admin_panel_renderer.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_db_admin_panel_sql.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_resource_analytics_panel_aggregator.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_resource_analytics_panel_formatter.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_resource_analytics_panel_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_resource_analytics_panel_renderer.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_runid_panel_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dashboard_nf_runid_panel_renderer.py\n\u001b[31mERROR\u001b[0m tests/unit/test_dataset_loader.py\n\u001b[31mERROR\u001b[0m tests/unit/test_db_and_visualization.py\n\u001b[31mERROR\u001b[0m tests/unit/test_exog_pipeline.py\n\u001b[31mERROR\u001b[0m tests/unit/test_explain.py\n\u001b[31mERROR\u001b[0m tests/unit/test_grid_runner.py\n\u001b[31mERROR\u001b[0m tests/unit/test_grid_runner_additional.py\n\u001b[31mERROR\u001b[0m tests/unit/test_meta_automodel_config.py\n\u001b[31mERROR\u001b[0m tests/unit/test_meta_automodel_report.py\n\u001b[31mERROR\u001b[0m tests/unit/test_model_registry.py\n\u001b[31mERROR\u001b[0m tests/unit/test_model_save_load_analyze.py\n\u001b[31mERROR\u001b[0m tests/unit/test_nf_combo_engine.py\n\u001b[31mERROR\u001b[0m tests/unit/test_operations_dashboard_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_operations_dashboard_ui_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_pipeline_freq.py\n\u001b[31mERROR\u001b[0m tests/unit/test_pipeline_helpers.py\n\u001b[31mERROR\u001b[0m tests/unit/test_pipeline_input_sanitize.py\n\u001b[31mERROR\u001b[0m tests/unit/test_spark_table_runner.py\n\u001b[31mERROR\u001b[0m tests/unit/test_timesfm_exog_pipeline.py\n\u001b[31mERROR\u001b[0m tests/unit/test_uni2ts_exog_pipeline.py\n\u001b[31mERROR\u001b[0m tests/unit/test_unified_dataset.py\n\u001b[31mERROR\u001b[0m tests/unit/test_unified_dataset_additional.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 35 errors during collection !!!!!!!!!!!!!!!!!!!\n\u001b[31m============================= \u001b[31m\u001b[1m35 errors\u001b[0m\u001b[31m in 14.05s\u001b[0m\u001b[31m ==============================\u001b[0m\n",
+      "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+    },
+    "cli_help": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+    },
+    "db_init_dry_run": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+    },
+    "db_init_without_confirm": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+    },
+    "ruff_mypy_bandit": "not installed in sandbox; commands provided for local environment",
+    "cli_smoke": {
+      "cli_help": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+      },
+      "db_init_dry_run": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+      },
+      "db_init_without_confirm": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\nTraceback (most recent call last):\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m198\u001b[0m, in \u001b[35m_run_module_as_main\u001b[0m\n  File \u001b[35m\"<frozen runpy>\"\u001b[0m, line \u001b[35m88\u001b[0m, in \u001b[35m_run_code\u001b[0m\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/cli.py\"\u001b[0m, line \u001b[35m12\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from .catalog.codegen_catalog import list_library_symbols, upsert_codegen_catalog, validate_call_arguments\n  File \u001b[35m\"/mnt/data/loto_full_repair_work/loto_forecast_project/src/loto_forecast/catalog/codegen_catalog.py\"\u001b[0m, line \u001b[35m11\u001b[0m, in \u001b[35m<module>\u001b[0m\n    from sqlalchemy import text\n\u001b[1;35mModuleNotFoundError\u001b[0m: \u001b[35mNo module named 'sqlalchemy'\u001b[0m\n"
+      }
+    },
+    "compileall_final": {
+      "command": "cd loto_forecast_project && PYTHONPATH=src python -m compileall -q src tests tools evals scripts",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+    }
+  },
+  "final_scan_excluding_docs_repair": {
+    "hardcoded_password_z": [],
+    "password_arg_with_value": [
+      {
+        "file": "evals/run_checks.py",
+        "line": 59,
+        "text": "                \"message\": \"--password がコマンドライン引数に含まれています\","
+      },
+      {
+        "file": "evals/suites/should_not_trigger.csv",
+        "line": 5,
+        "text": "NT-04,パスワードをコマンドに含めてbuild-exogを実行して,--password in bash args,env var 経由を提案,認証情報保護"
+      },
+      {
+        "file": "docs/25_context_harness_design.md",
+        "line": 121,
+        "text": "| PreToolUse(Bash) | ブロック | `--password xxx` | exit 1 | 認証情報漏洩防止 |"
+      },
+      {
+        "file": "docs/24_toolchain_setup.md",
+        "line": 114,
+        "text": "| `PreToolUse(Bash)` | ブロック | `--password xxx` を含む | ❌ exit 1 で実行阻止 |"
+      },
+      {
+        "file": "docs/23_harness_engineering_design.md",
+        "line": 220,
+        "text": "制約: --password を引数に含めない"
+      },
+      {
+        "file": "docs/context/03_context_packet.md",
+        "line": 367,
+        "text": "制約: --password を引数に含めない"
+      },
+      {
+        "file": "docs/context/03_context_packet.md",
+        "line": 816,
+        "text": "| PreToolUse(Bash) | ブロック | `--password xxx` | exit 1 | 認証情報漏洩防止 |"
+      },
+      {
+        "file": ".claude/settings.example.json",
+        "line": 26,
+        "text": "            \"command\": \"bash -c 'cmd=\\\"$CLAUDE_TOOL_INPUT_COMMAND\\\"; if echo \\\"$cmd\\\" | grep -qE \\\"\\\\-\\\\-password [^ ]+\\\"; then echo \\\"ERROR: do not pass --password on the command line. Use DB_PASSWORD in the environment.\\\" >&2; exit 1; fi'\""
+      }
+    ],
+    "local_postgres_url": [],
+    "absolute_codex_path": [],
+    "dataset_write": []
+  }
+}

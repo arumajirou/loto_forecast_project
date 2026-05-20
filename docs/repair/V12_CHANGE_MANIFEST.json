@@ -1,0 +1,20 @@
+{
+  "version": "v12",
+  "purpose": "Add progress bar and progress logs for browser screenshot collection",
+  "changed_files": [
+    "scripts/collect_browser_observability.py",
+    "scripts/capture_app_screenshots.sh",
+    "scripts/start_dashboard_and_capture_screenshots.sh",
+    "src/loto_forecast/observability/store.py",
+    "src/loto_forecast/api/streamlit/operations_dashboard.py",
+    "docs/repair/V12_PROGRESS_BAR_REPORT.md",
+    "docs/repair/V12_SETUP_AND_CAPTURE_COMMANDS.md",
+    "docs/repair/V12_CHANGE_MANIFEST.json"
+  ],
+  "safety": {
+    "db_write_executed": false,
+    "db_init_executed": false,
+    "dataset_write_executed": false,
+    "playwright_live_run_executed": false
+  }
+}

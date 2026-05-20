@@ -1,0 +1,50 @@
+# ディレクトリ設計書
+
+- `src/loto_forecast/`
+  - `cli.py`: CLIエントリポイント
+  - `config/settings.py`: 設定
+  - `data/db.py`: DBアクセス
+  - `features/engineering.py`: 特徴量生成
+  - `models/neuralforecast_model.py`: NeuralForecast 実装
+  - `models/registry.py`: 共通アダプタ
+  - `orchestration/pipeline.py`: 学習/予測/評価オーケストレーション
+  - `orchestration/grid_runner.py`: グリッド実行
+  - `catalog/codegen_catalog.py`: YAMLカタログ正規化
+  - `infra/meta_store.py`: DB永続化
+  - `data/unified_dataset.py`: `dataset.loto_y_ts` + `dataset.loto_hist_feat` + `exog.*` 統合データセット生成/受け渡し（psql/csv/pyspark）
+  - `data/spark_table_runner.py`: PostgreSQL(JDBC)入力のPySpark変換・出力（postgres/parquet/csv）
+  - `orchestration/meta_automodel.py`: `meta.nf_automodel` 駆動の網羅/再帰実行
+  - `analysis/diagnostics.py`, `analysis/evaluation.py`, `analysis/explain.py`, `analysis/visualization.py`
+- `src/resources/`
+  - `exog_pipeline.py`: `dataset.loto_y_ts` -> `exog.*` 外生変数ETL
+  - `chronos_exog_pipeline.py`: Chronos埋め込み外生変数ETL（`exog.chronos`）
+  - `timesfm_exog_pipeline.py`: TimesFM埋め込み外生変数ETL（`exog.timesfm`）
+  - `uni2ts_exog_pipeline.py`: UNI2TS埋め込み外生変数ETL（`exog.uni2ts`）
+  - `context.py`, `span.py`, `sampling.py`: `resources.*` 監視記録
+  - `collectors/`: psutil / nvml / db collector
+- `sql/`
+  - `00_create_schema.sql`
+  - `01_create_meta_tables.sql`
+  - `02_create_catalog_and_grid_tables.sql`
+  - `03_create_nf_automodel_tables.sql`
+- `docs/`
+  - 要件/設計/テスト/運用
+- `notebooks/`
+  - 動作確認（DB・学習・解析・カタログ・グリッド）
+  - `10_meta_pyspark_runner.ipynb`: meta作成・pyspark実行・bash連携
+  - `11_model_save_load_analyze.ipynb`: モデル保存/ロード/解析実行例
+  - `12_meta_automodel_progress_runner.ipynb`: create/run/pyspark/save-load-analyze の段階実行
+  - `13_local_full_pipeline_runner.ipynb`: フルローカル一括実行（学習/保存/ロード/解析/評価/予測）
+- `scripts/`
+  - `run_meta_automodel_create.sh`: `meta.nf_automodel` 設定作成/更新
+  - `run_local_nf_meta_create_and_pyspark.sh`: ローカル向け `meta-automodel-create + run-table-pyspark + check-unified-grouping + meta-automodel-run` 一括実行
+  - `run_local_nf_full_pipeline.sh`: 上記 + `run_model_save_load_analyze.sh` を連続実行
+  - `run_table_pyspark.sh`: PySparkテーブル実行
+  - `run_fast_meta_pipeline.sh`: 高速一括実行
+  - `run_model_save_load_analyze.sh`: 保存済みモデルのsave/load/analyze単体実行（`RUN_ID`自動解決対応）
+- `tests/`
+  - `unit/` と `integration/`
+- `artifacts/`
+  - run_id単位モデル成果物
+- `logs/`
+  - 実行ログ

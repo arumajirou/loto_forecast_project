@@ -1,0 +1,28 @@
+{
+  "version": "v15",
+  "created_at": "2026-05-20T16:19:50+0000",
+  "changes": [
+    {
+      "file": "scripts/start_dashboard_and_capture_screenshots.sh",
+      "change": "replace erroneous 'bash bash ./scripts/wsl_start_loto_app.sh' with 'bash ./scripts/wsl_start_loto_app.sh'"
+    },
+    {
+      "file": "scripts/kill_loto_observability_processes.sh",
+      "change": "avoid CONT before TERM for stopped Playwright/node processes to reduce EPIPE noise; force kill remaining processes"
+    },
+    {
+      "file": "scripts/*.sh",
+      "change": "set executable bit in zip metadata"
+    },
+    {
+      "file": "docs/repair/V15_BASH_INVOCATION_FIX.md",
+      "change": "add operational note"
+    }
+  ],
+  "safety": {
+    "db_init_executed": false,
+    "db_write_executed": false,
+    "dataset_write_executed": false,
+    "browser_capture_executed": false
+  }
+}

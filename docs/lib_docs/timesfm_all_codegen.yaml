@@ -1,0 +1,1812 @@
+title: "CLE V10 batch codegen / module=timesfm / total=65"
+bundle_kind: code
+count: 65
+rows:
+  -
+    row_no: 11
+    id: 12
+    type: function
+    name: make_attn_mask
+    path: timesfm.flax.transformer.make_attn_mask
+    module: timesfm.flax.transformer
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: "Bool[Array, 'b 1 q n']"
+    docstring: "Makes attention mask."
+    params:
+      -
+        name: query_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: num_all_masked_kv
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Integer[Array, 'b']"
+        has_default: false
+        default_repr: ""
+      -
+        name: query_index_offset
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Integer[Array, 'b'] | None"
+        has_default: true
+        default_repr: None
+      -
+        name: kv_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.transformer import make_attn_mask\n\nresult = make_attn_mask(\n    query_length=None  # TODO: int,\n    num_all_masked_kv=None  # TODO: Integer[Array, 'b'],\n    query_index_offset=None,\n    kv_length=0,\n)\n"
+  -
+    row_no: 35
+    id: 36
+    type: function
+    name: revin
+    path: timesfm.flax.util.revin
+    module: timesfm.flax.util
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: nan
+    docstring: "Reversible per-instance normalization."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b ...']"
+        has_default: false
+        default_repr: ""
+      -
+        name: mu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b ...']"
+        has_default: false
+        default_repr: ""
+      -
+        name: sigma
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b ...']"
+        has_default: false
+        default_repr: ""
+      -
+        name: reverse
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.util import revin\n\nresult = revin(\n    x=None  # TODO: Float[Array, 'b ...'],\n    mu=None  # TODO: Float[Array, 'b ...'],\n    sigma=None  # TODO: Float[Array, 'b ...'],\n    reverse=False,\n)\n"
+  -
+    row_no: 34
+    id: 35
+    type: function
+    name: scan_along_axis
+    path: timesfm.flax.util.scan_along_axis
+    module: timesfm.flax.util
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: nan
+    docstring: "Scans along an axis."
+    params:
+      -
+        name: f
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: init
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: xs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: axis
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.util import scan_along_axis\n\nresult = scan_along_axis(\n    f=None  # TODO,\n    init=None  # TODO,\n    xs=None  # TODO,\n    axis=None  # TODO: int,\n)\n"
+  -
+    row_no: 33
+    id: 34
+    type: function
+    name: update_running_stats
+    path: timesfm.flax.util.update_running_stats
+    module: timesfm.flax.util
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: "tuple[tuple[Float[Array, 'b'], Float[Array, 'b'], Float[Array, 'b']], tuple[Float[Array, 'b'], Float[Array, 'b'], Float[Array, 'b']]]"
+    docstring: "Updates the running stats."
+    params:
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b']"
+        has_default: false
+        default_repr: ""
+      -
+        name: mu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b']"
+        has_default: false
+        default_repr: ""
+      -
+        name: sigma
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b']"
+        has_default: false
+        default_repr: ""
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Float[Array, 'b p']"
+        has_default: false
+        default_repr: ""
+      -
+        name: mask
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Bool[Array, 'b p']"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.util import update_running_stats\n\nresult = update_running_stats(\n    n=None  # TODO: Float[Array, 'b'],\n    mu=None  # TODO: Float[Array, 'b'],\n    sigma=None  # TODO: Float[Array, 'b'],\n    x=None  # TODO: Float[Array, 'b p'],\n    mask=None  # TODO: Bool[Array, 'b p'],\n)\n"
+  -
+    row_no: 143
+    id: 144
+    type: function
+    name: linear_interpolation
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.linear_interpolation
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: nan
+    docstring: "Performs linear interpolation to fill NaN values in a 1D numpy array.\n\nArgs:\n    arr: The 1D numpy array containing NaN values.\n\nReturns:\n    A new numpy array with NaN values filled using linear interpolation,\n    or the original array if no NaNs are present.\n    Returns None if the input is not a 1D array.\n    Returns the original array if there are no NaN values."
+    params:
+      -
+        name: arr
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import linear_interpolation\n\nresult = linear_interpolation(\n    arr=None  # TODO,\n)\n"
+  -
+    row_no: 142
+    id: 143
+    type: function
+    name: strip_leading_nans
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.strip_leading_nans
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Removes contiguous NaN values from the beginning of a NumPy array.\n\nArgs:\n  arr: The input NumPy array.\n\nReturns:\n  A new NumPy array with leading NaN values removed.\n  If the array is all NaNs or empty, returns an empty array."
+    params:
+      -
+        name: arr
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import strip_leading_nans\n\nresult = strip_leading_nans(\n    arr=None  # TODO,\n)\n"
+  -
+    row_no: 155
+    id: 156
+    type: function
+    name: try_gc
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.try_gc
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params: []
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import try_gc\n\nresult = try_gc(\n)\n"
+  -
+    row_no: 81
+    id: 82
+    type: function
+    name: make_attn_mask
+    path: timesfm.torch.transformer.make_attn_mask
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: torch.Tensor
+    docstring: "Makes attention mask."
+    params:
+      -
+        name: query_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: num_all_masked_kv
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: query_index_offset
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "torch.Tensor | None"
+        has_default: true
+        default_repr: None
+      -
+        name: kv_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import make_attn_mask\n\nresult = make_attn_mask(\n    query_length=None  # TODO: int,\n    num_all_masked_kv=None  # TODO: torch.Tensor,\n    query_index_offset=None,\n    kv_length=0,\n)\n"
+  -
+    row_no: 103
+    id: 104
+    type: function
+    name: revin
+    path: timesfm.torch.util.revin
+    module: timesfm.torch.util
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: nan
+    docstring: "Reversible instance normalization."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: mu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: sigma
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: reverse
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.util import revin\n\nresult = revin(\n    x=None  # TODO: torch.Tensor,\n    mu=None  # TODO: torch.Tensor,\n    sigma=None  # TODO: torch.Tensor,\n    reverse=False,\n)\n"
+  -
+    row_no: 102
+    id: 103
+    type: function
+    name: update_running_stats
+    path: timesfm.torch.util.update_running_stats
+    module: timesfm.torch.util
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: "tuple[tuple[torch.Tensor, torch.Tensor, torch.Tensor], tuple[torch.Tensor, torch.Tensor, torch.Tensor]]"
+    docstring: "Updates the running stats."
+    params:
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: mu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: sigma
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: mask
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.util import update_running_stats\n\nresult = update_running_stats(\n    n=None  # TODO: torch.Tensor,\n    mu=None  # TODO: torch.Tensor,\n    sigma=None  # TODO: torch.Tensor,\n    x=None  # TODO: torch.Tensor,\n    mask=None  # TODO: torch.Tensor,\n)\n"
+  -
+    row_no: 68
+    id: 69
+    type: function
+    name: normalize
+    path: timesfm.utils.xreg_lib.normalize
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: batch
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import normalize\n\nresult = normalize(\n    batch=None  # TODO,\n)\n"
+  -
+    row_no: 69
+    id: 70
+    type: function
+    name: renormalize
+    path: timesfm.utils.xreg_lib.renormalize
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: batch
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: stats
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import renormalize\n\nresult = renormalize(\n    batch=None  # TODO,\n    stats=None  # TODO,\n)\n"
+  -
+    row_no: 1
+    id: 2
+    type: class
+    name: ForecastConfig
+    path: timesfm.configs.ForecastConfig
+    module: timesfm.configs
+    library: timesfm
+    top_group: timesfm.configs
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: nan
+    docstring: "Options for forecasting.\n\nAttributes:\n  max_context: The maximum context length. This is used by the complied decode\n    function at inference time during batched inference. Any input time series\n    with length less than max_context will be padded with zeros, and with\n    length greater than max_context will be truncated.\n  max_horizon: The maximum horizon length. This is used by the complied decode\n    function at inference time during batched inference. The compiled cached\n    decoding function will by default forecast till max_horizon.\n  normalize_inputs: Whether to normalize the inputs. This is useful when the\n    raw inputs are of extremely large or small magnitudes which may result in\n    numerical issues.\n  window_size: The window size for decomposed forecasting.\n    TODO(siriuz42):implement it.\n  per_core_batch_size: The batch size per core. Used at inference time during\n    batched inference when multiple GPU / TPU devices are used.\n  use_continuous_quantile_head: Whether to use a separate continuous quantile\n    head to avoid quantile collapsing.\n  force_flip_invariance: Whether to force flip invariance. TimesFM guarantees\n    that TimesFM(aX + b) = a * TimesFM(x) + b for a >= 0 by default. This flag\n    extends it to a < 0 as well.\n  infer_is_positive: Whether to guarantee nonnegativity of the output if the\n    input is nonnegative.\n  fix_quantile_crossing: Whether to fix quantile crossing.\n  return_backcast: Whether to return backcast."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.configs import ForecastConfig\n\n# 予測設定の作成\n# TODO: 用途に合わせて各パラメータを調整してください\nobj = ForecastConfig(\n    max_context=0,  # モデルに入力する最大過去データ点数\n    max_horizon=0,  # 一度に予測する最大ステップ数\n    normalize_inputs=False,  # 入力データを正規化するか\n    window_size=0,  # 分解予測時のウィンドウサイズ\n    per_core_batch_size=1,  # コアごとのバッチサイズ\n    use_continuous_quantile_head=False,  # 連続分位点ヘッドを使用するか\n    force_flip_invariance=True,  # 反転不変性を強制するか\n    infer_is_positive=True,  # 出力が非負であることを保証するか\n    fix_quantile_crossing=False,  # 分位点の交差を修正するか\n    return_backcast=False,  # 過去データの再構成を返すか\n)\n\nprint(f\"ForecastConfig created: context={obj.max_context}, horizon={obj.max_horizon}\")\n"
+  -
+    row_no: 3
+    id: 4
+    type: class
+    name: RandomFourierFeaturesConfig
+    path: timesfm.configs.RandomFourierFeaturesConfig
+    module: timesfm.configs
+    library: timesfm
+    top_group: timesfm.configs
+    role: sampling
+    name_cluster: 2
+    event_like: False
+    return_type: nan
+    docstring: "Framework-agnostic config for random fourier features."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.configs import RandomFourierFeaturesConfig\n\n# ランダムフーリエ特徴量レイヤーの設定作成\n# TODO: 用途に合わせて各パラメータを調整してください\nobj = RandomFourierFeaturesConfig(\n    input_dims=None  # TODO: int,  # 入力次元数\n    output_dims=None  # TODO: int,  # 出力次元数\n    projection_stddev=None  # TODO: float,  # 投影重みの初期化標準偏差\n    use_bias=None  # TODO: bool,  # バイアス項を使用するか\n)\n\nprint(f\"RFF Config created: input={obj.input_dims}, output={obj.output_dims}\")\n"
+  -
+    row_no: 2
+    id: 3
+    type: class
+    name: ResidualBlockConfig
+    path: timesfm.configs.ResidualBlockConfig
+    module: timesfm.configs
+    library: timesfm
+    top_group: timesfm.configs
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: nan
+    docstring: "Framework-agnostic config for a residual block."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.configs import ResidualBlockConfig\n\n# 残差ブロックの設定作成\n# TODO: 用途に合わせて各パラメータを調整してください\nobj = ResidualBlockConfig(\n    input_dims=None  # TODO: int,  # 入力次元数\n    hidden_dims=None  # TODO: int,  # 隠れ層の次元数\n    output_dims=None  # TODO: int,  # 出力次元数\n    use_bias=None  # TODO: bool,  # バイアス項を使用するか\n    activation=None  # TODO: Literal,  # 活性化関数\n)\n\nprint(f\"ResidualBlock Config created: {obj.input_dims} -> {obj.hidden_dims} -> {obj.output_dims} (act={obj.activation})\")\n"
+  -
+    row_no: 5
+    id: 6
+    type: class
+    name: StackedTransformersConfig
+    path: timesfm.configs.StackedTransformersConfig
+    module: timesfm.configs
+    library: timesfm
+    top_group: timesfm.configs
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: nan
+    docstring: "Framework-agnostic config for a stacked transformers."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.configs import TransformerConfig, StackedTransformersConfig\n\n# 1. 個別のTransformer層の詳細設定\ntransformer_config = TransformerConfig(\n    model_dims=None  # TODO: int,  # モデル次元\n    hidden_dims=None  # TODO: int,  # FFNの隠れ次元\n    num_heads=None  # TODO: int,  # 注意ヘッド数\n    attention_norm=None  # TODO: Literal,  # Attention正規化方式\n    feedforward_norm=None  # TODO: Literal,  # FFN正規化方式\n    qk_norm=None  # TODO: Literal,  # QK正規化方式\n    use_bias=None  # TODO: bool,  # 線形層にバイアスを使うか\n    use_rotary_position_embeddings=None  # TODO: bool,  # RoPEを使用するか\n    ff_activation=None  # TODO: Literal,  # FFN活性化関数\n    fuse_qkv=None  # TODO: bool,  # QKVを融合実装するか\n)\n\n# 2. Transformerを積み上げる設定の作成\nobj = StackedTransformersConfig(\n    num_layers=None  # TODO: int,  # 積み上げるTransformer層数\n    transformer=transformer_config,  # TransformerConfigオブジェクト\n)\n\nprint(f\"Stacked Transformers: {obj.num_layers} layers of {obj.transformer.model_dims} dims\")\n"
+  -
+    row_no: 4
+    id: 5
+    type: class
+    name: TransformerConfig
+    path: timesfm.configs.TransformerConfig
+    module: timesfm.configs
+    library: timesfm
+    top_group: timesfm.configs
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: nan
+    docstring: "Framework-agnostic config for a transformer."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.configs import TransformerConfig\n\n# Transformer層の設定作成\n# TODO: 用途に合わせて各パラメータを調整してください\nobj = TransformerConfig(\n    model_dims=None  # TODO: int,  # モデル次元\n    hidden_dims=None  # TODO: int,  # FFNの隠れ次元\n    num_heads=None  # TODO: int,  # 注意ヘッド数\n    attention_norm=None  # TODO: Literal,  # Attention正規化方式\n    feedforward_norm=None  # TODO: Literal,  # FFN正規化方式\n    qk_norm=None  # TODO: Literal,  # QK正規化方式\n    use_bias=None  # TODO: bool,  # 線形層にバイアスを使うか\n    use_rotary_position_embeddings=None  # TODO: bool,  # RoPEを使用するか\n    ff_activation=None  # TODO: Literal,  # FFN活性化関数\n    fuse_qkv=None  # TODO: bool,  # QKVを融合実装するか\n)\n\nprint(f\"TransformerConfig created: dims={obj.model_dims}, heads={obj.num_heads}\")\n"
+  -
+    row_no: 45
+    id: 46
+    type: class
+    name: RandomFourierFeatures
+    path: timesfm.flax.dense.RandomFourierFeatures
+    module: timesfm.flax.dense
+    library: timesfm
+    top_group: timesfm.flax
+    role: sampling
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Random Fourier features layer."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.dense import RandomFourierFeatures\n\nobj = RandomFourierFeatures(\n)\n"
+  -
+    row_no: 42
+    id: 43
+    type: class
+    name: ResidualBlock
+    path: timesfm.flax.dense.ResidualBlock
+    module: timesfm.flax.dense
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: nan
+    docstring: "Residual block with two linear layers and a linear residual connection."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.dense import ResidualBlock\n\nobj = ResidualBlock(\n)\n"
+  -
+    row_no: 57
+    id: 58
+    type: class
+    name: LayerNorm
+    path: timesfm.flax.normalization.LayerNorm
+    module: timesfm.flax.normalization
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: nan
+    docstring: "Layer normalization replica of  LayerNorm."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.normalization import LayerNorm\n\nobj = LayerNorm(\n)\n"
+  -
+    row_no: 54
+    id: 55
+    type: class
+    name: RMSNorm
+    path: timesfm.flax.normalization.RMSNorm
+    module: timesfm.flax.normalization
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: nan
+    docstring: "RMS normalization."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.normalization import RMSNorm\n\nobj = RMSNorm(\n)\n"
+  -
+    row_no: 18
+    id: 19
+    type: class
+    name: MultiHeadAttention
+    path: timesfm.flax.transformer.MultiHeadAttention
+    module: timesfm.flax.transformer
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: "Multi-head attention."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.transformer import MultiHeadAttention\n\nobj = MultiHeadAttention(\n)\n"
+  -
+    row_no: 15
+    id: 16
+    type: class
+    name: PerDimScale
+    path: timesfm.flax.transformer.PerDimScale
+    module: timesfm.flax.transformer
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: "Per-dimension scaling."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.transformer import PerDimScale\n\nobj = PerDimScale(\n)\n"
+  -
+    row_no: 12
+    id: 13
+    type: class
+    name: RotaryPositionalEmbedding
+    path: timesfm.flax.transformer.RotaryPositionalEmbedding
+    module: timesfm.flax.transformer
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: "Rotary positional embedding."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.transformer import RotaryPositionalEmbedding\n\nobj = RotaryPositionalEmbedding(\n)\n"
+  -
+    row_no: 21
+    id: 22
+    type: class
+    name: Transformer
+    path: timesfm.flax.transformer.Transformer
+    module: timesfm.flax.transformer
+    library: timesfm
+    top_group: timesfm.flax
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: nan
+    docstring: "Classic Transformer used in TimesFM."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.transformer import Transformer\n\nobj = Transformer(\n)\n"
+  -
+    row_no: 32
+    id: 33
+    type: class
+    name: DecodeCache
+    path: timesfm.flax.util.DecodeCache
+    module: timesfm.flax.util
+    library: timesfm
+    top_group: timesfm.flax
+    role: io_read
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: "Cache for decoding."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.flax.util import DecodeCache\n\nobj = DecodeCache(\n    next_index=None  # TODO: Integer[Array, 'b'],\n    num_masked=None  # TODO: Integer[Array, 'b'],\n    key=None  # TODO: Float[Array, 'b n h d'],\n    value=None  # TODO: Float[Array, 'b n h d'],\n)\n"
+  -
+    row_no: 145
+    id: 146
+    type: class
+    name: TimesFM_2p5
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: nan
+    docstring: "Abstract base class for TimesFM models.\n\nAttributes:\n  forecast_config: Configuration for forecasting flags.\n  compiled_decode: Compiled decode function.\n  global_batch_size: Global batch size."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5\n\nobj = TimesFM_2p5(\n)\n"
+  -
+    row_no: 144
+    id: 145
+    type: class
+    name: TimesFM_2p5_200M_Definition
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5_200M_Definition
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: nan
+    docstring: "Framework-agnostic config of TimesFM 2.5."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5_200M_Definition\n\nobj = TimesFM_2p5_200M_Definition(\n    input_patch_len=32,\n    output_patch_len=128,\n    output_quantile_len=1024,\n    quantiles=<factory>,\n    decode_index=5,\n    tokenizer=ResidualBlockConfig(input_dims=64, hidden_dims=1280, output_dims=1280, use_bias=True, activation='swish'),\n    stacked_transformers=StackedTransformersConfig(num_layers=20, transformer=TransformerConfig(model_dims=1280, hidden_dims=1280, num_heads=16, attention_norm='rms', feedforward_norm='rms', qk_norm='rms', use_bias=False, use_rotary_position_embeddings=True, ff_activation='swish', fuse_qkv=True)),\n    output_projection_point=ResidualBlockConfig(input_dims=1280, hidden_dims=1280, output_dims=1280, use_bias=False, activation='swish'),\n    output_projection_quantiles=ResidualBlockConfig(input_dims=1280, hidden_dims=1280, output_dims=10240, use_bias=False, activation='swish'),\n)\n"
+  -
+    row_no: 170
+    id: 171
+    type: class
+    name: TimesFM_2p5_200M_flax
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: nan
+    docstring: "Flax implementation of TimesFM 2.5 with 200M parameters."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax\n\nobj = TimesFM_2p5_200M_flax(\n)\n"
+  -
+    row_no: 159
+    id: 160
+    type: class
+    name: TimesFM_2p5_200M_flax_module
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax_module
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: nan
+    docstring: "TimesFM 2.5 with 200M parameters."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax_module\n\nobj = TimesFM_2p5_200M_flax_module(\n)\n"
+  -
+    row_no: 127
+    id: 128
+    type: class
+    name: TimesFM_2p5_200M_torch
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: nan
+    docstring: "PyTorch implementation of TimesFM 2.5 with 200M parameters."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch\n\nobj = TimesFM_2p5_200M_torch(\n)\n"
+  -
+    row_no: 121
+    id: 122
+    type: class
+    name: TimesFM_2p5_200M_torch_module
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch_module
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 16
+    event_like: False
+    return_type: nan
+    docstring: "TimesFM 2.5 with 200M parameters."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch_module\n\nobj = TimesFM_2p5_200M_torch_module(\n)\n"
+  -
+    row_no: 110
+    id: 111
+    type: class
+    name: RandomFourierFeatures
+    path: timesfm.torch.dense.RandomFourierFeatures
+    module: timesfm.torch.dense
+    library: timesfm
+    top_group: timesfm.torch
+    role: sampling
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Random Fourier features layer."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.dense import RandomFourierFeatures\n\nobj = RandomFourierFeatures(\n)\n"
+  -
+    row_no: 107
+    id: 108
+    type: class
+    name: ResidualBlock
+    path: timesfm.torch.dense.ResidualBlock
+    module: timesfm.torch.dense
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: nan
+    docstring: "Residual block with two linear layers and a linear residual connection."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.dense import ResidualBlock\n\nobj = ResidualBlock(\n)\n"
+  -
+    row_no: 116
+    id: 117
+    type: class
+    name: RMSNorm
+    path: timesfm.torch.normalization.RMSNorm
+    module: timesfm.torch.normalization
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: nan
+    docstring: "RMS normalization."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.normalization import RMSNorm\n\nobj = RMSNorm(\n)\n"
+  -
+    row_no: 90
+    id: 91
+    type: class
+    name: MultiHeadAttention
+    path: timesfm.torch.transformer.MultiHeadAttention
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: "Multi-head attention."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import MultiHeadAttention\n\nobj = MultiHeadAttention(\n)\n"
+  -
+    row_no: 87
+    id: 88
+    type: class
+    name: PerDimScale
+    path: timesfm.torch.transformer.PerDimScale
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: "Per-dimension scaling."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import PerDimScale\n\nobj = PerDimScale(\n)\n"
+  -
+    row_no: 82
+    id: 83
+    type: class
+    name: RotaryPositionalEmbedding
+    path: timesfm.torch.transformer.RotaryPositionalEmbedding
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: "Rotary positional embedding."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import RotaryPositionalEmbedding\n\nobj = RotaryPositionalEmbedding(\n)\n"
+  -
+    row_no: 93
+    id: 94
+    type: class
+    name: Transformer
+    path: timesfm.torch.transformer.Transformer
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: nan
+    docstring: "Classic Transformer used in TimesFM."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import Transformer\n\nobj = Transformer(\n)\n"
+  -
+    row_no: 101
+    id: 102
+    type: class
+    name: DecodeCache
+    path: timesfm.torch.util.DecodeCache
+    module: timesfm.torch.util
+    library: timesfm
+    top_group: timesfm.torch
+    role: io_read
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: "Cache for decoding."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.util import DecodeCache\n\nobj = DecodeCache(\n)\n"
+  -
+    row_no: 70
+    id: 71
+    type: class
+    name: BatchedInContextXRegBase
+    path: timesfm.utils.xreg_lib.BatchedInContextXRegBase
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: nan
+    docstring: "Helper class for in-context regression covariate formatting.\n\nAttributes:\n  targets: List of targets (responses) of the in-context regression.\n  train_lens: List of lengths of each target vector from the context.\n  test_lens: List of lengths of each forecast horizon.\n  train_dynamic_numerical_covariates: Dict of covariate names mapping to the\n    dynamic numerical covariates of each forecast task on the context. Their\n    lengths should match the corresponding lengths in `train_lens`.\n  train_dynamic_categorical_covariates: Dict of covariate names mapping to the\n    dynamic categorical covariates of each forecast task on the context. Their\n    lengths should match the corresponding lengths in `train_lens`.\n  test_dynamic_numerical_covariates: Dict of covariate names mapping to the\n    dynamic numerical covariates of each forecast task on the horizon. Their\n    lengths should match the corresponding lengths in `test_lens`.\n  test_dynamic_categorical_covariates: Dict of covariate names mapping to the\n    dynamic categorical covariates of each forecast task on the horizon. Their\n    lengths should match the corresponding lengths in `test_lens`.\n  static_numerical_covariates: Dict of covariate names mapping to the static\n    numerical covariates of each forecast task.\n  static_categorical_covariates: Dict of covariate names mapping to the static\n    categorical covariates of each forecast task."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import BatchedInContextXRegBase\n\nobj = BatchedInContextXRegBase(\n)\n"
+  -
+    row_no: 75
+    id: 76
+    type: class
+    name: BatchedInContextXRegLinear
+    path: timesfm.utils.xreg_lib.BatchedInContextXRegLinear
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: other
+    name_cluster: 15
+    event_like: False
+    return_type: nan
+    docstring: "Linear in-context regression model."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import BatchedInContextXRegLinear\n\nobj = BatchedInContextXRegLinear(\n)\n"
+  -
+    row_no: 147
+    id: 148
+    type: method
+    name: compile
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5.compile
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Compiles the TimesFM model for fast decoding."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: forecast_config
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "ForecastConfig | None"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5\n\nobj = TimesFM_2p5()  # TODO: __init__ args\n\nresult = obj.compile(\n    forecast_config=None,\n)\n"
+  -
+    row_no: 148
+    id: 149
+    type: method
+    name: forecast
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5.forecast
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: "tuple[np.ndarray, np.ndarray]"
+    docstring: "Forecasts the time series."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: horizon
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "list[np.ndarray]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5\n\nobj = TimesFM_2p5()  # TODO: __init__ args\n\nresult = obj.forecast(\n    horizon=None  # TODO: int,\n    inputs=None  # TODO: list[np.ndarray],\n)\n"
+  -
+    row_no: 149
+    id: 150
+    type: method
+    name: forecast_with_covariates
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5.forecast_with_covariates
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: nan
+    docstring: "Forecasts on a list of time series with covariates.\n\nTo optimize inference speed, avoid string valued categorical covariates.\n\nArgs:\n  inputs: A list of time series forecast contexts. Each context time series\n    should be in a format convertible to JTensor by `jnp.array`.\n  dynamic_numerical_covariates: A dict of dynamic numerical covariates.\n  dynamic_categorical_covariates: A dict of dynamic categorical covariates.\n  static_numerical_covariates: A dict of static numerical covariates.\n  static_categorical_covariates: A dict of static categorical covariates.\n  xreg_mode: one of \"xreg + timesfm\" or \"timesfm + xreg\". \"xreg + timesfm\"\n    fits a model on the residuals of the TimesFM forecast. \"timesfm + xreg\"\n    fits a model on the targets then forecasts on the residuals via TimesFM.\n  normalize_xreg_target_per_input: whether to normalize the xreg target per\n    input in the given batch.\n  ridge: ridge penalty for the linear model.\n  max_rows_per_col: max number of rows per column for the linear model.\n  force_on_cpu: whether to force running on cpu for the linear model.\n\nReturns:\n  A tuple of two lists. The first is the outputs of the model. The second is\n  the outputs of the xreg."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "list[Sequence[float]]"
+        has_default: false
+        default_repr: ""
+      -
+        name: dynamic_numerical_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "dict[str, Sequence[Sequence[float]]] | None"
+        has_default: true
+        default_repr: None
+      -
+        name: dynamic_categorical_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "dict[str, Sequence[Sequence[Category]]] | None"
+        has_default: true
+        default_repr: None
+      -
+        name: static_numerical_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "dict[str, Sequence[float]] | None"
+        has_default: true
+        default_repr: None
+      -
+        name: static_categorical_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "dict[str, Sequence[Category]] | None"
+        has_default: true
+        default_repr: None
+      -
+        name: xreg_mode
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: XRegMode
+        has_default: true
+        default_repr: "'xreg + timesfm'"
+      -
+        name: normalize_xreg_target_per_input
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: ridge
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: 0.0
+      -
+        name: max_rows_per_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: force_on_cpu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5\n\nobj = TimesFM_2p5()  # TODO: __init__ args\n\nresult = obj.forecast_with_covariates(\n    inputs=None  # TODO: list[Sequence[float]],\n    dynamic_numerical_covariates=None,\n    dynamic_categorical_covariates=None,\n    static_numerical_covariates=None,\n    static_categorical_covariates=None,\n    xreg_mode='xreg + timesfm',\n    normalize_xreg_target_per_input=True,\n    ridge=0.0,\n    max_rows_per_col=0,\n    force_on_cpu=False,\n)\n"
+  -
+    row_no: 146
+    id: 147
+    type: method
+    name: load_checkpoint
+    path: timesfm.timesfm_2p5.timesfm_2p5_base.TimesFM_2p5.load_checkpoint
+    module: timesfm.timesfm_2p5.timesfm_2p5_base
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: io_read
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: "Loads a TimesFM model from a checkpoint."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_base import TimesFM_2p5\n\nobj = TimesFM_2p5()  # TODO: __init__ args\n\nresult = obj.load_checkpoint(\n    path=None  # TODO: str,\n)\n"
+  -
+    row_no: 172
+    id: 173
+    type: method
+    name: compile
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax.compile
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: forecast_config
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: configs.ForecastConfig
+        has_default: false
+        default_repr: ""
+      -
+        name: dryrun
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax\n\nobj = TimesFM_2p5_200M_flax()  # TODO: __init__ args\n\nresult = obj.compile(\n    forecast_config=None  # TODO: configs.ForecastConfig,\n    dryrun=True,\n)\n"
+  -
+    row_no: 171
+    id: 172
+    type: method
+    name: from_pretrained
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax.from_pretrained
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: "Loads a Flax TimesFM model."
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: model_id
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'google/timesfm-2.5-200m-flax'"
+      -
+        name: revision
+        kind: KEYWORD_ONLY
+        annotation: "str | None"
+        has_default: true
+        default_repr: None
+      -
+        name: cache_dir
+        kind: KEYWORD_ONLY
+        annotation: "str | Path | None"
+        has_default: true
+        default_repr: None
+      -
+        name: force_download
+        kind: KEYWORD_ONLY
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: proxies
+        kind: KEYWORD_ONLY
+        annotation: "Dict | None"
+        has_default: true
+        default_repr: None
+      -
+        name: resume_download
+        kind: KEYWORD_ONLY
+        annotation: "bool | None"
+        has_default: true
+        default_repr: None
+      -
+        name: local_files_only
+        kind: KEYWORD_ONLY
+        annotation: "bool | None"
+        has_default: true
+        default_repr: None
+      -
+        name: token
+        kind: KEYWORD_ONLY
+        annotation: "str | None"
+        has_default: true
+        default_repr: None
+      -
+        name: model_kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax\n\nobj = TimesFM_2p5_200M_flax()  # TODO: __init__ args\n\nresult = obj.from_pretrained(\n    model_id='google/timesfm-2.5-200m-flax',\n    revision=None,\n    cache_dir=None,\n    force_download=False,\n    proxies=None,\n    resume_download=None,\n    local_files_only=None,\n    token=None,\n)\n"
+  -
+    row_no: 163
+    id: 164
+    type: method
+    name: compile
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax_module.compile
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: context
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: horizon
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: per_core_batch_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 1
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax_module\n\nobj = TimesFM_2p5_200M_flax_module()  # TODO: __init__ args\n\nresult = obj.compile(\n    context=None  # TODO: int,\n    horizon=None  # TODO: int,\n    per_core_batch_size=1,\n)\n"
+  -
+    row_no: 162
+    id: 163
+    type: method
+    name: decode
+    path: timesfm.timesfm_2p5.timesfm_2p5_flax.TimesFM_2p5_200M_flax_module.decode
+    module: timesfm.timesfm_2p5.timesfm_2p5_flax
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: io_read
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: horizon
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: masks
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_flax import TimesFM_2p5_200M_flax_module\n\nobj = TimesFM_2p5_200M_flax_module()  # TODO: __init__ args\n\nresult = obj.decode(\n    horizon=None  # TODO: int,\n    inputs=None  # TODO,\n    masks=None  # TODO,\n)\n"
+  -
+    row_no: 130
+    id: 131
+    type: method
+    name: compile
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch.compile
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: None
+    docstring: "Attempts to compile the model for fast decoding.\n\nSee configs.ForecastConfig for more details on the supported flags.\n\nArgs:\n  forecast_config: Configuration for forecasting flags.\n  **kwargs: Additional keyword arguments to pass to model.compile()."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: forecast_config
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: configs.ForecastConfig
+        has_default: false
+        default_repr: ""
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch\n\nobj = TimesFM_2p5_200M_torch()  # TODO: __init__ args\n\nresult = obj.compile(\n    forecast_config=None  # TODO: configs.ForecastConfig,\n)\n"
+  -
+    row_no: 125
+    id: 126
+    type: method
+    name: decode
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch_module.decode
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: io_read
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: "Decodes the time series."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: horizon
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: masks
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch_module\n\nobj = TimesFM_2p5_200M_torch_module()  # TODO: __init__ args\n\nresult = obj.decode(\n    horizon=None  # TODO: int,\n    inputs=None  # TODO,\n    masks=None  # TODO,\n)\n"
+  -
+    row_no: 126
+    id: 127
+    type: method
+    name: forecast_naive
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch_module.forecast_naive
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: "list[np.ndarray]"
+    docstring: "Forecasts the time series.\n\nThis is a naive implementation for debugging purposes. No forecasting\nflags are used here. Forecasting quality can be subpar.\n\nArgs:\n  horizon: The number of time points to forecast.\n  inputs: A sequence of numpy arrays, each representing a time series to\n    query forecast for.\n\nReturns:\n  A list of numpy arrays of forecasts."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: horizon
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "Sequence[np.ndarray]"
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch_module\n\nobj = TimesFM_2p5_200M_torch_module()  # TODO: __init__ args\n\nresult = obj.forecast_naive(\n    horizon=None  # TODO: int,\n    inputs=None  # TODO: Sequence[np.ndarray],\n)\n"
+  -
+    row_no: 124
+    id: 125
+    type: method
+    name: forward
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch_module.forward
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: masks
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: decode_caches
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "list[util.DecodeCache] | None"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch_module\n\nobj = TimesFM_2p5_200M_torch_module()  # TODO: __init__ args\n\nresult = obj.forward(\n    inputs=None  # TODO: torch.Tensor,\n    masks=None  # TODO: torch.Tensor,\n    decode_caches=None,\n)\n"
+  -
+    row_no: 123
+    id: 124
+    type: method
+    name: load_checkpoint
+    path: timesfm.timesfm_2p5.timesfm_2p5_torch.TimesFM_2p5_200M_torch_module.load_checkpoint
+    module: timesfm.timesfm_2p5.timesfm_2p5_torch
+    library: timesfm
+    top_group: timesfm.timesfm_2p5
+    role: io_read
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: "Loads a PyTorch TimesFM model from a checkpoint."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: false
+        default_repr: ""
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.timesfm_2p5.timesfm_2p5_torch import TimesFM_2p5_200M_torch_module\n\nobj = TimesFM_2p5_200M_torch_module()  # TODO: __init__ args\n\nresult = obj.load_checkpoint(\n    path=None  # TODO: str,\n)\n"
+  -
+    row_no: 112
+    id: 113
+    type: method
+    name: forward
+    path: timesfm.torch.dense.RandomFourierFeatures.forward
+    module: timesfm.torch.dense
+    library: timesfm
+    top_group: timesfm.torch
+    role: sampling
+    name_cluster: 5
+    event_like: False
+    return_type: torch.Tensor
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.dense import RandomFourierFeatures\n\nobj = RandomFourierFeatures()  # TODO: __init__ args\n\nresult = obj.forward(\n    x=None  # TODO: torch.Tensor,\n)\n"
+  -
+    row_no: 109
+    id: 110
+    type: method
+    name: forward
+    path: timesfm.torch.dense.ResidualBlock.forward
+    module: timesfm.torch.dense
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: torch.Tensor
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.dense import ResidualBlock\n\nobj = ResidualBlock()  # TODO: __init__ args\n\nresult = obj.forward(\n    x=None  # TODO: torch.Tensor,\n)\n"
+  -
+    row_no: 118
+    id: 119
+    type: method
+    name: forward
+    path: timesfm.torch.normalization.RMSNorm.forward
+    module: timesfm.torch.normalization
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: torch.Tensor
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.normalization import RMSNorm\n\nobj = RMSNorm()  # TODO: __init__ args\n\nresult = obj.forward(\n    inputs=None  # TODO: torch.Tensor,\n)\n"
+  -
+    row_no: 92
+    id: 93
+    type: method
+    name: forward
+    path: timesfm.torch.transformer.MultiHeadAttention.forward
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: "tuple[torch.Tensor, DecodeCache | None]"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs_q
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: decode_cache
+        kind: KEYWORD_ONLY
+        annotation: "DecodeCache | None"
+        has_default: true
+        default_repr: None
+      -
+        name: patch_mask
+        kind: KEYWORD_ONLY
+        annotation: "torch.Tensor | None"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import MultiHeadAttention\n\nobj = MultiHeadAttention()  # TODO: __init__ args\n\nresult = obj.forward(\n    inputs_q=None  # TODO: torch.Tensor,\n    decode_cache=None,\n    patch_mask=None,\n)\n"
+  -
+    row_no: 89
+    id: 90
+    type: method
+    name: forward
+    path: timesfm.torch.transformer.PerDimScale.forward
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: torch.Tensor
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import PerDimScale\n\nobj = PerDimScale()  # TODO: __init__ args\n\nresult = obj.forward(\n    x=None  # TODO: torch.Tensor,\n)\n"
+  -
+    row_no: 84
+    id: 85
+    type: method
+    name: forward
+    path: timesfm.torch.transformer.RotaryPositionalEmbedding.forward
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: "Generates a JTensor of sinusoids with different frequencies."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: inputs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: position
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "torch.Tensor | None"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import RotaryPositionalEmbedding\n\nobj = RotaryPositionalEmbedding()  # TODO: __init__ args\n\nresult = obj.forward(\n    inputs=None  # TODO: torch.Tensor,\n    position=None,\n)\n"
+  -
+    row_no: 95
+    id: 96
+    type: method
+    name: forward
+    path: timesfm.torch.transformer.Transformer.forward
+    module: timesfm.torch.transformer
+    library: timesfm
+    top_group: timesfm.torch
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: "tuple[torch.Tensor, DecodeCache | None]"
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: input_embeddings
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: patch_mask
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: torch.Tensor
+        has_default: false
+        default_repr: ""
+      -
+        name: decode_cache
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "DecodeCache | None"
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.torch.transformer import Transformer\n\nobj = Transformer()  # TODO: __init__ args\n\nresult = obj.forward(\n    input_embeddings=None  # TODO: torch.Tensor,\n    patch_mask=None  # TODO: torch.Tensor,\n    decode_cache=None,\n)\n"
+  -
+    row_no: 73
+    id: 74
+    type: method
+    name: create_covariate_matrix
+    path: timesfm.utils.xreg_lib.BatchedInContextXRegBase.create_covariate_matrix
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: "tuple[np.ndarray, np.ndarray, np.ndarray]"
+    docstring: "Creates target vector and covariate matrices for in context regression.\n\nHere we use model fitting language to refer to the context as 'train' and\nthe horizon as 'test'.\n\nArgs:\n  one_hot_encoder_drop: Which drop strategy to use for the one hot encoder.\n  use_intercept: Whether to prepare an intercept (all 1) column in the\n    matrices.\n  assert_covariates: Whether to assert the validity of the covariate inputs.\n  assert_covariate_shapes: Whether to assert the shapes of the covariate\n    inputs when `assert_covariates` is True.\n\nReturns:\n  A tuple of the target vector, the covariate matrix for the context, and\n  the covariate matrix for the horizon."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: one_hot_encoder_drop
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "str | None"
+        has_default: true
+        default_repr: "'first'"
+      -
+        name: use_intercept
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: assert_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: assert_covariate_shapes
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import BatchedInContextXRegBase\n\nobj = BatchedInContextXRegBase()  # TODO: __init__ args\n\nresult = obj.create_covariate_matrix(\n    one_hot_encoder_drop='first',\n    use_intercept=True,\n    assert_covariates=False,\n    assert_covariate_shapes=False,\n)\n"
+  -
+    row_no: 74
+    id: 75
+    type: method
+    name: fit
+    path: timesfm.utils.xreg_lib.BatchedInContextXRegBase.fit
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: model_fit
+    name_cluster: 4
+    event_like: False
+    return_type: Any
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import BatchedInContextXRegBase\n\nobj = BatchedInContextXRegBase()  # TODO: __init__ args\n\nresult = obj.fit(\n)\n"
+  -
+    row_no: 76
+    id: 77
+    type: method
+    name: fit
+    path: timesfm.utils.xreg_lib.BatchedInContextXRegLinear.fit
+    module: timesfm.utils.xreg_lib
+    library: timesfm
+    top_group: timesfm.utils
+    role: model_fit
+    name_cluster: 4
+    event_like: False
+    return_type: "list[np.ndarray] | tuple[list[np.ndarray], list[np.ndarray], jax.Array, jax.Array, jax.Array]"
+    docstring: "Fits a linear model for in-context regression.\n\nArgs:\n  ridge: A non-negative value for specifying the ridge regression penalty.\n    If 0 is provided, fallback to ordinary least squares. Note this penalty\n    is added to the normalized covariate matrix.\n  one_hot_encoder_drop: Which drop strategy to use for the one hot encoder.\n  use_intercept: Whether to prepare an intercept (all 1) column in the\n    matrices.\n  force_on_cpu: Whether to force execution on cpu for accelerator machines.\n  max_rows_per_col: How many rows to subsample per column. 0 for no\n    subsampling. This is for speeding up model fitting.\n  max_rows_per_col_sample_seed: The seed for the subsampling if needed by\n    `max_rows_per_col`.\n  debug_info: Whether to return debug info.\n  assert_covariates: Whether to assert the validity of the covariate inputs.\n  assert_covariate_shapes: Whether to assert the shapes of the covariate\n    inputs when `assert_covariates` is True.\n\nReturns:\n  If `debug_info` is False:\n    The linear fits on the horizon.\n  If `debug_info` is True:\n    A tuple of:\n    - the linear fits on the horizon,\n    - the linear fits on the context,\n    - the flattened target vector,\n    - the covariate matrix for the context, and\n    - the covariate matrix for the horizon."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: ridge
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: 0.0
+      -
+        name: one_hot_encoder_drop
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: "str | None"
+        has_default: true
+        default_repr: "'first'"
+      -
+        name: use_intercept
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: True
+      -
+        name: force_on_cpu
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: max_rows_per_col
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 0
+      -
+        name: max_rows_per_col_sample_seed
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: int
+        has_default: true
+        default_repr: 42
+      -
+        name: debug_info
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: assert_covariates
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+      -
+        name: assert_covariate_shapes
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom timesfm.utils.xreg_lib import BatchedInContextXRegLinear\n\nobj = BatchedInContextXRegLinear()  # TODO: __init__ args\n\nresult = obj.fit(\n    ridge=0.0,\n    one_hot_encoder_drop='first',\n    use_intercept=True,\n    force_on_cpu=False,\n    max_rows_per_col=0,\n    max_rows_per_col_sample_seed=42,\n    debug_info=False,\n    assert_covariates=False,\n    assert_covariate_shapes=False,\n)\n"

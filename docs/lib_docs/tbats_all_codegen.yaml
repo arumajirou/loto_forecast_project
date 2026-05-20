@@ -1,0 +1,4772 @@
+title: "CLE V10 batch codegen / module=tbats / total=193"
+bundle_kind: code
+count: 193
+rows:
+  -
+    row_no: 334
+    id: 335
+    type: function
+    name: boxcox
+    path: tbats.transformation.BoxCox.boxcox
+    module: tbats.transformation.BoxCox
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: lam
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: bounds
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "(-1, 2)"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.BoxCox import boxcox\n\nresult = boxcox(\n    y=None  # TODO,\n    lam=None,\n    seasonal_periods=None,\n    bounds=(-1, 2),\n)\n"
+  -
+    row_no: 333
+    id: 334
+    type: function
+    name: find_box_cox_lambda
+    path: tbats.transformation.BoxCox.find_box_cox_lambda
+    module: tbats.transformation.BoxCox
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: bounds
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "(-1, 2)"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.BoxCox import find_box_cox_lambda\n\nresult = find_box_cox_lambda(\n    y=None  # TODO,\n    seasonal_periods=None,\n    bounds=(-1, 2),\n)\n"
+  -
+    row_no: 335
+    id: 336
+    type: function
+    name: inv_boxcox
+    path: tbats.transformation.BoxCox.inv_boxcox
+    module: tbats.transformation.BoxCox
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: lam
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: force_valid
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.BoxCox import inv_boxcox\n\nresult = inv_boxcox(\n    y=None  # TODO,\n    lam=None  # TODO,\n    force_valid=False,\n)\n"
+  -
+    row_no: 199
+    id: 200
+    type: class
+    name: ArrayHelper
+    path: tbats.abstract.ArrayHelper.ArrayHelper
+    module: tbats.abstract.ArrayHelper
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ArrayHelper import ArrayHelper\n\nobj = ArrayHelper(\n)\n"
+  -
+    row_no: 144
+    id: 145
+    type: class
+    name: Case
+    path: tbats.abstract.Case.Case
+    module: tbats.abstract.Case
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: ""
+    docstring: "Provides means to choose best model for provided components setup\n\nAttributes\n----------\ncomponents: Components\n    Components model should use\nmodel: Model or None\n    Best model found.\n    None when no fitting occured yet.\n\nMethods"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Case import Case\n\nobj = Case(\n    components=None  # TODO,\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 152
+    id: 153
+    type: class
+    name: ComponentMatrix
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix(\n    matrix=None  # TODO,\n    model_components=None  # TODO,\n    append_arma_coefs=False,\n)\n"
+  -
+    row_no: 82
+    id: 83
+    type: class
+    name: Components
+    path: tbats.abstract.Components.Components
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: ""
+    docstring: "Contains all the information necessary to determine the amount and the structure of parameters\n\nParameters\n----------\nuse_box_cox: bool\n    If box cox will be used\nbox_cox_bounds: tuple, shape=(2,)\n    Minimal and maximal allowed values for Box-Cox lambda transformation.\nuse_trend: bool\n    If trend will be used\nuse_damped_trend: bool\n    If trend damping will apply. Applicable only when use_trend=True\nseasonal_periods: array-like\n    Seasonal period lengths (amount of observations for one period of each seasonality)\nuse_arma_errors:\n    If ARMA(p,q) residuals modelling shall be tried.\np: int\n    Amount of AR(p) terms for ARMA(p,q) residuals modelling.\n    If use_arma_errors=False then p=0\nq: int\n    Amount of MA(p) terms for ARMA(p,q) residuals modelling.\n    If use_arma_errors=False then q=0"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components(\n    use_box_cox=False,\n    use_trend=False,\n    use_damped_trend=False,\n    seasonal_periods=None,\n    use_arma_errors=False,\n    p=0,\n    q=0,\n    box_cox_bounds=(0, 1),\n)\n"
+  -
+    row_no: 192
+    id: 193
+    type: class
+    name: Context
+    path: tbats.abstract.Context.Context
+    module: tbats.abstract.Context
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Context import Context\n\nobj = Context(\n    show_warnings=True,\n    n_jobs=None,\n    multiprocessing_start_method=None,\n)\n"
+  -
+    row_no: 244
+    id: 245
+    type: class
+    name: ContextInterface
+    path: tbats.abstract.ContextInterface.ContextInterface
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 15
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface(\n)\n"
+  -
+    row_no: 204
+    id: 205
+    type: class
+    name: Estimator
+    path: tbats.abstract.Estimator.Estimator
+    module: tbats.abstract.Estimator
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: ""
+    docstring: "Base estimator for BATS and TBATS models\n\nMethods\n-------\nfit(y)\n    Fit to y and select best performing model based on AIC criterion."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Estimator import Estimator\n\nobj = Estimator(\n    context=None  # TODO,\n    use_box_cox=None,\n    box_cox_bounds=(0, 1),\n    use_trend=None,\n    use_damped_trend=None,\n    seasonal_periods=None,\n    use_arma_errors=True,\n    n_jobs=None,\n)\n"
+  -
+    row_no: 172
+    id: 173
+    type: class
+    name: MatrixBuilder
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder(\n    model_params=None  # TODO,\n)\n"
+  -
+    row_no: 237
+    id: 238
+    type: class
+    name: MatrixBuilderCache
+    path: tbats.abstract.MatrixBuilderCache.MatrixBuilderCache
+    module: tbats.abstract.MatrixBuilderCache
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderCache import MatrixBuilderCache\n\nobj = MatrixBuilderCache(\n    matrix_builder=None  # TODO,\n)\n"
+  -
+    row_no: 166
+    id: 167
+    type: class
+    name: MatrixBuilderInterface
+    path: tbats.abstract.MatrixBuilderInterface.MatrixBuilderInterface
+    module: tbats.abstract.MatrixBuilderInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderInterface import MatrixBuilderInterface\n\nobj = MatrixBuilderInterface(\n)\n"
+  -
+    row_no: 100
+    id: 101
+    type: class
+    name: Model
+    path: tbats.abstract.Model.Model
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: "BATS or TBATS model\n\nAttributes\n----------\nwarnings: array-like\n    All warning messages associated to the model.\n    Empty array when there are no warnings.\nis_fitted: bool\n    If the model has been successfully fitted\n    False when model was not fitted at all or fitting of the model failed\ny: array-like or None\n    Time series model has been fitted to.\n    None when no fitting was performed yet.\ny_hat: array-like or None\n    In series predictions.\nresid: array-like or None\n    Residuals from in series predictions\nresid_boxcox: array-like or None\n    Residuals from Box-Cox transformed predictions.\n    When no box cox is used those are equal to resid.\nx_last: array-like or None\n    last vector from x matrix that can be used to calculate predictions\naic: float\n    AIC criterion value\n    np.inf when not fitted or failed to fit\nparams: ModelParams\n    Parameters used in the model\nmatrix: MatrixBuilderInterface\n    Matrices used in linear equations of the model\n\nMethods\n-------\nfit(y)\n    Calculates in-series predictions for provided time series.\n    Can also be used to re-fit the model.\nforecast(steps=1)\n    Calculates forecast for provided amount of steps ahead."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model(\n    model_params=None  # TODO,\n    context=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 124
+    id: 125
+    type: class
+    name: ModelParams
+    path: tbats.abstract.ModelParams.ModelParams
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "Holds all parameters needed to calculate model and forecasts\n\nAttributes\n----------\ncomponents: Components\n    Defines which components are used in the model (trend, box-cox, seasonalities, ...)\nalpha: float\n    Smoothing parameter value\nbeta: float or None\n    Trend smoothing parameter value.\n    None when trend is not used.\n    Also see components.use_trend.\nphi: float or None\n    Trend damping parameter value.\n    None when trend is not used. 1.0 when trend is used but damping is not.\n    Also see components.use_damped_trend.\nbox_cox_lambda: float or None\n    Box-Cox transformation lambda parameter value\n    None when series is not being transformed.\n    Also see components.use_box_cox.\ngamma_params: array-like of floats\n    Seasonal smoothing parameters.\n    Empty array when there is no seasonality in the model.\n    Also see components.seasonal_periods\nar_coefs: array-like of floats\n    AR(p) parameters used for residuals modeling.\n    Empty array when there is no ARMA residuals modelling.\n    Also see components.p and components.use_arma_errors.\nma_coefs: array-like of floats or None\n    MA(q) parameters used for residuals modeling.\n    Empty array when there is no ARMA residuals modelling.\n    Also see components.q and components.use_arma_errors.\nx0: array-like of floats or None\n    Seed state for computations consisting of trend, seasonal and ARMA related seeds."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams(\n    components=None  # TODO,\n    alpha=None  # TODO,\n    beta=None,\n    phi=None,\n    box_cox_lambda=None,\n    gamma_params=None,\n    ar_coefs=None,\n    ma_coefs=None,\n    x0=None,\n)\n"
+  -
+    row_no: 223
+    id: 224
+    type: class
+    name: ParamsOptimizer
+    path: tbats.abstract.ParamsOptimizer.ParamsOptimizer
+    module: tbats.abstract.ParamsOptimizer
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: ""
+    docstring: "Tries to find optimal seed and parameter values for the model\n\nUses linear regression to choose seed values\nand Nelder-Mead optimization to choose model parameters\n\nAttributes\n----------\noptimal_params: ModelParams or None\n    Optimal model parameters that were found.\n    None when no optimization was performed.\n\nMethods\n-------\noptimize(y, initial_params, calculate_seed=True)\n    Seeks for the best seed and parameter values for the model defined by initial params\nconverged()\n    Returns true when optimization did converge\noptimal_model()\n    Returns the best model that was found"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer(\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 184
+    id: 185
+    type: class
+    name: SeedFinder
+    path: tbats.abstract.SeedFinder.SeedFinder
+    module: tbats.abstract.SeedFinder
+    library: tbats
+    top_group: tbats.abstract
+    role: sampling
+    name_cluster: 7
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.SeedFinder import SeedFinder\n\nobj = SeedFinder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 328
+    id: 329
+    type: class
+    name: BATS
+    path: tbats.bats.BATS.BATS
+    module: tbats.bats.BATS
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 22
+    event_like: False
+    return_type: ""
+    docstring: "BATS estimator used to fit and select best performing model.\n\nBATS (Exponential smoothing state space model with Box-Cox\ntransformation, ARMA errors, Trend and Seasonal components.)\n\nModel has been described in De Livera, Hyndman & Snyder (2011).\n\nAll of the useful methods have been implemented in parent Estimator class."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.BATS import BATS\n\nobj = BATS(\n    use_box_cox=None,\n    box_cox_bounds=(0, 1),\n    use_trend=None,\n    use_damped_trend=None,\n    seasonal_periods=None,\n    use_arma_errors=True,\n    show_warnings=True,\n    n_jobs=None,\n    multiprocessing_start_method='spawn',\n    context=None,\n)\n"
+  -
+    row_no: 293
+    id: 294
+    type: class
+    name: Case
+    path: tbats.bats.Case.Case
+    module: tbats.bats.Case
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Case import Case\n\nobj = Case(\n    components=None  # TODO,\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 275
+    id: 276
+    type: class
+    name: Components
+    path: tbats.bats.Components.Components
+    module: tbats.bats.Components
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: ""
+    docstring: "Contains information necessary to determine amount of parameters of the model.\n\nSee parent class description for details."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Components import Components\n\nobj = Components(\n    use_box_cox=False,\n    use_trend=False,\n    use_damped_trend=False,\n    seasonal_periods=None,\n    use_arma_errors=False,\n    p=0,\n    q=0,\n    box_cox_bounds=(0, 1),\n)\n"
+  -
+    row_no: 315
+    id: 316
+    type: class
+    name: Context
+    path: tbats.bats.Context.Context
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context(\n    show_warnings=True,\n    n_jobs=None,\n    multiprocessing_start_method=None,\n)\n"
+  -
+    row_no: 296
+    id: 297
+    type: class
+    name: MatrixBuilder
+    path: tbats.bats.MatrixBuilder.MatrixBuilder
+    module: tbats.bats.MatrixBuilder
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder(\n    model_params=None  # TODO,\n)\n"
+  -
+    row_no: 283
+    id: 284
+    type: class
+    name: Model
+    path: tbats.bats.Model.Model
+    module: tbats.bats.Model
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: "BATS model, see parent class for details"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Model import Model\n\nobj = Model(\n    model_params=None  # TODO,\n    context=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 286
+    id: 287
+    type: class
+    name: ModelParams
+    path: tbats.bats.ModelParams.ModelParams
+    module: tbats.bats.ModelParams
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "Holds all parameters needed to calculate BATS model and forecasts\n\nFor other parameters documentation see parent class documentation.\n\nParameters\n----------\ngamma_params: array-like of floats\n    Gamma smoothing parameters for seasonal effects.\n    In BATS there is one gamma parameter for each season."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.ModelParams import ModelParams\n\nobj = ModelParams(\n    components=None  # TODO,\n    alpha=None  # TODO,\n    beta=None,\n    phi=None,\n    box_cox_lambda=None,\n    gamma_params=None,\n    ar_coefs=None,\n    ma_coefs=None,\n    x0=None,\n)\n"
+  -
+    row_no: 326
+    id: 327
+    type: class
+    name: ParamsOptimizer
+    path: tbats.bats.ParamsOptimizer.ParamsOptimizer
+    module: tbats.bats.ParamsOptimizer
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: ""
+    docstring: "See parent class for documentation"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer(\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 303
+    id: 304
+    type: class
+    name: SeedFinder
+    path: tbats.bats.SeedFinder.SeedFinder
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 7
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 269
+    id: 270
+    type: class
+    name: BatsException
+    path: tbats.error.BatsException.BatsException
+    module: tbats.error.BatsException
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.BatsException import BatsException\n\nobj = BatsException(\n)\n"
+  -
+    row_no: 273
+    id: 274
+    type: class
+    name: BatsWarning
+    path: tbats.error.BatsWarning.BatsWarning
+    module: tbats.error.BatsWarning
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.BatsWarning import BatsWarning\n\nobj = BatsWarning(\n)\n"
+  -
+    row_no: 261
+    id: 262
+    type: class
+    name: ExceptionHandler
+    path: tbats.error.ExceptionHandler.ExceptionHandler
+    module: tbats.error.ExceptionHandler
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.ExceptionHandler import ExceptionHandler\n\nobj = ExceptionHandler(\n    show_warnings=True,\n)\n"
+  -
+    row_no: 259
+    id: 260
+    type: class
+    name: InputArgsException
+    path: tbats.error.InputArgsException.InputArgsException
+    module: tbats.error.InputArgsException
+    library: tbats
+    top_group: tbats.error
+    role: cli
+    name_cluster: 16
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.InputArgsException import InputArgsException\n\nobj = InputArgsException(\n)\n"
+  -
+    row_no: 271
+    id: 272
+    type: class
+    name: InputArgsWarning
+    path: tbats.error.InputArgsWarning.InputArgsWarning
+    module: tbats.error.InputArgsWarning
+    library: tbats
+    top_group: tbats.error
+    role: cli
+    name_cluster: 20
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.InputArgsWarning import InputArgsWarning\n\nobj = InputArgsWarning(\n)\n"
+  -
+    row_no: 267
+    id: 268
+    type: class
+    name: ModelWarning
+    path: tbats.error.ModelWarning.ModelWarning
+    module: tbats.error.ModelWarning
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.ModelWarning import ModelWarning\n\nobj = ModelWarning(\n)\n"
+  -
+    row_no: 46
+    id: 47
+    type: class
+    name: Case
+    path: tbats.tbats.Case.Case
+    module: tbats.tbats.Case
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Case import Case\n\nobj = Case(\n    components=None  # TODO,\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 3
+    id: 4
+    type: class
+    name: Components
+    path: tbats.tbats.Components.Components
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: ""
+    docstring: "Contains information necessary to determine amount of parameters of the model.\n\nSee parent class description for details."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components(\n    use_box_cox=False,\n    use_trend=False,\n    use_damped_trend=False,\n    seasonal_periods=None,\n    seasonal_harmonics=None,\n    use_arma_errors=False,\n    p=0,\n    q=0,\n    box_cox_bounds=(0, 1),\n)\n"
+  -
+    row_no: 68
+    id: 69
+    type: class
+    name: Context
+    path: tbats.tbats.Context.Context
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context(\n    show_warnings=True,\n    n_jobs=None,\n    multiprocessing_start_method=None,\n)\n"
+  -
+    row_no: 21
+    id: 22
+    type: class
+    name: HarmonicsChoosingStrategy
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy(\n    context=None  # TODO,\n    checking_range=None,\n)\n"
+  -
+    row_no: 49
+    id: 50
+    type: class
+    name: MatrixBuilder
+    path: tbats.tbats.MatrixBuilder.MatrixBuilder
+    module: tbats.tbats.MatrixBuilder
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder(\n    model_params=None  # TODO,\n)\n"
+  -
+    row_no: 18
+    id: 19
+    type: class
+    name: Model
+    path: tbats.tbats.Model.Model
+    module: tbats.tbats.Model
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: "TBATS model, see parent class for details"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Model import Model\n\nobj = Model(\n    model_params=None  # TODO,\n    context=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 37
+    id: 38
+    type: class
+    name: ModelParams
+    path: tbats.tbats.ModelParams.ModelParams
+    module: tbats.tbats.ModelParams
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "Holds all parameters needed to calculate TBATS model and forecasts\n\nFor other parameters documentation see parent class documentation.\n\nParameters\n----------\ngamma_params: array-like of floats\n    Gamma smoothing parameters for seasonal effects.\n    In TBATS there are two smoothing parameters for each season.\n    Vector holds 2 gamma parameters for season 1, then 2 gamma parameters for season 2, ..."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ModelParams import ModelParams\n\nobj = ModelParams(\n    components=None  # TODO,\n    alpha=None  # TODO,\n    beta=None,\n    phi=None,\n    box_cox_lambda=None,\n    gamma_params=None,\n    ar_coefs=None,\n    ma_coefs=None,\n    x0=None,\n)\n"
+  -
+    row_no: 80
+    id: 81
+    type: class
+    name: ParamsOptimizer
+    path: tbats.tbats.ParamsOptimizer.ParamsOptimizer
+    module: tbats.tbats.ParamsOptimizer
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: ""
+    docstring: "See parent class for documentation"
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer(\n    context=None  # TODO,\n)\n"
+  -
+    row_no: 63
+    id: 64
+    type: class
+    name: SeedFinder
+    path: tbats.tbats.SeedFinder.SeedFinder
+    module: tbats.tbats.SeedFinder
+    library: tbats
+    top_group: tbats.tbats
+    role: sampling
+    name_cluster: 7
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.SeedFinder import SeedFinder\n\nobj = SeedFinder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 56
+    id: 57
+    type: class
+    name: TBATS
+    path: tbats.tbats.TBATS.TBATS
+    module: tbats.tbats.TBATS
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: ""
+    docstring: "TBATS estimator used to fit and select best performing model.\n\nTBATS (Exponential smoothing state space model with Box-Cox\ntransformation, ARMA errors, Trigonometric Trend and Seasonal components.)\n\nModel has been described in De Livera, Hyndman & Snyder (2011).\n\nAll of the useful methods have been implemented in parent Estimator class."
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.TBATS import TBATS\n\nobj = TBATS(\n    use_box_cox=None,\n    box_cox_bounds=(0, 1),\n    use_trend=None,\n    use_damped_trend=None,\n    seasonal_periods=None,\n    use_arma_errors=True,\n    show_warnings=True,\n    n_jobs=None,\n    multiprocessing_start_method='spawn',\n    context=None,\n)\n"
+  -
+    row_no: 340
+    id: 341
+    type: class
+    name: Guerrero
+    path: tbats.transformation.Guerrero.Guerrero
+    module: tbats.transformation.Guerrero
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 23
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params: "nan"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.Guerrero import Guerrero\n\nobj = Guerrero(\n)\n"
+  -
+    row_no: 201
+    id: 202
+    type: method
+    name: make_one_and_zeroes_vector
+    path: tbats.abstract.ArrayHelper.ArrayHelper.make_one_and_zeroes_vector
+    module: tbats.abstract.ArrayHelper
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 88
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: one
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 1
+      -
+        name: one_position
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'begin'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ArrayHelper import ArrayHelper\n\nobj = ArrayHelper()  # TODO: __init__ args\n\nresult = obj.make_one_and_zeroes_vector(\n    size=None  # TODO,\n    one=1,\n    one_position='begin',\n)\n"
+  -
+    row_no: 200
+    id: 201
+    type: method
+    name: to_array
+    path: tbats.abstract.ArrayHelper.ArrayHelper.to_array
+    module: tbats.abstract.ArrayHelper
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 87
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: values
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: type
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: float
+      -
+        name: give_shape
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ArrayHelper import ArrayHelper\n\nobj = ArrayHelper()  # TODO: __init__ args\n\nresult = obj.to_array(\n    values=None,\n    type=float,\n    give_shape=False,\n)\n"
+  -
+    row_no: 146
+    id: 147
+    type: method
+    name: fit
+    path: tbats.abstract.Case.Case.fit
+    module: tbats.abstract.Case
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 48
+    event_like: False
+    return_type: ""
+    docstring: "Fits and chooses best model with chosen components\n\nParameters\n----------\ny: array-like\n    Time series to fit the model to and rate the model against\n\nReturns\n-------\nModel\n    Best model by AIC"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 148
+    id: 149
+    type: method
+    name: fit_case
+    path: tbats.abstract.Case.Case.fit_case
+    module: tbats.abstract.Case
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 71
+    event_like: False
+    return_type: ""
+    docstring: "Fits model with provided components to time series\n\nParameters\n----------\ny: array-like\n    Time series\ncase_definition: Components\n    Components for which model should be fit\n\nReturns\n-------\nModel\n    Fitted model"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: case_definition
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit_case(\n    y=None  # TODO,\n    case_definition=None  # TODO,\n)\n"
+  -
+    row_no: 147
+    id: 148
+    type: method
+    name: fit_initial_model
+    path: tbats.abstract.Case.Case.fit_initial_model
+    module: tbats.abstract.Case
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 23
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit_initial_model(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 149
+    id: 150
+    type: method
+    name: fit_with_starting_params
+    path: tbats.abstract.Case.Case.fit_with_starting_params
+    module: tbats.abstract.Case
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 72
+    event_like: False
+    return_type: ""
+    docstring: "Fits (optimizes) model with provided starting parameters\n\nParameters\n----------\ny: array-like\n    Time series\nmodel_params: ModelParams\n    Model parameters\n\nReturns\n-------\nModel\n    optimal model"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: model_params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit_with_starting_params(\n    y=None  # TODO,\n    model_params=None  # TODO,\n)\n"
+  -
+    row_no: 159
+    id: 160
+    type: method
+    name: alpha_beta_part
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.alpha_beta_part
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 77
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.alpha_beta_part(\n)\n"
+  -
+    row_no: 162
+    id: 163
+    type: method
+    name: arma_offset
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.arma_offset
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 80
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.arma_offset(\n)\n"
+  -
+    row_no: 160
+    id: 161
+    type: method
+    name: arma_part
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.arma_part
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 78
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.arma_part(\n)\n"
+  -
+    row_no: 156
+    id: 157
+    type: method
+    name: as_matrix
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.as_matrix
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 74
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.as_matrix(\n)\n"
+  -
+    row_no: 157
+    id: 158
+    type: method
+    name: as_vector
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.as_vector
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 75
+    event_like: False
+    return_type: ""
+    docstring: ":return: First row as flat vector"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.as_vector(\n)\n"
+  -
+    row_no: 161
+    id: 162
+    type: method
+    name: break_into_seasons
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.break_into_seasons
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 79
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.break_into_seasons(\n)\n"
+  -
+    row_no: 163
+    id: 164
+    type: method
+    name: seasonal_offset
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.seasonal_offset
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 81
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.seasonal_offset(\n)\n"
+  -
+    row_no: 158
+    id: 159
+    type: method
+    name: seasonal_part
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.seasonal_part
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 76
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.seasonal_part(\n)\n"
+  -
+    row_no: 155
+    id: 156
+    type: method
+    name: with_replaced_seasonal
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.with_replaced_seasonal
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 73
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: new_seasonal_part
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: new_seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.with_replaced_seasonal(\n    new_seasonal_part=None  # TODO,\n    new_seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 154
+    id: 155
+    type: method
+    name: without_arma
+    path: tbats.abstract.ComponentMatrix.ComponentMatrix.without_arma
+    module: tbats.abstract.ComponentMatrix
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 44
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ComponentMatrix import ComponentMatrix\n\nobj = ComponentMatrix()  # TODO: __init__ args\n\nresult = obj.without_arma(\n)\n"
+  -
+    row_no: 89
+    id: 90
+    type: method
+    name: arma_length
+    path: tbats.abstract.Components.Components.arma_length
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 42
+    event_like: False
+    return_type: ""
+    docstring: "Returns amount of ARMA(p,q) parameters"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.arma_length(\n)\n"
+  -
+    row_no: 84
+    id: 85
+    type: method
+    name: create_constant_components
+    path: tbats.abstract.Components.Components.create_constant_components
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.create_constant_components(\n)\n"
+  -
+    row_no: 87
+    id: 88
+    type: method
+    name: gamma_params_amount
+    path: tbats.abstract.Components.Components.gamma_params_amount
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.gamma_params_amount(\n)\n"
+  -
+    row_no: 95
+    id: 96
+    type: method
+    name: is_box_cox_in_bounds
+    path: tbats.abstract.Components.Components.is_box_cox_in_bounds
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 46
+    event_like: False
+    return_type: ""
+    docstring: "Tells if provided Box-Cox lambda is within allowed interval\n\nWhen box cox is not used, returns True regardless of lambda value.\n\nReturns\n-------\nbool\n    True when lambda is in bounds"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: box_cox_lambda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.is_box_cox_in_bounds(\n    box_cox_lambda=None  # TODO,\n)\n"
+  -
+    row_no: 86
+    id: 87
+    type: method
+    name: seasonal_components_amount
+    path: tbats.abstract.Components.Components.seasonal_components_amount
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 90
+    id: 91
+    type: method
+    name: summary
+    path: tbats.abstract.Components.Components.summary
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 43
+    event_like: False
+    return_type: ""
+    docstring: "Returns components summary\n\nReturns\n-------\nstr\n    summary of components"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.summary(\n)\n"
+  -
+    row_no: 94
+    id: 95
+    type: method
+    name: with_arma
+    path: tbats.abstract.Components.Components.with_arma
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 45
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy itself with provided ARMA components\n\nReturns\n-------\nComponents\n    copy of components with provided ARMA(p,q) degrees"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: p
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+      -
+        name: q
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.with_arma(\n    p=0,\n    q=0,\n)\n"
+  -
+    row_no: 91
+    id: 92
+    type: method
+    name: with_seasonal_periods
+    path: tbats.abstract.Components.Components.with_seasonal_periods
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy of itself but with new seasonal periods\n\nParameters\n----------\nseasonal_periods: array-like\n    New season lengths\n\nReturns\n-------\nComponents\n    copy of components with new seasonal periods"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.with_seasonal_periods(\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 93
+    id: 94
+    type: method
+    name: without_arma
+    path: tbats.abstract.Components.Components.without_arma
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 44
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy itself without ARMA components\n\nReturns\n-------\nComponents\n    copy of components without ARMA"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.without_arma(\n)\n"
+  -
+    row_no: 92
+    id: 93
+    type: method
+    name: without_seasonal_periods
+    path: tbats.abstract.Components.Components.without_seasonal_periods
+    module: tbats.abstract.Components
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy itself without seasonality\n\nReturns\n-------\nComponents\n    copy of components without seasonal periods"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.without_seasonal_periods(\n)\n"
+  -
+    row_no: 194
+    id: 195
+    type: method
+    name: get_exception_handler
+    path: tbats.abstract.Context.Context.get_exception_handler
+    module: tbats.abstract.Context
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 85
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.get_exception_handler(\n)\n"
+  -
+    row_no: 195
+    id: 196
+    type: method
+    name: multiprocessing
+    path: tbats.abstract.Context.Context.multiprocessing
+    module: tbats.abstract.Context
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 86
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.multiprocessing(\n)\n"
+  -
+    row_no: 252
+    id: 253
+    type: method
+    name: create_case
+    path: tbats.abstract.ContextInterface.ContextInterface.create_case
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 40
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_case(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 253
+    id: 254
+    type: method
+    name: create_case_from_dictionary
+    path: tbats.abstract.ContextInterface.ContextInterface.create_case_from_dictionary
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components_dictionary
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_case_from_dictionary(\n)\n"
+  -
+    row_no: 254
+    id: 255
+    type: method
+    name: create_components
+    path: tbats.abstract.ContextInterface.ContextInterface.create_components
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 38
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_components(\n)\n"
+  -
+    row_no: 246
+    id: 247
+    type: method
+    name: create_constant_model
+    path: tbats.abstract.ContextInterface.ContextInterface.create_constant_model
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 32
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: constant_value
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_constant_model(\n    constant_value=None  # TODO,\n)\n"
+  -
+    row_no: 250
+    id: 251
+    type: method
+    name: create_default_starting_params
+    path: tbats.abstract.ContextInterface.ContextInterface.create_default_starting_params
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 36
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 255
+    id: 256
+    type: method
+    name: create_harmonics_choosing_strategy
+    path: tbats.abstract.ContextInterface.ContextInterface.create_harmonics_choosing_strategy
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 41
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_harmonics_choosing_strategy(\n)\n"
+  -
+    row_no: 249
+    id: 250
+    type: method
+    name: create_matrix_builder
+    path: tbats.abstract.ContextInterface.ContextInterface.create_matrix_builder
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 35
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_matrix_builder(\n    params=None  # TODO,\n)\n"
+  -
+    row_no: 247
+    id: 248
+    type: method
+    name: create_model
+    path: tbats.abstract.ContextInterface.ContextInterface.create_model
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 33
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: validate_input
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_model(\n    params=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 251
+    id: 252
+    type: method
+    name: create_params_optimizer
+    path: tbats.abstract.ContextInterface.ContextInterface.create_params_optimizer
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 37
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_params_optimizer(\n)\n"
+  -
+    row_no: 248
+    id: 249
+    type: method
+    name: create_seed_finder
+    path: tbats.abstract.ContextInterface.ContextInterface.create_seed_finder
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: sampling
+    name_cluster: 34
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.create_seed_finder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 245
+    id: 246
+    type: method
+    name: get_exception_handler
+    path: tbats.abstract.ContextInterface.ContextInterface.get_exception_handler
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 85
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.get_exception_handler(\n)\n"
+  -
+    row_no: 256
+    id: 257
+    type: method
+    name: multiprocessing
+    path: tbats.abstract.ContextInterface.ContextInterface.multiprocessing
+    module: tbats.abstract.ContextInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 86
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ContextInterface import ContextInterface\n\nobj = ContextInterface()  # TODO: __init__ args\n\nresult = obj.multiprocessing(\n)\n"
+  -
+    row_no: 208
+    id: 209
+    type: method
+    name: fit
+    path: tbats.abstract.Estimator.Estimator.fit
+    module: tbats.abstract.Estimator
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 48
+    event_like: False
+    return_type: ""
+    docstring: "Fit model to observations ``y``.\n\n:param y: array-like or iterable, shape=(n_samples,)\n:return: abstract.Model, Fitted model"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Estimator import Estimator\n\nobj = Estimator()  # TODO: __init__ args\n\nresult = obj.fit(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 174
+    id: 175
+    type: method
+    name: calculate_D_matrix
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.calculate_D_matrix
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 83
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.calculate_D_matrix(\n)\n"
+  -
+    row_no: 177
+    id: 178
+    type: method
+    name: make_A_matrix
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_A_matrix
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_A_matrix(\n)\n"
+  -
+    row_no: 181
+    id: 182
+    type: method
+    name: make_F_matrix
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_F_matrix
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_F_matrix(\n)\n"
+  -
+    row_no: 180
+    id: 181
+    type: method
+    name: make_g_vector
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_g_vector
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_g_vector(\n)\n"
+  -
+    row_no: 176
+    id: 177
+    type: method
+    name: make_gamma_vector
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_gamma_vector
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_gamma_vector(\n)\n"
+  -
+    row_no: 175
+    id: 176
+    type: method
+    name: make_seasonal_components_for_w
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_seasonal_components_for_w
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_seasonal_components_for_w(\n)\n"
+  -
+    row_no: 179
+    id: 180
+    type: method
+    name: make_w_vector
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.make_w_vector
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_w_vector(\n)\n"
+  -
+    row_no: 178
+    id: 179
+    type: method
+    name: seasonal_components_amount
+    path: tbats.abstract.MatrixBuilder.MatrixBuilder.seasonal_components_amount
+    module: tbats.abstract.MatrixBuilder
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 242
+    id: 243
+    type: method
+    name: calculate_D_matrix
+    path: tbats.abstract.MatrixBuilderCache.MatrixBuilderCache.calculate_D_matrix
+    module: tbats.abstract.MatrixBuilderCache
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 83
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderCache import MatrixBuilderCache\n\nobj = MatrixBuilderCache()  # TODO: __init__ args\n\nresult = obj.calculate_D_matrix(\n)\n"
+  -
+    row_no: 241
+    id: 242
+    type: method
+    name: make_F_matrix
+    path: tbats.abstract.MatrixBuilderCache.MatrixBuilderCache.make_F_matrix
+    module: tbats.abstract.MatrixBuilderCache
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderCache import MatrixBuilderCache\n\nobj = MatrixBuilderCache()  # TODO: __init__ args\n\nresult = obj.make_F_matrix(\n)\n"
+  -
+    row_no: 240
+    id: 241
+    type: method
+    name: make_g_vector
+    path: tbats.abstract.MatrixBuilderCache.MatrixBuilderCache.make_g_vector
+    module: tbats.abstract.MatrixBuilderCache
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderCache import MatrixBuilderCache\n\nobj = MatrixBuilderCache()  # TODO: __init__ args\n\nresult = obj.make_g_vector(\n)\n"
+  -
+    row_no: 239
+    id: 240
+    type: method
+    name: make_w_vector
+    path: tbats.abstract.MatrixBuilderCache.MatrixBuilderCache.make_w_vector
+    module: tbats.abstract.MatrixBuilderCache
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderCache import MatrixBuilderCache\n\nobj = MatrixBuilderCache()  # TODO: __init__ args\n\nresult = obj.make_w_vector(\n)\n"
+  -
+    row_no: 170
+    id: 171
+    type: method
+    name: calculate_D_matrix
+    path: tbats.abstract.MatrixBuilderInterface.MatrixBuilderInterface.calculate_D_matrix
+    module: tbats.abstract.MatrixBuilderInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 83
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderInterface import MatrixBuilderInterface\n\nobj = MatrixBuilderInterface()  # TODO: __init__ args\n\nresult = obj.calculate_D_matrix(\n)\n"
+  -
+    row_no: 169
+    id: 170
+    type: method
+    name: make_F_matrix
+    path: tbats.abstract.MatrixBuilderInterface.MatrixBuilderInterface.make_F_matrix
+    module: tbats.abstract.MatrixBuilderInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderInterface import MatrixBuilderInterface\n\nobj = MatrixBuilderInterface()  # TODO: __init__ args\n\nresult = obj.make_F_matrix(\n)\n"
+  -
+    row_no: 168
+    id: 169
+    type: method
+    name: make_g_vector
+    path: tbats.abstract.MatrixBuilderInterface.MatrixBuilderInterface.make_g_vector
+    module: tbats.abstract.MatrixBuilderInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderInterface import MatrixBuilderInterface\n\nobj = MatrixBuilderInterface()  # TODO: __init__ args\n\nresult = obj.make_g_vector(\n)\n"
+  -
+    row_no: 167
+    id: 168
+    type: method
+    name: make_w_vector
+    path: tbats.abstract.MatrixBuilderInterface.MatrixBuilderInterface.make_w_vector
+    module: tbats.abstract.MatrixBuilderInterface
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.MatrixBuilderInterface import MatrixBuilderInterface\n\nobj = MatrixBuilderInterface()  # TODO: __init__ args\n\nresult = obj.make_w_vector(\n)\n"
+  -
+    row_no: 116
+    id: 117
+    type: method
+    name: add_warning
+    path: tbats.abstract.Model.Model.add_warning
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 61
+    event_like: False
+    return_type: ""
+    docstring: "Add a warning message to the model\n\nParameters\n----------\nmessage: str\n    The message"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: message
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.add_warning(\n    message=None  # TODO,\n)\n"
+  -
+    row_no: 106
+    id: 107
+    type: method
+    name: calculate_aic
+    path: tbats.abstract.Model.Model.calculate_aic
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 51
+    event_like: False
+    return_type: ""
+    docstring: "Calculates AIC criterion value for the model"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.calculate_aic(\n)\n"
+  -
+    row_no: 111
+    id: 112
+    type: method
+    name: can_be_admissible
+    path: tbats.abstract.Model.Model.can_be_admissible
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 56
+    event_like: False
+    return_type: ""
+    docstring: "Tells if model can be admissible."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.can_be_admissible(\n)\n"
+  -
+    row_no: 102
+    id: 103
+    type: method
+    name: fit
+    path: tbats.abstract.Model.Model.fit
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 48
+    event_like: False
+    return_type: ""
+    docstring: "Calculates in series predictions for provided time series.\n\nParameters\n----------\ny: array-like\n    Time series to fit model to\n\nReturns\n-------\nself\n    See class attributes to read fit results"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.fit(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 103
+    id: 104
+    type: method
+    name: forecast
+    path: tbats.abstract.Model.Model.forecast
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 49
+    event_like: False
+    return_type: ""
+    docstring: "Forecast for provided amount of steps ahead\n\nWhen confidence_level it will also return confidence bounds. Their calculation is valid\nunder assumption that residuals are from normal distribution.\n\nParameters\n----------\nsteps: int\n    Amount of steps to forecast\nconfidence_level: float, optional (default=None)\n    When provided and a value between 0 and 1 also confidence bounds shall be returned for provided level.\n    If None (default), confidence intervals will not be calculated.\n\nReturns\n-------\narray-like:\n    Forecasts\ndict:\n    Confidence bounds, present only when confidence_level is provided"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: steps
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 1
+      -
+        name: confidence_level
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.forecast(\n    steps=1,\n    confidence_level=None,\n)\n"
+  -
+    row_no: 112
+    id: 113
+    type: method
+    name: is_admissible
+    path: tbats.abstract.Model.Model.is_admissible
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 57
+    event_like: False
+    return_type: ""
+    docstring: "Tells if model is admissible (stable). Model that has not been fitted is not addmisible."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.is_admissible(\n)\n"
+  -
+    row_no: 105
+    id: 106
+    type: method
+    name: likelihood
+    path: tbats.abstract.Model.Model.likelihood
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 50
+    event_like: False
+    return_type: ""
+    docstring: "Calculates likelihood of the model. Used for optimization."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.likelihood(\n)\n"
+  -
+    row_no: 104
+    id: 105
+    type: method
+    name: summary
+    path: tbats.abstract.Model.Model.summary
+    module: tbats.abstract.Model
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 43
+    event_like: False
+    return_type: ""
+    docstring: "Returns model summary containing all parameter values.\n\nReturns\n-------\nstr\n    Model summary"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.Model import Model\n\nobj = Model()  # TODO: __init__ args\n\nresult = obj.summary(\n)\n"
+  -
+    row_no: 136
+    id: 137
+    type: method
+    name: amount
+    path: tbats.abstract.ModelParams.ModelParams.amount
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 68
+    event_like: False
+    return_type: ""
+    docstring: "Amount of parameters in the model, including seed state\n:return: int"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.amount(\n)\n"
+  -
+    row_no: 129
+    id: 130
+    type: method
+    name: find_initial_box_cox_lambda
+    path: tbats.abstract.ModelParams.ModelParams.find_initial_box_cox_lambda
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 62
+    event_like: False
+    return_type: ""
+    docstring: "Chooses starting Box-Cox lambda parameter using Guerrero method.\n\nParameters\n----------\ny: array-like\n    Time series\ncomponents: Components\n    Components of the model\n\nReturns\n-------\nfloat or None\n    Lambda parameter or None when no Box-Cox transformation applies."
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.find_initial_box_cox_lambda(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 137
+    id: 138
+    type: method
+    name: is_box_cox_in_bounds
+    path: tbats.abstract.ModelParams.ModelParams.is_box_cox_in_bounds
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 46
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.is_box_cox_in_bounds(\n)\n"
+  -
+    row_no: 127
+    id: 128
+    type: method
+    name: seasonal_components_amount
+    path: tbats.abstract.ModelParams.ModelParams.seasonal_components_amount
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 138
+    id: 139
+    type: method
+    name: summary
+    path: tbats.abstract.ModelParams.ModelParams.summary
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 43
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.summary(\n)\n"
+  -
+    row_no: 135
+    id: 136
+    type: method
+    name: to_vector
+    path: tbats.abstract.ModelParams.ModelParams.to_vector
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 67
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.to_vector(\n)\n"
+  -
+    row_no: 130
+    id: 131
+    type: method
+    name: with_arma
+    path: tbats.abstract.ModelParams.ModelParams.with_arma
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 45
+    event_like: False
+    return_type: ""
+    docstring: "Returns copy of itself with provided ARMA levels.\n\nARMA coefficients are initialized to vectors of lengths p and q of zero values.\n\nParameters\n----------\np: int\n    Auto-regressive level p\nq: int\n    Moving average level q\n\nReturns\n-------\nModelParams\n    Copy with ARMA of provided levels"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: p
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+      -
+        name: q
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_arma(\n    p=0,\n    q=0,\n)\n"
+  -
+    row_no: 126
+    id: 127
+    type: method
+    name: with_default_starting_params
+    path: tbats.abstract.ModelParams.ModelParams.with_default_starting_params
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 133
+    id: 134
+    type: method
+    name: with_vector_values
+    path: tbats.abstract.ModelParams.ModelParams.with_vector_values
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 65
+    event_like: False
+    return_type: ""
+    docstring: "Returns a copy of itself with model parameters taken from the vector\n\nIf necessary x0 is re-transformed to match new Box-Cox lambda parameter.\n\nParameters\n----------\nvector: array-like of floats\n    A vector with model parameters. When all parameters are used it consist of:\n    (alpha, box_cox_lambda, beta, phi, gamma parameters, AR coefficients, MA coefficients)\n    When some components are not used they are also not present in the vector.\n\nReturns\n-------\nModelParams\n    A copy of itself with model parameters taken from the vector"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: vector
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_vector_values(\n    vector=None  # TODO,\n)\n"
+  -
+    row_no: 132
+    id: 133
+    type: method
+    name: with_x0
+    path: tbats.abstract.ModelParams.ModelParams.with_x0
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 64
+    event_like: False
+    return_type: ""
+    docstring: "Returns a copy of itself with seed states set to provided values.\n\nParameters\n----------\nx0: array-like of floats\n    Seed states\n\nReturns\n-------\nModelParams\n    Copy with x0 set to provided values"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: x0
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_x0(\n    x0=None  # TODO,\n)\n"
+  -
+    row_no: 131
+    id: 132
+    type: method
+    name: with_zero_x0
+    path: tbats.abstract.ModelParams.ModelParams.with_zero_x0
+    module: tbats.abstract.ModelParams
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 63
+    event_like: False
+    return_type: ""
+    docstring: "Returns a copy of itself with seed state values set to zeroes.\n\nReturns\n-------\nModelParams\n    Copy with x0 as a vector of zeroes"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_zero_x0(\n)\n"
+  -
+    row_no: 225
+    id: 226
+    type: method
+    name: converged
+    path: tbats.abstract.ParamsOptimizer.ParamsOptimizer.converged
+    module: tbats.abstract.ParamsOptimizer
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 96
+    event_like: False
+    return_type: ""
+    docstring: "Returns true when optimization converged\n\nReturns\n-------\nbool\n    True when converged"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer()  # TODO: __init__ args\n\nresult = obj.converged(\n)\n"
+  -
+    row_no: 226
+    id: 227
+    type: method
+    name: optimal_model
+    path: tbats.abstract.ParamsOptimizer.ParamsOptimizer.optimal_model
+    module: tbats.abstract.ParamsOptimizer
+    library: tbats
+    top_group: tbats.abstract
+    role: other
+    name_cluster: 97
+    event_like: False
+    return_type: ""
+    docstring: "Constructs the best model that was found\n\nReturns\n-------\nModel\n    Optimal model"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer()  # TODO: __init__ args\n\nresult = obj.optimal_model(\n)\n"
+  -
+    row_no: 227
+    id: 228
+    type: method
+    name: optimize
+    path: tbats.abstract.ParamsOptimizer.ParamsOptimizer.optimize
+    module: tbats.abstract.ParamsOptimizer
+    library: tbats
+    top_group: tbats.abstract
+    role: model_fit
+    name_cluster: 98
+    event_like: False
+    return_type: ""
+    docstring: "Finds seed and parameters that minimize likelihood\n\nParameters\n----------\ny: array-like of floats\n    Time series\ninitial_params: ModelParams\n    Model components and initial parameter values\ncalculate_seed: bool, optional (default=True)\n    If optimizer should also calculate seed x0.\n    When False optimization shall use x0 from initial params as seed\n\nReturns\n-------\nParamsOptimizer\n    Itself"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: initial_params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: calculate_seed
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.ParamsOptimizer import ParamsOptimizer\n\nobj = ParamsOptimizer()  # TODO: __init__ args\n\nresult = obj.optimize(\n    y=None  # TODO,\n    initial_params=None  # TODO,\n    calculate_seed=True,\n)\n"
+  -
+    row_no: 188
+    id: 189
+    type: method
+    name: find
+    path: tbats.abstract.SeedFinder.SeedFinder.find
+    module: tbats.abstract.SeedFinder
+    library: tbats
+    top_group: tbats.abstract
+    role: sampling
+    name_cluster: 84
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: w_tilda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: residuals
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.find(\n    w_tilda=None  # TODO,\n    residuals=None  # TODO,\n)\n"
+  -
+    row_no: 187
+    id: 188
+    type: method
+    name: from_linear_regression_coefs_to_x0
+    path: tbats.abstract.SeedFinder.SeedFinder.from_linear_regression_coefs_to_x0
+    module: tbats.abstract.SeedFinder
+    library: tbats
+    top_group: tbats.abstract
+    role: sampling
+    name_cluster: 31
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: linear_regression_coefs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.from_linear_regression_coefs_to_x0(\n    linear_regression_coefs=None  # TODO,\n)\n"
+  -
+    row_no: 186
+    id: 187
+    type: method
+    name: to_matrix_for_linear_regression
+    path: tbats.abstract.SeedFinder.SeedFinder.to_matrix_for_linear_regression
+    module: tbats.abstract.SeedFinder
+    library: tbats
+    top_group: tbats.abstract
+    role: sampling
+    name_cluster: 30
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: w_tilda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.abstract.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.to_matrix_for_linear_regression(\n    w_tilda=None  # TODO,\n)\n"
+  -
+    row_no: 294
+    id: 295
+    type: method
+    name: fit_initial_model
+    path: tbats.bats.Case.Case.fit_initial_model
+    module: tbats.bats.Case
+    library: tbats
+    top_group: tbats.bats
+    role: model_fit
+    name_cluster: 23
+    event_like: False
+    return_type: ""
+    docstring: "Optimizes seasonal and non-seasonal models with no ARMA and returns the better one\n\nParameters\n----------\ny: array-like of floats\n    Time series\n\nReturns\n-------\nModel\n    The best model with no ARMA"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit_initial_model(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 277
+    id: 278
+    type: method
+    name: create_constant_components
+    path: tbats.bats.Components.Components.create_constant_components
+    module: tbats.bats.Components
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.create_constant_components(\n)\n"
+  -
+    row_no: 279
+    id: 280
+    type: method
+    name: gamma_params_amount
+    path: tbats.bats.Components.Components.gamma_params_amount
+    module: tbats.bats.Components
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: ""
+    docstring: "BATS model contains one gamma parameter for each season"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.gamma_params_amount(\n)\n"
+  -
+    row_no: 278
+    id: 279
+    type: method
+    name: seasonal_components_amount
+    path: tbats.bats.Components.Components.seasonal_components_amount
+    module: tbats.bats.Components
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "Returns amount of seasonal seed states per season"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 323
+    id: 324
+    type: method
+    name: create_case
+    path: tbats.bats.Context.Context.create_case
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 40
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_case(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 322
+    id: 323
+    type: method
+    name: create_case_from_dictionary
+    path: tbats.bats.Context.Context.create_case_from_dictionary
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components_dictionary
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_case_from_dictionary(\n)\n"
+  -
+    row_no: 324
+    id: 325
+    type: method
+    name: create_components
+    path: tbats.bats.Context.Context.create_components
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 38
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_components(\n)\n"
+  -
+    row_no: 316
+    id: 317
+    type: method
+    name: create_constant_model
+    path: tbats.bats.Context.Context.create_constant_model
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 32
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: constant_value
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_constant_model(\n    constant_value=None  # TODO,\n)\n"
+  -
+    row_no: 320
+    id: 321
+    type: method
+    name: create_default_starting_params
+    path: tbats.bats.Context.Context.create_default_starting_params
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 36
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 319
+    id: 320
+    type: method
+    name: create_matrix_builder
+    path: tbats.bats.Context.Context.create_matrix_builder
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 35
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_matrix_builder(\n    params=None  # TODO,\n)\n"
+  -
+    row_no: 317
+    id: 318
+    type: method
+    name: create_model
+    path: tbats.bats.Context.Context.create_model
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 33
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: validate_input
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_model(\n    params=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 321
+    id: 322
+    type: method
+    name: create_params_optimizer
+    path: tbats.bats.Context.Context.create_params_optimizer
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 37
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_params_optimizer(\n)\n"
+  -
+    row_no: 318
+    id: 319
+    type: method
+    name: create_seed_finder
+    path: tbats.bats.Context.Context.create_seed_finder
+    module: tbats.bats.Context
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 34
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_seed_finder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 300
+    id: 301
+    type: method
+    name: make_A_matrix
+    path: tbats.bats.MatrixBuilder.MatrixBuilder.make_A_matrix
+    module: tbats.bats.MatrixBuilder
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_A_matrix(\n)\n"
+  -
+    row_no: 299
+    id: 300
+    type: method
+    name: make_gamma_vector
+    path: tbats.bats.MatrixBuilder.MatrixBuilder.make_gamma_vector
+    module: tbats.bats.MatrixBuilder
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_gamma_vector(\n)\n"
+  -
+    row_no: 298
+    id: 299
+    type: method
+    name: make_seasonal_components_for_w
+    path: tbats.bats.MatrixBuilder.MatrixBuilder.make_seasonal_components_for_w
+    module: tbats.bats.MatrixBuilder
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_seasonal_components_for_w(\n)\n"
+  -
+    row_no: 289
+    id: 290
+    type: method
+    name: seasonal_components_amount
+    path: tbats.bats.ModelParams.ModelParams.seasonal_components_amount
+    module: tbats.bats.ModelParams
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "BATS model requires this many seasonal seed state values"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 288
+    id: 289
+    type: method
+    name: with_default_starting_params
+    path: tbats.bats.ModelParams.ModelParams.with_default_starting_params
+    module: tbats.bats.ModelParams
+    library: tbats
+    top_group: tbats.bats
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: ""
+    docstring: "Factory method for starting model parameters.\n\nParameters\n----------\ny: array-like of floats\n    Time series\ncomponents: Components\n    Components used in the model\n\nReturns\n-------\nModelParams\n    Default starting params."
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 306
+    id: 307
+    type: method
+    name: from_linear_regression_coefs_to_x0
+    path: tbats.bats.SeedFinder.SeedFinder.from_linear_regression_coefs_to_x0
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 31
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: linear_regression_coefs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.from_linear_regression_coefs_to_x0(\n    linear_regression_coefs=None  # TODO,\n)\n"
+  -
+    row_no: 309
+    id: 310
+    type: method
+    name: get_mask
+    path: tbats.bats.SeedFinder.SeedFinder.get_mask
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 109
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.get_mask(\n)\n"
+  -
+    row_no: 311
+    id: 312
+    type: method
+    name: mask_to_seasonal_cuts
+    path: tbats.bats.SeedFinder.SeedFinder.mask_to_seasonal_cuts
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 111
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: mask
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.mask_to_seasonal_cuts(\n    mask=None  # TODO,\n)\n"
+  -
+    row_no: 310
+    id: 311
+    type: method
+    name: prepare_mask
+    path: tbats.bats.SeedFinder.SeedFinder.prepare_mask
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 110
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.prepare_mask(\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 307
+    id: 308
+    type: method
+    name: prepare_seasonal_params
+    path: tbats.bats.SeedFinder.SeedFinder.prepare_seasonal_params
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 107
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: w_tilda_obj
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.prepare_seasonal_params(\n    w_tilda_obj=None  # TODO,\n)\n"
+  -
+    row_no: 305
+    id: 306
+    type: method
+    name: to_matrix_for_linear_regression
+    path: tbats.bats.SeedFinder.SeedFinder.to_matrix_for_linear_regression
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 30
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: w_tilda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.to_matrix_for_linear_regression(\n    w_tilda=None  # TODO,\n)\n"
+  -
+    row_no: 308
+    id: 309
+    type: method
+    name: transform_to_seasonal_vector
+    path: tbats.bats.SeedFinder.SeedFinder.transform_to_seasonal_vector
+    module: tbats.bats.SeedFinder
+    library: tbats
+    top_group: tbats.bats
+    role: sampling
+    name_cluster: 108
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: lr_coefs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.bats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.transform_to_seasonal_vector(\n    lr_coefs=None  # TODO,\n)\n"
+  -
+    row_no: 264
+    id: 265
+    type: method
+    name: exception
+    path: tbats.error.ExceptionHandler.ExceptionHandler.exception
+    module: tbats.error.ExceptionHandler
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 106
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: message
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: exception_type
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: previous_exception
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.ExceptionHandler import ExceptionHandler\n\nobj = ExceptionHandler()  # TODO: __init__ args\n\nresult = obj.exception(\n    message=None  # TODO,\n    exception_type=None  # TODO,\n    previous_exception=None,\n)\n"
+  -
+    row_no: 263
+    id: 264
+    type: method
+    name: warn
+    path: tbats.error.ExceptionHandler.ExceptionHandler.warn
+    module: tbats.error.ExceptionHandler
+    library: tbats
+    top_group: tbats.error
+    role: other
+    name_cluster: 105
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: message
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: warning_type
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: BatsWarning
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.error.ExceptionHandler import ExceptionHandler\n\nobj = ExceptionHandler()  # TODO: __init__ args\n\nresult = obj.warn(\n    message=None  # TODO,\n    warning_type=BatsWarning,\n)\n"
+  -
+    row_no: 47
+    id: 48
+    type: method
+    name: fit_initial_model
+    path: tbats.tbats.Case.Case.fit_initial_model
+    module: tbats.tbats.Case
+    library: tbats
+    top_group: tbats.tbats
+    role: model_fit
+    name_cluster: 23
+    event_like: False
+    return_type: ""
+    docstring: "Fits model with no ARMA and returns it\n\nTBATS, unlike BATS, does not check for non-seasonal model,\nnon-seasonal models for TBATS are checked when seasonal harmonics are being determined\n\nParameters\n----------\ny: array-like\n    Time series\n\nReturns\n-------\nModel\n    Fitted model with no ARMA"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Case import Case\n\nobj = Case()  # TODO: __init__ args\n\nresult = obj.fit_initial_model(\n    y=None  # TODO,\n)\n"
+  -
+    row_no: 5
+    id: 6
+    type: method
+    name: create_constant_components
+    path: tbats.tbats.Components.Components.create_constant_components
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.create_constant_components(\n)\n"
+  -
+    row_no: 6
+    id: 7
+    type: method
+    name: gamma_params_amount
+    path: tbats.tbats.Components.Components.gamma_params_amount
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: ""
+    docstring: "TBATS model contains two gamma parameters for each seasonality"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.gamma_params_amount(\n)\n"
+  -
+    row_no: 7
+    id: 8
+    type: method
+    name: seasonal_components_amount
+    path: tbats.tbats.Components.Components.seasonal_components_amount
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "TBATS model contains two seed values for each seasonality being modelled"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 9
+    id: 10
+    type: method
+    name: with_harmonic_for_season
+    path: tbats.tbats.Components.Components.with_harmonic_for_season
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 5
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy of itself with provided harmonics amount for chosen season.\n\nParameters\n----------\nseason_index: int\n    Index of the season to change harmonic for.\n    Index for first season is 0.\nnew_harmonic: int\n    New amount of harmonics for this season.\n    Only positive values are allowed.\n\nReturns\n-------\nComponents\n    copy of components with provided harmonics amount for chosen season."
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: season_index
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: new_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.with_harmonic_for_season(\n    season_index=None  # TODO,\n    new_harmonic=None  # TODO,\n)\n"
+  -
+    row_no: 8
+    id: 9
+    type: method
+    name: with_harmonics_as_ones
+    path: tbats.tbats.Components.Components.with_harmonics_as_ones
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 4
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy of itself but with all harmonics set to 1\n\nReturns\n-------\nComponents\n    copy of components with all harmonics set to 1"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.with_harmonics_as_ones(\n)\n"
+  -
+    row_no: 10
+    id: 11
+    type: method
+    name: with_seasonal_periods
+    path: tbats.tbats.Components.Components.with_seasonal_periods
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy of itself but with new seasonal periods\n\nAll harmonics will be set to 1\n\nParameters\n----------\nseasonal_periods: array-like\n    New season lengths\n\nReturns\n-------\nComponents\n    copy of components with new seasonal periods"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.with_seasonal_periods(\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 11
+    id: 12
+    type: method
+    name: without_seasonal_periods
+    path: tbats.tbats.Components.Components.without_seasonal_periods
+    module: tbats.tbats.Components
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: ""
+    docstring: "Creates copy itself without seasonality\n\nReturns\n-------\nComponents\n    copy of components without seasonal periods"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Components import Components\n\nobj = Components()  # TODO: __init__ args\n\nresult = obj.without_seasonal_periods(\n)\n"
+  -
+    row_no: 77
+    id: 78
+    type: method
+    name: create_case
+    path: tbats.tbats.Context.Context.create_case
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 40
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_case(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 76
+    id: 77
+    type: method
+    name: create_case_from_dictionary
+    path: tbats.tbats.Context.Context.create_case_from_dictionary
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components_dictionary
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_case_from_dictionary(\n)\n"
+  -
+    row_no: 75
+    id: 76
+    type: method
+    name: create_components
+    path: tbats.tbats.Context.Context.create_components
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 38
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_components(\n)\n"
+  -
+    row_no: 69
+    id: 70
+    type: method
+    name: create_constant_model
+    path: tbats.tbats.Context.Context.create_constant_model
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 32
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: constant_value
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_constant_model(\n    constant_value=None  # TODO,\n)\n"
+  -
+    row_no: 73
+    id: 74
+    type: method
+    name: create_default_starting_params
+    path: tbats.tbats.Context.Context.create_default_starting_params
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 36
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 78
+    id: 79
+    type: method
+    name: create_harmonics_choosing_strategy
+    path: tbats.tbats.Context.Context.create_harmonics_choosing_strategy
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 41
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_harmonics_choosing_strategy(\n)\n"
+  -
+    row_no: 72
+    id: 73
+    type: method
+    name: create_matrix_builder
+    path: tbats.tbats.Context.Context.create_matrix_builder
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 35
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_matrix_builder(\n    params=None  # TODO,\n)\n"
+  -
+    row_no: 70
+    id: 71
+    type: method
+    name: create_model
+    path: tbats.tbats.Context.Context.create_model
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 33
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: params
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: validate_input
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_model(\n    params=None  # TODO,\n    validate_input=True,\n)\n"
+  -
+    row_no: 74
+    id: 75
+    type: method
+    name: create_params_optimizer
+    path: tbats.tbats.Context.Context.create_params_optimizer
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 37
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_params_optimizer(\n)\n"
+  -
+    row_no: 71
+    id: 72
+    type: method
+    name: create_seed_finder
+    path: tbats.tbats.Context.Context.create_seed_finder
+    module: tbats.tbats.Context
+    library: tbats
+    top_group: tbats.tbats
+    role: sampling
+    name_cluster: 34
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.Context import Context\n\nobj = Context()  # TODO: __init__ args\n\nresult = obj.create_seed_finder(\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 30
+    id: 31
+    type: method
+    name: calculate_max
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.calculate_max
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: dependency_reduction_function
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.calculate_max(\n    seasonal_periods=None  # TODO,\n    dependency_reduction_function=None,\n)\n"
+  -
+    row_no: 23
+    id: 24
+    type: method
+    name: choose
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.choose
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.choose(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 26
+    id: 27
+    type: method
+    name: choose_for_season
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.choose_for_season
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: season_index
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: best_model_so_far
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.choose_for_season(\n    season_index=None  # TODO,\n    max_harmonic=None  # TODO,\n    best_model_so_far=None  # TODO,\n)\n"
+  -
+    row_no: 28
+    id: 29
+    type: method
+    name: choose_for_season_serial
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.choose_for_season_serial
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 15
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: season_index
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: best_model_so_far
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.choose_for_season_serial(\n    season_index=None  # TODO,\n    max_harmonic=None  # TODO,\n    best_model_so_far=None  # TODO,\n)\n"
+  -
+    row_no: 29
+    id: 30
+    type: method
+    name: fit_model_like_previous_with_harmonic
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.fit_model_like_previous_with_harmonic
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: model_fit
+    name_cluster: 16
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: previous_model
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: season_index
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: harmonic_to_check
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.fit_model_like_previous_with_harmonic(\n    previous_model=None  # TODO,\n    season_index=None  # TODO,\n    harmonic_to_check=None  # TODO,\n)\n"
+  -
+    row_no: 24
+    id: 25
+    type: method
+    name: initial_harmonics_to_check
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.initial_harmonics_to_check
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.initial_harmonics_to_check(\n    max_harmonic=None  # TODO,\n)\n"
+  -
+    row_no: 31
+    id: 32
+    type: method
+    name: max_harmonic_dependency_reduction
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.max_harmonic_dependency_reduction
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic_proposal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: period_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.max_harmonic_dependency_reduction(\n    max_harmonic_proposal=None  # TODO,\n    period_length=None  # TODO,\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 32
+    id: 33
+    type: method
+    name: max_harmonic_dependency_reduction_better
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.max_harmonic_dependency_reduction_better
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic_proposal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: period_length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.max_harmonic_dependency_reduction_better(\n    max_harmonic_proposal=None  # TODO,\n    period_length=None  # TODO,\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 25
+    id: 26
+    type: method
+    name: next_harmonics_to_check
+    path: tbats.tbats.HarmonicsChoosingStrategy.HarmonicsChoosingStrategy.next_harmonics_to_check
+    module: tbats.tbats.HarmonicsChoosingStrategy
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: max_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: previously_checked
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: chosen_harmonic
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.HarmonicsChoosingStrategy import HarmonicsChoosingStrategy\n\nobj = HarmonicsChoosingStrategy()  # TODO: __init__ args\n\nresult = obj.next_harmonics_to_check(\n    max_harmonic=None  # TODO,\n    previously_checked=None,\n    chosen_harmonic=None,\n)\n"
+  -
+    row_no: 53
+    id: 54
+    type: method
+    name: make_A_matrix
+    path: tbats.tbats.MatrixBuilder.MatrixBuilder.make_A_matrix
+    module: tbats.tbats.MatrixBuilder
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_A_matrix(\n)\n"
+  -
+    row_no: 52
+    id: 53
+    type: method
+    name: make_gamma_vector
+    path: tbats.tbats.MatrixBuilder.MatrixBuilder.make_gamma_vector
+    module: tbats.tbats.MatrixBuilder
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_gamma_vector(\n)\n"
+  -
+    row_no: 51
+    id: 52
+    type: method
+    name: make_seasonal_components_for_w
+    path: tbats.tbats.MatrixBuilder.MatrixBuilder.make_seasonal_components_for_w
+    module: tbats.tbats.MatrixBuilder
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.MatrixBuilder import MatrixBuilder\n\nobj = MatrixBuilder()  # TODO: __init__ args\n\nresult = obj.make_seasonal_components_for_w(\n)\n"
+  -
+    row_no: 41
+    id: 42
+    type: method
+    name: gamma_1
+    path: tbats.tbats.ModelParams.ModelParams.gamma_1
+    module: tbats.tbats.ModelParams
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: ""
+    docstring: "Gamma 1 smoothing parameters are kept in even position of gamma vector"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.gamma_1(\n)\n"
+  -
+    row_no: 42
+    id: 43
+    type: method
+    name: gamma_2
+    path: tbats.tbats.ModelParams.ModelParams.gamma_2
+    module: tbats.tbats.ModelParams
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: ""
+    docstring: "Gamma 2 smoothing parameters are kept in odd position of gamma vector"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.gamma_2(\n)\n"
+  -
+    row_no: 40
+    id: 41
+    type: method
+    name: seasonal_components_amount
+    path: tbats.tbats.ModelParams.ModelParams.seasonal_components_amount
+    module: tbats.tbats.ModelParams
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 3
+    event_like: False
+    return_type: ""
+    docstring: "TBATS requires this many seed state values for seasonalities"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.seasonal_components_amount(\n)\n"
+  -
+    row_no: 39
+    id: 40
+    type: method
+    name: with_default_starting_params
+    path: tbats.tbats.ModelParams.ModelParams.with_default_starting_params
+    module: tbats.tbats.ModelParams
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: ""
+    docstring: "Factory method for starting model parameters.\n\nParameters\n----------\ny: array-like of floats\n    Time series\ncomponents: Components\n    Components used in the model\n\nReturns\n-------\nModelParams\n    Default starting params."
+    params:
+      -
+        name: cls
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: components
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.ModelParams import ModelParams\n\nobj = ModelParams()  # TODO: __init__ args\n\nresult = obj.with_default_starting_params(\n    y=None  # TODO,\n    components=None  # TODO,\n)\n"
+  -
+    row_no: 66
+    id: 67
+    type: method
+    name: from_linear_regression_coefs_to_x0
+    path: tbats.tbats.SeedFinder.SeedFinder.from_linear_regression_coefs_to_x0
+    module: tbats.tbats.SeedFinder
+    library: tbats
+    top_group: tbats.tbats
+    role: sampling
+    name_cluster: 31
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: linear_regression_coefs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.from_linear_regression_coefs_to_x0(\n    linear_regression_coefs=None  # TODO,\n)\n"
+  -
+    row_no: 65
+    id: 66
+    type: method
+    name: to_matrix_for_linear_regression
+    path: tbats.tbats.SeedFinder.SeedFinder.to_matrix_for_linear_regression
+    module: tbats.tbats.SeedFinder
+    library: tbats
+    top_group: tbats.tbats
+    role: sampling
+    name_cluster: 30
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: w_tilda
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.SeedFinder import SeedFinder\n\nobj = SeedFinder()  # TODO: __init__ args\n\nresult = obj.to_matrix_for_linear_regression(\n    w_tilda=None  # TODO,\n)\n"
+  -
+    row_no: 60
+    id: 61
+    type: method
+    name: create_most_complex_components
+    path: tbats.tbats.TBATS.TBATS.create_most_complex_components
+    module: tbats.tbats.TBATS
+    library: tbats
+    top_group: tbats.tbats
+    role: other
+    name_cluster: 29
+    event_like: False
+    return_type: ""
+    docstring: "Creates model components for the most complex model without ARMA residuals modelling"
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.tbats.TBATS import TBATS\n\nobj = TBATS()  # TODO: __init__ args\n\nresult = obj.create_most_complex_components(\n)\n"
+  -
+    row_no: 342
+    id: 343
+    type: method
+    name: find_lambda
+    path: tbats.transformation.Guerrero.Guerrero.find_lambda
+    module: tbats.transformation.Guerrero
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 112
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: bounds
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "(-1, 2)"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.Guerrero import Guerrero\n\nobj = Guerrero()  # TODO: __init__ args\n\nresult = obj.find_lambda(\n    y=None  # TODO,\n    seasonal_periods=None,\n    bounds=(-1, 2),\n)\n"
+  -
+    row_no: 343
+    id: 344
+    type: method
+    name: find_longest_season_with_2x_observations
+    path: tbats.transformation.Guerrero.Guerrero.find_longest_season_with_2x_observations
+    module: tbats.transformation.Guerrero
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 113
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: seasonal_periods
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.Guerrero import Guerrero\n\nobj = Guerrero()  # TODO: __init__ args\n\nresult = obj.find_longest_season_with_2x_observations(\n    y=None  # TODO,\n    seasonal_periods=None  # TODO,\n)\n"
+  -
+    row_no: 345
+    id: 346
+    type: method
+    name: guerrero_coefficient_of_variation
+    path: tbats.transformation.Guerrero.Guerrero.guerrero_coefficient_of_variation
+    module: tbats.transformation.Guerrero
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 115
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: lam
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.Guerrero import Guerrero\n\nobj = Guerrero()  # TODO: __init__ args\n\nresult = obj.guerrero_coefficient_of_variation(\n    lam=None  # TODO,\n)\n"
+  -
+    row_no: 344
+    id: 345
+    type: method
+    name: minimize
+    path: tbats.transformation.Guerrero.Guerrero.minimize
+    module: tbats.transformation.Guerrero
+    library: tbats
+    top_group: tbats.transformation
+    role: other
+    name_cluster: 114
+    event_like: False
+    return_type: ""
+    docstring: nan
+    params:
+      -
+        name: self
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: bounds
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tbats.transformation.Guerrero import Guerrero\n\nobj = Guerrero()  # TODO: __init__ args\n\nresult = obj.minimize(\n    y=None  # TODO,\n    bounds=None  # TODO,\n)\n"

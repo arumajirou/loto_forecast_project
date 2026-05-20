@@ -1,0 +1,25 @@
+{
+  "version": "v7",
+  "base": "loto_forecast_project_uv_repaired_v6.zip",
+  "created_at": "2026-05-20T14:34:01Z",
+  "changes": [
+    "Added local observability JSONL store with secret masking, duplicate detection, error classification, and summary reports.",
+    "Added browser screenshot/console/network/trace collector using Playwright with safe-click defaults.",
+    "Added dashboard Observability panel (観測・診断) to visualize events, browser runs, screenshots, duplicate groups, and error findings.",
+    "Added scripts/run_dashboard_observability.sh for staged dashboard launch, browser collection, and summary generation.",
+    "Added scripts/observability_summary.py and tests/unit/test_observability_store.py.",
+    "Added pyproject optional extras: browser and observability.",
+    "Kept DB writes, dataset writes, db-init, model training, and destructive browser clicks out of default flows."
+  ],
+  "executed_checks": {
+    "compileall": "PASS",
+    "pytest tests/unit/test_observability_store.py -q --no-cov": "PASS",
+    "ruff/mypy/bandit": "NOT_RUN in sandbox; run ./scripts/repair_static.sh locally after uv setup"
+  },
+  "safety": {
+    "db_init_executed": false,
+    "dataset_write_executed": false,
+    "browser_automation_executed": false,
+    "external_api_sent": false
+  }
+}

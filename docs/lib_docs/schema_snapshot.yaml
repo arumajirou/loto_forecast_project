@@ -1,0 +1,5012 @@
+generated_at: '2026-02-19T06:32:09.155677+00:00'
+database: loto
+schemas:
+- schema: dataset
+  table_count: 14
+  tables:
+  - table: execution_event_log
+    estimated_rows: 0
+    table_size_bytes: 24576
+    table_size: 24.00 KB
+    column_count: 8
+    columns:
+    - name: event_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: task_id
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: run_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: event_ts
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: level
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: event_type
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: message
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: payload
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 8
+  - table: exog_contribution
+    estimated_rows: 0
+    table_size_bytes: 16384
+    table_size: 16.00 KB
+    column_count: 5
+    columns:
+    - name: run_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: feature_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: importance
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: method
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 5
+  - table: forecast
+    estimated_rows: 0
+    table_size_bytes: 16384
+    table_size: 16.00 KB
+    column_count: 5
+    columns:
+    - name: run_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: unique_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: ds
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: yhat
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 5
+  - table: grid_search_definition
+    estimated_rows: 1
+    table_size_bytes: 32768
+    table_size: 32.00 KB
+    column_count: 13
+    columns:
+    - name: grid_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: library_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: adapter_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: model_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: horizon
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: param_space
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: exog_policy
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 7
+    - name: run_predict
+      data_type: boolean
+      is_nullable: 'NO'
+      ordinal_position: 8
+    - name: run_evaluate
+      data_type: boolean
+      is_nullable: 'NO'
+      ordinal_position: 9
+    - name: max_tasks
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: note
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: created_by
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 13
+  - table: grid_search_task
+    estimated_rows: 3
+    table_size_bytes: 65536
+    table_size: 64.00 KB
+    column_count: 16
+    columns:
+    - name: task_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: grid_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: task_order
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: param_values
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: status
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: run_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: log_path
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: started_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: ended_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: result
+      data_type: jsonb
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: metrics
+      data_type: jsonb
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: resource_summary
+      data_type: jsonb
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: error_message
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: retries
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 14
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 15
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 16
+  - table: library_catalog
+    estimated_rows: 1
+    table_size_bytes: 32768
+    table_size: 32.00 KB
+    column_count: 6
+    columns:
+    - name: library_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: source_path
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: bundle_kind
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: row_count
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: imported_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: metadata
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 6
+  - table: loto_hist_feat
+    estimated_rows: 76083
+    table_size_bytes: 16556032
+    table_size: 15.79 MB
+    column_count: 37
+    columns:
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: ds
+      data_type: date
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: hist_b1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: hist_pn1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: hist_pm1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: hist_pn2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: hist_pm2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: hist_pn3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: hist_pm3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: hist_pn4
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: hist_pm4
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: hist_b1_tens
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: hist_b1_ones
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: hist_pn5
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: hist_pm5
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: hist_co
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: hist_b2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: hist_pn6
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: hist_pm6
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: hist_b2_tens
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: hist_b2_ones
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: hist_pn7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: hist_pm7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: hist_stc
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: hist_stm
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: hist_bxc
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: hist_bxm
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: hist_ssc
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: hist_ssm
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: hist_sbc
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: hist_sbm
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: hist_mnc
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_mnm
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: exec_ts
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: updated_ts
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: proc_seconds
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 37
+  - table: loto_y_ts
+    estimated_rows: 456498
+    table_size_bytes: 69304320
+    table_size: 66.09 MB
+    column_count: 8
+    columns:
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: ds
+      data_type: date
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: exec_ts
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: updated_ts
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: proc_seconds
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 8
+  - table: model_metric
+    estimated_rows: 0
+    table_size_bytes: 16384
+    table_size: 16.00 KB
+    column_count: 4
+    columns:
+    - name: run_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: metric_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: metric_value
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 4
+  - table: model_run
+    estimated_rows: 0
+    table_size_bytes: 24576
+    table_size: 24.00 KB
+    column_count: 12
+    columns:
+    - name: run_id
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: started_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: ended_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: model_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: meta
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: library_name
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: adapter_name
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: status
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: grid_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: task_id
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: error_message
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: log_path
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 12
+  - table: module_catalog
+    estimated_rows: 47
+    table_size_bytes: 49152
+    table_size: 48.00 KB
+    column_count: 8
+    columns:
+    - name: module_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: library_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: module_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: top_group
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: symbol_count
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: metadata
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 7
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 8
+  - table: resource_sample
+    estimated_rows: 0
+    table_size_bytes: 8192
+    table_size: 8.00 KB
+    column_count: 5
+    columns:
+    - name: run_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: ts
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: cpu_percent
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: mem_percent
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: rss_mb
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+  - table: symbol_catalog
+    estimated_rows: 931
+    table_size_bytes: 1802240
+    table_size: 1.72 MB
+    column_count: 15
+    columns:
+    - name: symbol_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: library_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: module_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: symbol_type
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: symbol_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: full_path
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: parent_symbol
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: role
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: return_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: event_like
+      data_type: boolean
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: has_code
+      data_type: boolean
+      is_nullable: 'NO'
+      ordinal_position: 11
+    - name: docstring
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: raw
+      data_type: jsonb
+      is_nullable: 'NO'
+      ordinal_position: 13
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 14
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 15
+  - table: symbol_param_catalog
+    estimated_rows: 4259
+    table_size_bytes: 696320
+    table_size: 680.00 KB
+    column_count: 9
+    columns:
+    - name: symbol_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: ordinal
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: param_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: param_kind
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: annotation
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: has_default
+      data_type: boolean
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: default_repr
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: is_required
+      data_type: boolean
+      is_nullable: 'NO'
+      ordinal_position: 8
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 9
+- schema: exog
+  table_count: 6
+  tables:
+  - table: chronos
+    estimated_rows: 453292
+    table_size_bytes: 654032896
+    table_size: 623.73 MB
+    column_count: 269
+    columns:
+    - name: loto_y_ts_row_id
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: ds
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: y_idx
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: hist_chronos_1
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: hist_chronos_2
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: hist_chronos_3
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: hist_chronos_4
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: hist_chronos_5
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: hist_chronos_6
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: hist_chronos_7
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: hist_chronos_8
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: hist_chronos_9
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: hist_chronos_10
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: hist_chronos_11
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: hist_chronos_12
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: hist_chronos_13
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: hist_chronos_14
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: hist_chronos_15
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: hist_chronos_16
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: hist_chronos_17
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: hist_chronos_18
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: hist_chronos_19
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: hist_chronos_20
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: hist_chronos_21
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: hist_chronos_22
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: hist_chronos_23
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: hist_chronos_24
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: hist_chronos_25
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: hist_chronos_26
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_chronos_27
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_chronos_28
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_chronos_29
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_chronos_30
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_chronos_31
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_chronos_32
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_chronos_33
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_chronos_34
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_chronos_35
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_chronos_36
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_chronos_37
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_chronos_38
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_chronos_39
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_chronos_40
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_chronos_41
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_chronos_42
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_chronos_43
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_chronos_44
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_chronos_45
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_chronos_46
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_chronos_47
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_chronos_48
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_chronos_49
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: hist_chronos_50
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: hist_chronos_51
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 58
+    - name: hist_chronos_52
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 59
+    - name: hist_chronos_53
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 60
+    - name: hist_chronos_54
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 61
+    - name: hist_chronos_55
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 62
+    - name: hist_chronos_56
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 63
+    - name: hist_chronos_57
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 64
+    - name: hist_chronos_58
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 65
+    - name: hist_chronos_59
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 66
+    - name: hist_chronos_60
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 67
+    - name: hist_chronos_61
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 68
+    - name: hist_chronos_62
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 69
+    - name: hist_chronos_63
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 70
+    - name: hist_chronos_64
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 71
+    - name: hist_chronos_65
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 72
+    - name: hist_chronos_66
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 73
+    - name: hist_chronos_67
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 74
+    - name: hist_chronos_68
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 75
+    - name: hist_chronos_69
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 76
+    - name: hist_chronos_70
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 77
+    - name: hist_chronos_71
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 78
+    - name: hist_chronos_72
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 79
+    - name: hist_chronos_73
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 80
+    - name: hist_chronos_74
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 81
+    - name: hist_chronos_75
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 82
+    - name: hist_chronos_76
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 83
+    - name: hist_chronos_77
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 84
+    - name: hist_chronos_78
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 85
+    - name: hist_chronos_79
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 86
+    - name: hist_chronos_80
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 87
+    - name: hist_chronos_81
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 88
+    - name: hist_chronos_82
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 89
+    - name: hist_chronos_83
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 90
+    - name: hist_chronos_84
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 91
+    - name: hist_chronos_85
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 92
+    - name: hist_chronos_86
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 93
+    - name: hist_chronos_87
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 94
+    - name: hist_chronos_88
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 95
+    - name: hist_chronos_89
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 96
+    - name: hist_chronos_90
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 97
+    - name: hist_chronos_91
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 98
+    - name: hist_chronos_92
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 99
+    - name: hist_chronos_93
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 100
+    - name: hist_chronos_94
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 101
+    - name: hist_chronos_95
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 102
+    - name: hist_chronos_96
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 103
+    - name: hist_chronos_97
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 104
+    - name: hist_chronos_98
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 105
+    - name: hist_chronos_99
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 106
+    - name: hist_chronos_100
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 107
+    - name: hist_chronos_101
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 108
+    - name: hist_chronos_102
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 109
+    - name: hist_chronos_103
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 110
+    - name: hist_chronos_104
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 111
+    - name: hist_chronos_105
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 112
+    - name: hist_chronos_106
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 113
+    - name: hist_chronos_107
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 114
+    - name: hist_chronos_108
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 115
+    - name: hist_chronos_109
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 116
+    - name: hist_chronos_110
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 117
+    - name: hist_chronos_111
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 118
+    - name: hist_chronos_112
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 119
+    - name: hist_chronos_113
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 120
+    - name: hist_chronos_114
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 121
+    - name: hist_chronos_115
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 122
+    - name: hist_chronos_116
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 123
+    - name: hist_chronos_117
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 124
+    - name: hist_chronos_118
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 125
+    - name: hist_chronos_119
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 126
+    - name: hist_chronos_120
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 127
+    - name: hist_chronos_121
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 128
+    - name: hist_chronos_122
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 129
+    - name: hist_chronos_123
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 130
+    - name: hist_chronos_124
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 131
+    - name: hist_chronos_125
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 132
+    - name: hist_chronos_126
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 133
+    - name: hist_chronos_127
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 134
+    - name: hist_chronos_128
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 135
+    - name: hist_chronos_129
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 136
+    - name: hist_chronos_130
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 137
+    - name: hist_chronos_131
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 138
+    - name: hist_chronos_132
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 139
+    - name: hist_chronos_133
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 140
+    - name: hist_chronos_134
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 141
+    - name: hist_chronos_135
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 142
+    - name: hist_chronos_136
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 143
+    - name: hist_chronos_137
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 144
+    - name: hist_chronos_138
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 145
+    - name: hist_chronos_139
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 146
+    - name: hist_chronos_140
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 147
+    - name: hist_chronos_141
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 148
+    - name: hist_chronos_142
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 149
+    - name: hist_chronos_143
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 150
+    - name: hist_chronos_144
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 151
+    - name: hist_chronos_145
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 152
+    - name: hist_chronos_146
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 153
+    - name: hist_chronos_147
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 154
+    - name: hist_chronos_148
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 155
+    - name: hist_chronos_149
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 156
+    - name: hist_chronos_150
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 157
+    - name: hist_chronos_151
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 158
+    - name: hist_chronos_152
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 159
+    - name: hist_chronos_153
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 160
+    - name: hist_chronos_154
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 161
+    - name: hist_chronos_155
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 162
+    - name: hist_chronos_156
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 163
+    - name: hist_chronos_157
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 164
+    - name: hist_chronos_158
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 165
+    - name: hist_chronos_159
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 166
+    - name: hist_chronos_160
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 167
+    - name: hist_chronos_161
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 168
+    - name: hist_chronos_162
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 169
+    - name: hist_chronos_163
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 170
+    - name: hist_chronos_164
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 171
+    - name: hist_chronos_165
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 172
+    - name: hist_chronos_166
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 173
+    - name: hist_chronos_167
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 174
+    - name: hist_chronos_168
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 175
+    - name: hist_chronos_169
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 176
+    - name: hist_chronos_170
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 177
+    - name: hist_chronos_171
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 178
+    - name: hist_chronos_172
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 179
+    - name: hist_chronos_173
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 180
+    - name: hist_chronos_174
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 181
+    - name: hist_chronos_175
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 182
+    - name: hist_chronos_176
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 183
+    - name: hist_chronos_177
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 184
+    - name: hist_chronos_178
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 185
+    - name: hist_chronos_179
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 186
+    - name: hist_chronos_180
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 187
+    - name: hist_chronos_181
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 188
+    - name: hist_chronos_182
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 189
+    - name: hist_chronos_183
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 190
+    - name: hist_chronos_184
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 191
+    - name: hist_chronos_185
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 192
+    - name: hist_chronos_186
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 193
+    - name: hist_chronos_187
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 194
+    - name: hist_chronos_188
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 195
+    - name: hist_chronos_189
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 196
+    - name: hist_chronos_190
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 197
+    - name: hist_chronos_191
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 198
+    - name: hist_chronos_192
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 199
+    - name: hist_chronos_193
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 200
+    - name: hist_chronos_194
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 201
+    - name: hist_chronos_195
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 202
+    - name: hist_chronos_196
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 203
+    - name: hist_chronos_197
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 204
+    - name: hist_chronos_198
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 205
+    - name: hist_chronos_199
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 206
+    - name: hist_chronos_200
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 207
+    - name: hist_chronos_201
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 208
+    - name: hist_chronos_202
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 209
+    - name: hist_chronos_203
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 210
+    - name: hist_chronos_204
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 211
+    - name: hist_chronos_205
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 212
+    - name: hist_chronos_206
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 213
+    - name: hist_chronos_207
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 214
+    - name: hist_chronos_208
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 215
+    - name: hist_chronos_209
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 216
+    - name: hist_chronos_210
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 217
+    - name: hist_chronos_211
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 218
+    - name: hist_chronos_212
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 219
+    - name: hist_chronos_213
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 220
+    - name: hist_chronos_214
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 221
+    - name: hist_chronos_215
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 222
+    - name: hist_chronos_216
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 223
+    - name: hist_chronos_217
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 224
+    - name: hist_chronos_218
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 225
+    - name: hist_chronos_219
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 226
+    - name: hist_chronos_220
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 227
+    - name: hist_chronos_221
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 228
+    - name: hist_chronos_222
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 229
+    - name: hist_chronos_223
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 230
+    - name: hist_chronos_224
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 231
+    - name: hist_chronos_225
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 232
+    - name: hist_chronos_226
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 233
+    - name: hist_chronos_227
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 234
+    - name: hist_chronos_228
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 235
+    - name: hist_chronos_229
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 236
+    - name: hist_chronos_230
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 237
+    - name: hist_chronos_231
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 238
+    - name: hist_chronos_232
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 239
+    - name: hist_chronos_233
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 240
+    - name: hist_chronos_234
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 241
+    - name: hist_chronos_235
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 242
+    - name: hist_chronos_236
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 243
+    - name: hist_chronos_237
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 244
+    - name: hist_chronos_238
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 245
+    - name: hist_chronos_239
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 246
+    - name: hist_chronos_240
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 247
+    - name: hist_chronos_241
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 248
+    - name: hist_chronos_242
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 249
+    - name: hist_chronos_243
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 250
+    - name: hist_chronos_244
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 251
+    - name: hist_chronos_245
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 252
+    - name: hist_chronos_246
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 253
+    - name: hist_chronos_247
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 254
+    - name: hist_chronos_248
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 255
+    - name: hist_chronos_249
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 256
+    - name: hist_chronos_250
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 257
+    - name: hist_chronos_251
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 258
+    - name: hist_chronos_252
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 259
+    - name: hist_chronos_253
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 260
+    - name: hist_chronos_254
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 261
+    - name: hist_chronos_255
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 262
+    - name: hist_chronos_256
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 263
+    - name: embedding_dim
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 264
+    - name: model_name
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 265
+    - name: model_version
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 266
+    - name: config_hash
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 267
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 268
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 269
+  - table: loto_y_ts_exog
+    estimated_rows: 456498
+    table_size_bytes: 241049600
+    table_size: 229.88 MB
+    column_count: 58
+    columns:
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ds
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: feat_year
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: feat_month
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: feat_day
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: feat_dayofweek
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: feat_weekofyear
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: feat_dayofyear
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: feat_is_weekend
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: feat_is_month_start
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: feat_is_month_end
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: feat_dow_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: feat_dow_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: feat_month_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: feat_month_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: feat_days_since_first
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: feat_row_no_in_group
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: feat_proc_seconds
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: feat_exec_lag_sec
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: stat_y_count
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: stat_y_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: stat_y_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: stat_y_min
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: stat_y_max
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: stat_y_median
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: stat_y_q25
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: stat_y_q75
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: stat_y_trend_slope
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: stat_y_iqr
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: stat_y_cv
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_lag_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_lag_2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_lag_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_lag_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_lag_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_lag_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_diff_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_diff_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_roll_mean_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_roll_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_roll_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_roll_mean_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_roll_std_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_roll_std_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_roll_std_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_roll_min_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_roll_max_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_roll_min_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_roll_max_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_expanding_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_expanding_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_ewm_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_ewm_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: feat_gpu_cummean_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: feat_gpu_zscore_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 58
+  - table: merlion
+    estimated_rows: 456488
+    table_size_bytes: 308846592
+    table_size: 294.54 MB
+    column_count: 78
+    columns:
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ds
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: feat_year
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: feat_month
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: feat_day
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: feat_dayofweek
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: feat_weekofyear
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: feat_dayofyear
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: feat_is_weekend
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: feat_is_month_start
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: feat_is_month_end
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: feat_dow_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: feat_dow_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: feat_month_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: feat_month_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: feat_days_since_first
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: feat_row_no_in_group
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: feat_proc_seconds
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: feat_exec_lag_sec
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: stat_y_count
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: stat_y_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: stat_y_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: stat_y_min
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: stat_y_max
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: stat_y_median
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: stat_y_q25
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: stat_y_q75
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: stat_y_trend_slope
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: stat_y_iqr
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: stat_y_cv
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_lag_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_lag_2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_lag_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_lag_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_lag_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_lag_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_diff_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_diff_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_roll_mean_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_roll_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_roll_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_roll_mean_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_roll_std_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_roll_std_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_roll_std_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_roll_min_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_roll_max_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_roll_min_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_roll_max_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_expanding_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_expanding_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_ewm_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_ewm_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: hist_outlier_zscore_abs
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: hist_outlier_flag_z3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 58
+    - name: hist_outlier_iqr_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 59
+    - name: hist_outlier_flag_iqr
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 60
+    - name: hist_outlier_robust_z_abs
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 61
+    - name: hist_outlier_flag_robust
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 62
+    - name: hist_pyod_ecod_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 63
+    - name: hist_pyod_ecod_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 64
+    - name: hist_pyod_iforest_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 65
+    - name: hist_pyod_iforest_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 66
+    - name: hist_pyod_copod_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 67
+    - name: hist_pyod_copod_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 68
+    - name: hist_merlion_iforest_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 69
+    - name: hist_merlion_iforest_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 70
+    - name: hist_merlion_lof_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 71
+    - name: hist_merlion_lof_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 72
+    - name: hist_merlion_spectral_residual_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 73
+    - name: hist_merlion_spectral_residual_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 74
+    - name: hist_merlion_stat_threshold_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 75
+    - name: hist_merlion_stat_threshold_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 76
+    - name: feat_gpu_cummean_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 77
+    - name: feat_gpu_zscore_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 78
+  - table: pypots
+    estimated_rows: 456498
+    table_size_bytes: 264708096
+    table_size: 252.45 MB
+    column_count: 64
+    columns:
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ds
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: feat_year
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: feat_month
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: feat_day
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: feat_dayofweek
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: feat_weekofyear
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: feat_dayofyear
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: feat_is_weekend
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: feat_is_month_start
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: feat_is_month_end
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: feat_dow_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: feat_dow_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: feat_month_sin
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: feat_month_cos
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: feat_days_since_first
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: feat_row_no_in_group
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: feat_proc_seconds
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: feat_exec_lag_sec
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: stat_y_count
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: stat_y_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: stat_y_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: stat_y_min
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: stat_y_max
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: stat_y_median
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: stat_y_q25
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: stat_y_q75
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: stat_y_trend_slope
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: stat_y_iqr
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: stat_y_cv
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_lag_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_lag_2
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_lag_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_lag_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_lag_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_lag_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_diff_1
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_diff_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_roll_mean_3
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_roll_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_roll_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_roll_mean_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_roll_std_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_roll_std_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_roll_std_28
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_roll_min_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_roll_max_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_roll_min_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_roll_max_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_expanding_mean
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_expanding_std
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_ewm_mean_7
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_ewm_mean_14
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: hist_pypots_missing_ratio
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: hist_pypots_missing_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 58
+    - name: hist_pypots_transformer_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 59
+    - name: hist_pypots_transformer_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 60
+    - name: hist_pypots_saits_score
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 61
+    - name: hist_pypots_saits_flag
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 62
+    - name: feat_gpu_cummean_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 63
+    - name: feat_gpu_zscore_y
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 64
+  - table: timesfm
+    estimated_rows: 911844
+    table_size_bytes: 1374330880
+    table_size: 1.28 GB
+    column_count: 268
+    columns:
+    - name: loto_y_ts_row_id
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ds
+      data_type: date
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: hist_timesfm_1
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: hist_timesfm_2
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: hist_timesfm_3
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: hist_timesfm_4
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: hist_timesfm_5
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: hist_timesfm_6
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: hist_timesfm_7
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: hist_timesfm_8
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: hist_timesfm_9
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: hist_timesfm_10
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: hist_timesfm_11
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: hist_timesfm_12
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: hist_timesfm_13
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: hist_timesfm_14
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: hist_timesfm_15
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: hist_timesfm_16
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: hist_timesfm_17
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: hist_timesfm_18
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: hist_timesfm_19
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: hist_timesfm_20
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: hist_timesfm_21
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: hist_timesfm_22
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: hist_timesfm_23
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: hist_timesfm_24
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: hist_timesfm_25
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: hist_timesfm_26
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: hist_timesfm_27
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: hist_timesfm_28
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_timesfm_29
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_timesfm_30
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_timesfm_31
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_timesfm_32
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_timesfm_33
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_timesfm_34
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_timesfm_35
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_timesfm_36
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_timesfm_37
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_timesfm_38
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_timesfm_39
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_timesfm_40
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_timesfm_41
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_timesfm_42
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_timesfm_43
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_timesfm_44
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_timesfm_45
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_timesfm_46
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_timesfm_47
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_timesfm_48
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_timesfm_49
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_timesfm_50
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_timesfm_51
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: hist_timesfm_52
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: hist_timesfm_53
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 58
+    - name: hist_timesfm_54
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 59
+    - name: hist_timesfm_55
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 60
+    - name: hist_timesfm_56
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 61
+    - name: hist_timesfm_57
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 62
+    - name: hist_timesfm_58
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 63
+    - name: hist_timesfm_59
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 64
+    - name: hist_timesfm_60
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 65
+    - name: hist_timesfm_61
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 66
+    - name: hist_timesfm_62
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 67
+    - name: hist_timesfm_63
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 68
+    - name: hist_timesfm_64
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 69
+    - name: hist_timesfm_65
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 70
+    - name: hist_timesfm_66
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 71
+    - name: hist_timesfm_67
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 72
+    - name: hist_timesfm_68
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 73
+    - name: hist_timesfm_69
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 74
+    - name: hist_timesfm_70
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 75
+    - name: hist_timesfm_71
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 76
+    - name: hist_timesfm_72
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 77
+    - name: hist_timesfm_73
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 78
+    - name: hist_timesfm_74
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 79
+    - name: hist_timesfm_75
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 80
+    - name: hist_timesfm_76
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 81
+    - name: hist_timesfm_77
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 82
+    - name: hist_timesfm_78
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 83
+    - name: hist_timesfm_79
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 84
+    - name: hist_timesfm_80
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 85
+    - name: hist_timesfm_81
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 86
+    - name: hist_timesfm_82
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 87
+    - name: hist_timesfm_83
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 88
+    - name: hist_timesfm_84
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 89
+    - name: hist_timesfm_85
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 90
+    - name: hist_timesfm_86
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 91
+    - name: hist_timesfm_87
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 92
+    - name: hist_timesfm_88
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 93
+    - name: hist_timesfm_89
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 94
+    - name: hist_timesfm_90
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 95
+    - name: hist_timesfm_91
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 96
+    - name: hist_timesfm_92
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 97
+    - name: hist_timesfm_93
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 98
+    - name: hist_timesfm_94
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 99
+    - name: hist_timesfm_95
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 100
+    - name: hist_timesfm_96
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 101
+    - name: hist_timesfm_97
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 102
+    - name: hist_timesfm_98
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 103
+    - name: hist_timesfm_99
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 104
+    - name: hist_timesfm_100
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 105
+    - name: hist_timesfm_101
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 106
+    - name: hist_timesfm_102
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 107
+    - name: hist_timesfm_103
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 108
+    - name: hist_timesfm_104
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 109
+    - name: hist_timesfm_105
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 110
+    - name: hist_timesfm_106
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 111
+    - name: hist_timesfm_107
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 112
+    - name: hist_timesfm_108
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 113
+    - name: hist_timesfm_109
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 114
+    - name: hist_timesfm_110
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 115
+    - name: hist_timesfm_111
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 116
+    - name: hist_timesfm_112
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 117
+    - name: hist_timesfm_113
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 118
+    - name: hist_timesfm_114
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 119
+    - name: hist_timesfm_115
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 120
+    - name: hist_timesfm_116
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 121
+    - name: hist_timesfm_117
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 122
+    - name: hist_timesfm_118
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 123
+    - name: hist_timesfm_119
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 124
+    - name: hist_timesfm_120
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 125
+    - name: hist_timesfm_121
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 126
+    - name: hist_timesfm_122
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 127
+    - name: hist_timesfm_123
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 128
+    - name: hist_timesfm_124
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 129
+    - name: hist_timesfm_125
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 130
+    - name: hist_timesfm_126
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 131
+    - name: hist_timesfm_127
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 132
+    - name: hist_timesfm_128
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 133
+    - name: hist_timesfm_129
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 134
+    - name: hist_timesfm_130
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 135
+    - name: hist_timesfm_131
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 136
+    - name: hist_timesfm_132
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 137
+    - name: hist_timesfm_133
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 138
+    - name: hist_timesfm_134
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 139
+    - name: hist_timesfm_135
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 140
+    - name: hist_timesfm_136
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 141
+    - name: hist_timesfm_137
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 142
+    - name: hist_timesfm_138
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 143
+    - name: hist_timesfm_139
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 144
+    - name: hist_timesfm_140
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 145
+    - name: hist_timesfm_141
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 146
+    - name: hist_timesfm_142
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 147
+    - name: hist_timesfm_143
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 148
+    - name: hist_timesfm_144
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 149
+    - name: hist_timesfm_145
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 150
+    - name: hist_timesfm_146
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 151
+    - name: hist_timesfm_147
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 152
+    - name: hist_timesfm_148
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 153
+    - name: hist_timesfm_149
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 154
+    - name: hist_timesfm_150
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 155
+    - name: hist_timesfm_151
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 156
+    - name: hist_timesfm_152
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 157
+    - name: hist_timesfm_153
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 158
+    - name: hist_timesfm_154
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 159
+    - name: hist_timesfm_155
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 160
+    - name: hist_timesfm_156
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 161
+    - name: hist_timesfm_157
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 162
+    - name: hist_timesfm_158
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 163
+    - name: hist_timesfm_159
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 164
+    - name: hist_timesfm_160
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 165
+    - name: hist_timesfm_161
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 166
+    - name: hist_timesfm_162
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 167
+    - name: hist_timesfm_163
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 168
+    - name: hist_timesfm_164
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 169
+    - name: hist_timesfm_165
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 170
+    - name: hist_timesfm_166
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 171
+    - name: hist_timesfm_167
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 172
+    - name: hist_timesfm_168
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 173
+    - name: hist_timesfm_169
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 174
+    - name: hist_timesfm_170
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 175
+    - name: hist_timesfm_171
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 176
+    - name: hist_timesfm_172
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 177
+    - name: hist_timesfm_173
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 178
+    - name: hist_timesfm_174
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 179
+    - name: hist_timesfm_175
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 180
+    - name: hist_timesfm_176
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 181
+    - name: hist_timesfm_177
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 182
+    - name: hist_timesfm_178
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 183
+    - name: hist_timesfm_179
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 184
+    - name: hist_timesfm_180
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 185
+    - name: hist_timesfm_181
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 186
+    - name: hist_timesfm_182
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 187
+    - name: hist_timesfm_183
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 188
+    - name: hist_timesfm_184
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 189
+    - name: hist_timesfm_185
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 190
+    - name: hist_timesfm_186
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 191
+    - name: hist_timesfm_187
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 192
+    - name: hist_timesfm_188
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 193
+    - name: hist_timesfm_189
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 194
+    - name: hist_timesfm_190
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 195
+    - name: hist_timesfm_191
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 196
+    - name: hist_timesfm_192
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 197
+    - name: hist_timesfm_193
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 198
+    - name: hist_timesfm_194
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 199
+    - name: hist_timesfm_195
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 200
+    - name: hist_timesfm_196
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 201
+    - name: hist_timesfm_197
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 202
+    - name: hist_timesfm_198
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 203
+    - name: hist_timesfm_199
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 204
+    - name: hist_timesfm_200
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 205
+    - name: hist_timesfm_201
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 206
+    - name: hist_timesfm_202
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 207
+    - name: hist_timesfm_203
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 208
+    - name: hist_timesfm_204
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 209
+    - name: hist_timesfm_205
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 210
+    - name: hist_timesfm_206
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 211
+    - name: hist_timesfm_207
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 212
+    - name: hist_timesfm_208
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 213
+    - name: hist_timesfm_209
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 214
+    - name: hist_timesfm_210
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 215
+    - name: hist_timesfm_211
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 216
+    - name: hist_timesfm_212
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 217
+    - name: hist_timesfm_213
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 218
+    - name: hist_timesfm_214
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 219
+    - name: hist_timesfm_215
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 220
+    - name: hist_timesfm_216
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 221
+    - name: hist_timesfm_217
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 222
+    - name: hist_timesfm_218
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 223
+    - name: hist_timesfm_219
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 224
+    - name: hist_timesfm_220
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 225
+    - name: hist_timesfm_221
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 226
+    - name: hist_timesfm_222
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 227
+    - name: hist_timesfm_223
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 228
+    - name: hist_timesfm_224
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 229
+    - name: hist_timesfm_225
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 230
+    - name: hist_timesfm_226
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 231
+    - name: hist_timesfm_227
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 232
+    - name: hist_timesfm_228
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 233
+    - name: hist_timesfm_229
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 234
+    - name: hist_timesfm_230
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 235
+    - name: hist_timesfm_231
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 236
+    - name: hist_timesfm_232
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 237
+    - name: hist_timesfm_233
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 238
+    - name: hist_timesfm_234
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 239
+    - name: hist_timesfm_235
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 240
+    - name: hist_timesfm_236
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 241
+    - name: hist_timesfm_237
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 242
+    - name: hist_timesfm_238
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 243
+    - name: hist_timesfm_239
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 244
+    - name: hist_timesfm_240
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 245
+    - name: hist_timesfm_241
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 246
+    - name: hist_timesfm_242
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 247
+    - name: hist_timesfm_243
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 248
+    - name: hist_timesfm_244
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 249
+    - name: hist_timesfm_245
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 250
+    - name: hist_timesfm_246
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 251
+    - name: hist_timesfm_247
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 252
+    - name: hist_timesfm_248
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 253
+    - name: hist_timesfm_249
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 254
+    - name: hist_timesfm_250
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 255
+    - name: hist_timesfm_251
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 256
+    - name: hist_timesfm_252
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 257
+    - name: hist_timesfm_253
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 258
+    - name: hist_timesfm_254
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 259
+    - name: hist_timesfm_255
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 260
+    - name: hist_timesfm_256
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 261
+    - name: embedding_dim
+      data_type: integer
+      is_nullable: 'NO'
+      ordinal_position: 262
+    - name: model_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 263
+    - name: model_version
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 264
+    - name: config_hash
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 265
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 266
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 267
+    - name: y_idx
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 268
+  - table: uni2ts
+    estimated_rows: 456498
+    table_size_bytes: 644816896
+    table_size: 614.95 MB
+    column_count: 269
+    columns:
+    - name: loto_y_ts_row_id
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 1
+    - name: loto
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: unique_id
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: ts_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: ds
+      data_type: timestamp without time zone
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: y
+      data_type: double precision
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: hist_uni2ts_1
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: hist_uni2ts_2
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: hist_uni2ts_3
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: hist_uni2ts_4
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: hist_uni2ts_5
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: hist_uni2ts_6
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: hist_uni2ts_7
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: hist_uni2ts_8
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: hist_uni2ts_9
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: hist_uni2ts_10
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: hist_uni2ts_11
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: hist_uni2ts_12
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: hist_uni2ts_13
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: hist_uni2ts_14
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: hist_uni2ts_15
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: hist_uni2ts_16
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: hist_uni2ts_17
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: hist_uni2ts_18
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: hist_uni2ts_19
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: hist_uni2ts_20
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: hist_uni2ts_21
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: hist_uni2ts_22
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 28
+    - name: hist_uni2ts_23
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 29
+    - name: hist_uni2ts_24
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 30
+    - name: hist_uni2ts_25
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 31
+    - name: hist_uni2ts_26
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 32
+    - name: hist_uni2ts_27
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 33
+    - name: hist_uni2ts_28
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 34
+    - name: hist_uni2ts_29
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 35
+    - name: hist_uni2ts_30
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 36
+    - name: hist_uni2ts_31
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 37
+    - name: hist_uni2ts_32
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 38
+    - name: hist_uni2ts_33
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 39
+    - name: hist_uni2ts_34
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 40
+    - name: hist_uni2ts_35
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 41
+    - name: hist_uni2ts_36
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 42
+    - name: hist_uni2ts_37
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 43
+    - name: hist_uni2ts_38
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 44
+    - name: hist_uni2ts_39
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 45
+    - name: hist_uni2ts_40
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 46
+    - name: hist_uni2ts_41
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 47
+    - name: hist_uni2ts_42
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 48
+    - name: hist_uni2ts_43
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 49
+    - name: hist_uni2ts_44
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 50
+    - name: hist_uni2ts_45
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 51
+    - name: hist_uni2ts_46
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 52
+    - name: hist_uni2ts_47
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 53
+    - name: hist_uni2ts_48
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 54
+    - name: hist_uni2ts_49
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 55
+    - name: hist_uni2ts_50
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 56
+    - name: hist_uni2ts_51
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 57
+    - name: hist_uni2ts_52
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 58
+    - name: hist_uni2ts_53
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 59
+    - name: hist_uni2ts_54
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 60
+    - name: hist_uni2ts_55
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 61
+    - name: hist_uni2ts_56
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 62
+    - name: hist_uni2ts_57
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 63
+    - name: hist_uni2ts_58
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 64
+    - name: hist_uni2ts_59
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 65
+    - name: hist_uni2ts_60
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 66
+    - name: hist_uni2ts_61
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 67
+    - name: hist_uni2ts_62
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 68
+    - name: hist_uni2ts_63
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 69
+    - name: hist_uni2ts_64
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 70
+    - name: hist_uni2ts_65
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 71
+    - name: hist_uni2ts_66
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 72
+    - name: hist_uni2ts_67
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 73
+    - name: hist_uni2ts_68
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 74
+    - name: hist_uni2ts_69
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 75
+    - name: hist_uni2ts_70
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 76
+    - name: hist_uni2ts_71
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 77
+    - name: hist_uni2ts_72
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 78
+    - name: hist_uni2ts_73
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 79
+    - name: hist_uni2ts_74
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 80
+    - name: hist_uni2ts_75
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 81
+    - name: hist_uni2ts_76
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 82
+    - name: hist_uni2ts_77
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 83
+    - name: hist_uni2ts_78
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 84
+    - name: hist_uni2ts_79
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 85
+    - name: hist_uni2ts_80
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 86
+    - name: hist_uni2ts_81
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 87
+    - name: hist_uni2ts_82
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 88
+    - name: hist_uni2ts_83
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 89
+    - name: hist_uni2ts_84
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 90
+    - name: hist_uni2ts_85
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 91
+    - name: hist_uni2ts_86
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 92
+    - name: hist_uni2ts_87
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 93
+    - name: hist_uni2ts_88
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 94
+    - name: hist_uni2ts_89
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 95
+    - name: hist_uni2ts_90
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 96
+    - name: hist_uni2ts_91
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 97
+    - name: hist_uni2ts_92
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 98
+    - name: hist_uni2ts_93
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 99
+    - name: hist_uni2ts_94
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 100
+    - name: hist_uni2ts_95
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 101
+    - name: hist_uni2ts_96
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 102
+    - name: hist_uni2ts_97
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 103
+    - name: hist_uni2ts_98
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 104
+    - name: hist_uni2ts_99
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 105
+    - name: hist_uni2ts_100
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 106
+    - name: hist_uni2ts_101
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 107
+    - name: hist_uni2ts_102
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 108
+    - name: hist_uni2ts_103
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 109
+    - name: hist_uni2ts_104
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 110
+    - name: hist_uni2ts_105
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 111
+    - name: hist_uni2ts_106
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 112
+    - name: hist_uni2ts_107
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 113
+    - name: hist_uni2ts_108
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 114
+    - name: hist_uni2ts_109
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 115
+    - name: hist_uni2ts_110
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 116
+    - name: hist_uni2ts_111
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 117
+    - name: hist_uni2ts_112
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 118
+    - name: hist_uni2ts_113
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 119
+    - name: hist_uni2ts_114
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 120
+    - name: hist_uni2ts_115
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 121
+    - name: hist_uni2ts_116
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 122
+    - name: hist_uni2ts_117
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 123
+    - name: hist_uni2ts_118
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 124
+    - name: hist_uni2ts_119
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 125
+    - name: hist_uni2ts_120
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 126
+    - name: hist_uni2ts_121
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 127
+    - name: hist_uni2ts_122
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 128
+    - name: hist_uni2ts_123
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 129
+    - name: hist_uni2ts_124
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 130
+    - name: hist_uni2ts_125
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 131
+    - name: hist_uni2ts_126
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 132
+    - name: hist_uni2ts_127
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 133
+    - name: hist_uni2ts_128
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 134
+    - name: hist_uni2ts_129
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 135
+    - name: hist_uni2ts_130
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 136
+    - name: hist_uni2ts_131
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 137
+    - name: hist_uni2ts_132
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 138
+    - name: hist_uni2ts_133
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 139
+    - name: hist_uni2ts_134
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 140
+    - name: hist_uni2ts_135
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 141
+    - name: hist_uni2ts_136
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 142
+    - name: hist_uni2ts_137
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 143
+    - name: hist_uni2ts_138
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 144
+    - name: hist_uni2ts_139
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 145
+    - name: hist_uni2ts_140
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 146
+    - name: hist_uni2ts_141
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 147
+    - name: hist_uni2ts_142
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 148
+    - name: hist_uni2ts_143
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 149
+    - name: hist_uni2ts_144
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 150
+    - name: hist_uni2ts_145
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 151
+    - name: hist_uni2ts_146
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 152
+    - name: hist_uni2ts_147
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 153
+    - name: hist_uni2ts_148
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 154
+    - name: hist_uni2ts_149
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 155
+    - name: hist_uni2ts_150
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 156
+    - name: hist_uni2ts_151
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 157
+    - name: hist_uni2ts_152
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 158
+    - name: hist_uni2ts_153
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 159
+    - name: hist_uni2ts_154
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 160
+    - name: hist_uni2ts_155
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 161
+    - name: hist_uni2ts_156
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 162
+    - name: hist_uni2ts_157
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 163
+    - name: hist_uni2ts_158
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 164
+    - name: hist_uni2ts_159
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 165
+    - name: hist_uni2ts_160
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 166
+    - name: hist_uni2ts_161
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 167
+    - name: hist_uni2ts_162
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 168
+    - name: hist_uni2ts_163
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 169
+    - name: hist_uni2ts_164
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 170
+    - name: hist_uni2ts_165
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 171
+    - name: hist_uni2ts_166
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 172
+    - name: hist_uni2ts_167
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 173
+    - name: hist_uni2ts_168
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 174
+    - name: hist_uni2ts_169
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 175
+    - name: hist_uni2ts_170
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 176
+    - name: hist_uni2ts_171
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 177
+    - name: hist_uni2ts_172
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 178
+    - name: hist_uni2ts_173
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 179
+    - name: hist_uni2ts_174
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 180
+    - name: hist_uni2ts_175
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 181
+    - name: hist_uni2ts_176
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 182
+    - name: hist_uni2ts_177
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 183
+    - name: hist_uni2ts_178
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 184
+    - name: hist_uni2ts_179
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 185
+    - name: hist_uni2ts_180
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 186
+    - name: hist_uni2ts_181
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 187
+    - name: hist_uni2ts_182
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 188
+    - name: hist_uni2ts_183
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 189
+    - name: hist_uni2ts_184
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 190
+    - name: hist_uni2ts_185
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 191
+    - name: hist_uni2ts_186
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 192
+    - name: hist_uni2ts_187
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 193
+    - name: hist_uni2ts_188
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 194
+    - name: hist_uni2ts_189
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 195
+    - name: hist_uni2ts_190
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 196
+    - name: hist_uni2ts_191
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 197
+    - name: hist_uni2ts_192
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 198
+    - name: hist_uni2ts_193
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 199
+    - name: hist_uni2ts_194
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 200
+    - name: hist_uni2ts_195
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 201
+    - name: hist_uni2ts_196
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 202
+    - name: hist_uni2ts_197
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 203
+    - name: hist_uni2ts_198
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 204
+    - name: hist_uni2ts_199
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 205
+    - name: hist_uni2ts_200
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 206
+    - name: hist_uni2ts_201
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 207
+    - name: hist_uni2ts_202
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 208
+    - name: hist_uni2ts_203
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 209
+    - name: hist_uni2ts_204
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 210
+    - name: hist_uni2ts_205
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 211
+    - name: hist_uni2ts_206
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 212
+    - name: hist_uni2ts_207
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 213
+    - name: hist_uni2ts_208
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 214
+    - name: hist_uni2ts_209
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 215
+    - name: hist_uni2ts_210
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 216
+    - name: hist_uni2ts_211
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 217
+    - name: hist_uni2ts_212
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 218
+    - name: hist_uni2ts_213
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 219
+    - name: hist_uni2ts_214
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 220
+    - name: hist_uni2ts_215
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 221
+    - name: hist_uni2ts_216
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 222
+    - name: hist_uni2ts_217
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 223
+    - name: hist_uni2ts_218
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 224
+    - name: hist_uni2ts_219
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 225
+    - name: hist_uni2ts_220
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 226
+    - name: hist_uni2ts_221
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 227
+    - name: hist_uni2ts_222
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 228
+    - name: hist_uni2ts_223
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 229
+    - name: hist_uni2ts_224
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 230
+    - name: hist_uni2ts_225
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 231
+    - name: hist_uni2ts_226
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 232
+    - name: hist_uni2ts_227
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 233
+    - name: hist_uni2ts_228
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 234
+    - name: hist_uni2ts_229
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 235
+    - name: hist_uni2ts_230
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 236
+    - name: hist_uni2ts_231
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 237
+    - name: hist_uni2ts_232
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 238
+    - name: hist_uni2ts_233
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 239
+    - name: hist_uni2ts_234
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 240
+    - name: hist_uni2ts_235
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 241
+    - name: hist_uni2ts_236
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 242
+    - name: hist_uni2ts_237
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 243
+    - name: hist_uni2ts_238
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 244
+    - name: hist_uni2ts_239
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 245
+    - name: hist_uni2ts_240
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 246
+    - name: hist_uni2ts_241
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 247
+    - name: hist_uni2ts_242
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 248
+    - name: hist_uni2ts_243
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 249
+    - name: hist_uni2ts_244
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 250
+    - name: hist_uni2ts_245
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 251
+    - name: hist_uni2ts_246
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 252
+    - name: hist_uni2ts_247
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 253
+    - name: hist_uni2ts_248
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 254
+    - name: hist_uni2ts_249
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 255
+    - name: hist_uni2ts_250
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 256
+    - name: hist_uni2ts_251
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 257
+    - name: hist_uni2ts_252
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 258
+    - name: hist_uni2ts_253
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 259
+    - name: hist_uni2ts_254
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 260
+    - name: hist_uni2ts_255
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 261
+    - name: hist_uni2ts_256
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 262
+    - name: y_idx
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 263
+    - name: embedding_dim
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 264
+    - name: model_name
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 265
+    - name: model_version
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 266
+    - name: config_hash
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 267
+    - name: created_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 268
+    - name: updated_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 269
+- schema: resources
+  table_count: 4
+  tables:
+  - table: metric_def
+    estimated_rows: 7
+    table_size_bytes: 65536
+    table_size: 64.00 KB
+    column_count: 7
+    columns:
+    - name: metric_key
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: scope
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: unit
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: description
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: source_library
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: source_method
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: recommended_interval_sec
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 7
+  - table: resource_metric
+    estimated_rows: 42646
+    table_size_bytes: 5677056
+    table_size: 5.41 MB
+    column_count: 7
+    columns:
+    - name: run_id
+      data_type: uuid
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: span_id
+      data_type: uuid
+      is_nullable: 'YES'
+      ordinal_position: 2
+    - name: sampled_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 3
+    - name: scope
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: metric_key
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 5
+    - name: metric_value
+      data_type: double precision
+      is_nullable: 'NO'
+      ordinal_position: 6
+    - name: unit
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 7
+  - table: run
+    estimated_rows: 27
+    table_size_bytes: 81920
+    table_size: 80.00 KB
+    column_count: 15
+    columns:
+    - name: run_id
+      data_type: uuid
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: started_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: ended_at
+      data_type: timestamp with time zone
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: status
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 4
+    - name: env
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: profile
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: host
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 7
+    - name: app_name
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 8
+    - name: command
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 9
+    - name: config_hash
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: tags
+      data_type: jsonb
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: rows_target
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: rows_written
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: rows_failed
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: error_summary
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 15
+  - table: stage_span
+    estimated_rows: 14323
+    table_size_bytes: 6103040
+    table_size: 5.82 MB
+    column_count: 28
+    columns:
+    - name: span_id
+      data_type: uuid
+      is_nullable: 'NO'
+      ordinal_position: 1
+    - name: run_id
+      data_type: uuid
+      is_nullable: 'NO'
+      ordinal_position: 2
+    - name: parent_span_id
+      data_type: uuid
+      is_nullable: 'YES'
+      ordinal_position: 3
+    - name: stage_name
+      data_type: text
+      is_nullable: 'NO'
+      ordinal_position: 4
+    - name: function_fqn
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 5
+    - name: file_path
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 6
+    - name: started_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 7
+    - name: ended_at
+      data_type: timestamp with time zone
+      is_nullable: 'NO'
+      ordinal_position: 8
+    - name: duration_ms
+      data_type: bigint
+      is_nullable: 'NO'
+      ordinal_position: 9
+    - name: batch_no
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 10
+    - name: rows_in
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 11
+    - name: rows_out
+      data_type: integer
+      is_nullable: 'YES'
+      ordinal_position: 12
+    - name: cpu_user_ms
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 13
+    - name: cpu_system_ms
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 14
+    - name: rss_start_mb
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 15
+    - name: rss_end_mb
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 16
+    - name: rss_peak_mb
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 17
+    - name: io_read_bytes_delta
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 18
+    - name: io_write_bytes_delta
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 19
+    - name: net_sent_bytes_delta
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 20
+    - name: net_recv_bytes_delta
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 21
+    - name: gpu_util_avg
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 22
+    - name: gpu_mem_used_mb_avg
+      data_type: real
+      is_nullable: 'YES'
+      ordinal_position: 23
+    - name: db_time_ms
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 24
+    - name: db_rows
+      data_type: bigint
+      is_nullable: 'YES'
+      ordinal_position: 25
+    - name: exception_type
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 26
+    - name: exception_msg
+      data_type: text
+      is_nullable: 'YES'
+      ordinal_position: 27
+    - name: extra
+      data_type: jsonb
+      is_nullable: 'YES'
+      ordinal_position: 28

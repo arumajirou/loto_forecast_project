@@ -1,0 +1,3244 @@
+title: "CLE V10 batch codegen / module=tsfel / total=114"
+bundle_kind: code
+count: 114
+rows:
+  -
+    row_no: 168
+    id: 169
+    type: function
+    name: get_uci_splits
+    path: tsfel.datasets._single_problem_loaders.get_uci_splits
+    module: tsfel.datasets._single_problem_loaders
+    library: tsfel
+    top_group: tsfel.datasets
+    role: other
+    name_cluster: 113
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: cache_dir
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: data_modality
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.datasets._single_problem_loaders import get_uci_splits\n\nresult = get_uci_splits(\n    cache_dir=None  # TODO,\n    data_modality=None  # TODO,\n)\n"
+  -
+    row_no: 166
+    id: 167
+    type: function
+    name: load_biopluxecg
+    path: tsfel.datasets._single_problem_loaders.load_biopluxecg
+    module: tsfel.datasets._single_problem_loaders
+    library: tsfel
+    top_group: tsfel.datasets
+    role: io_read
+    name_cluster: 111
+    event_like: False
+    return_type: pd.Series
+    docstring: "Load an example single-lead ECG signal colected using BioSignalsPlux.\n\nParameters\n----------\nuse_cache : bool, default=True\n    If True, caches a local copy of the dataset in the user's home directory.\n\nReturns\n-------\nX : np.ndarray\n    The time series data.\n\nNotes\n-----\nThe signal is sampled at 1000 Hz and has a duration of 10 s.\n\nExamples\n--------\n>>> from tsfel.datasets import load_biopluxecg\n>>> X = load_biopluxecg()"
+    params:
+      -
+        name: use_cache
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.datasets._single_problem_loaders import load_biopluxecg\n\nresult = load_biopluxecg(\n    use_cache=True,\n)\n"
+  -
+    row_no: 169
+    id: 170
+    type: function
+    name: load_ucihar
+    path: tsfel.datasets._single_problem_loaders.load_ucihar
+    module: tsfel.datasets._single_problem_loaders
+    library: tsfel
+    top_group: tsfel.datasets
+    role: io_read
+    name_cluster: 114
+    event_like: False
+    return_type: "(List[pd.DataFrame], np.ndarray, List[pd.DataFrame], np.ndarray)"
+    docstring: "Loads the Human Activity Recognition Using Smartphones dataset from the\nUC Irvine Machine Learning Repository [1]_. Retrieves the raw inertial data\nfor both the training and test sets.\n\nParameters\n----------\nuse_cache: bool, default=True\n    If True, caches a local copy of the dataset in the user's home directory.\n\ndata_modality: None or list of data modalities, default=None\n    If set to None, all available data modalities are loaded. Otherwise,\n    only the specified modalities are loaded. The supported modalities are\n    defined as \"body_acc,\" \"body_gyro,\" and \"total_acc\".\n\nReturns\n-------\nX_train : list\n    A list of DataFrames containing windows of multivariate time series\n    from the training set. The number of channels (columns) in each\n    DataFrame depends on the `data_modality`.\n\ny_train : ndarray\n    The corresponding labels for the training set.\n\nX_test : list\n    A list of DataFrames containing windows of multivariate time series\n    from the test set. The number of channels (columns) in each\n    DataFrame depends on the `data_modality`.\n\ny_test : ndarray\n    The corresponding labels for the test set.\n\nNotes\n-----\nThe signal is sampled at 100 Hz, and it's divided in short fixed-size\nwindows.\n\n.. versionadded:: 0.1.8\n\nExamples\n--------\n>>> from tsfel.datasets import load_ucihar\n>>> X_train, y_train, X_test, y_test = load_ucihar()\n\nReferences\n----------\n.. [1] Anguita, D., et. al (2013). A Public Domain Dataset for Human\nActivity Recognition using Smartphones. The European Symposium on Artificial\nNeural Networks."
+    params:
+      -
+        name: use_cache
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: True
+      -
+        name: data_modality
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.datasets._single_problem_loaders import load_ucihar\n\nresult = load_ucihar(\n    use_cache=True,\n    data_modality=None,\n)\n"
+  -
+    row_no: 147
+    id: 148
+    type: function
+    name: calc_window_features
+    path: tsfel.feature_extraction.calc_features.calc_window_features
+    module: tsfel.feature_extraction.calc_features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 108
+    event_like: False
+    return_type: nan
+    docstring: "Extract features from a univariate or multivariate window.\n\nParameters\n----------\nconfig : dict\n    A dictionary containing the settings for feature extraction.\nwindow : np.ndarray, pd.DataFrame, pd.Series\n    The input signal from which features will be extracted.\nfs : float, default=None\n    Sampling frequency of the input signal.\nverbose : int, default=1\n    The verbosity mode. 0 means silent, and 1 means showing a progress bar.\nsingle_window : bool\n    If `True`, the progress bar will be shown only for the extraction of features from a single window.\n\n**kwargs :\n    Additional keyword arguments, see below:\n\n    * *features_path* (str) --\n        Path to a script with custom features.\n    \n    * *header_names* (list or array-like) --\n        Names of each column window.\n\nReturns\n-------\npd.DataFrame\n    A DataFrame containing the extracted features."
+    params:
+      -
+        name: config
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: window
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: verbose
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 1
+      -
+        name: single_window
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: False
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.calc_features import calc_window_features\n\nresult = calc_window_features(\n    config=None  # TODO,\n    window=None  # TODO,\n    fs=None  # TODO,\n    verbose=1,\n    single_window=False,\n)\n"
+  -
+    row_no: 144
+    id: 145
+    type: function
+    name: dataset_features_extractor
+    path: tsfel.feature_extraction.calc_features.dataset_features_extractor
+    module: tsfel.feature_extraction.calc_features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 105
+    event_like: False
+    return_type: nan
+    docstring: "Extracts features from a dataset.\n\nParameters\n----------\nmain_directory : String\n    Input directory\nfeat_dict : dict\n    Dictionary with features\nverbose : int\n    Verbosity mode. 0 = silent, 1 = progress bar.\n    (0 or 1 (Default))\n\\**kwargs:\nSee below:\n    * *search_criteria* (``list``) --\n        List of file names to compute features. (Example: 'Accelerometer.txt')\n        (default: ``None``)\n\n    * *time_unit* (``float``) --\n        Time unit\n        (default: ``1e9``)\n\n    * *resampling_rate* (``int``) --\n        Resampling rate\n        (default: ``100``)\n\n    * *window_size* (``int``) --\n        Window size in number of samples\n        (default: ``100``)\n\n    * *overlap* (``float``) --\n        Overlap between 0 and 1\n        (default: ``0``)\n\n    * *pre_process* (``function``) --\n        Function with pre processing code\n\n        (default: ``None``)\n\n    * *output_directory* (``String``) --\n        Output directory\n        (default: ``'output_directory', str(Path.home()) + '/tsfel_output'``)\n\n    * *features_path* (``string``) --\n        Directory of script with personal features\n\n    * *header_names* (``list or array``) --\n        Names of each column window\n\n    * *n_jobs* (``int``) --\n        The number of jobs to run in parallel. ``None`` means 1 unless in a :obj:`joblib.parallel_backend` context.\n        ``-1`` means using all processors.\n        (default: ``None`` in Windows and ``-1`` for other systems)\n\nReturns\n-------\nfile\n    csv file with the extracted features"
+    params:
+      -
+        name: main_directory
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: feat_dict
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: verbose
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 1
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.calc_features import dataset_features_extractor\n\nresult = dataset_features_extractor(\n    main_directory=None  # TODO,\n    feat_dict=None  # TODO,\n    verbose=1,\n)\n"
+  -
+    row_no: 148
+    id: 149
+    type: function
+    name: load_combined_feature_modules
+    path: tsfel.feature_extraction.calc_features.load_combined_feature_modules
+    module: tsfel.feature_extraction.calc_features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: io_read
+    name_cluster: 109
+    event_like: False
+    return_type: nan
+    docstring: "Load feature functions from both the TSFEL features module and an optional user module.\n\nParameters\n----------\nfeatures_path : str or None\n    Path to user-defined Python feature module (.py).\n    If None, only the default TSFEL features module is used.\n\nReturns\n-------\ndict\n    A dictionary mapping function names to function objects from both sources.\n    User-defined functions override TSFEL ones with the same name."
+    params:
+      -
+        name: features_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.calc_features import load_combined_feature_modules\n\nresult = load_combined_feature_modules(\n    features_path=None,\n)\n"
+  -
+    row_no: 146
+    id: 147
+    type: function
+    name: time_series_features_extractor
+    path: tsfel.feature_extraction.calc_features.time_series_features_extractor
+    module: tsfel.feature_extraction.calc_features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 107
+    event_like: False
+    return_type: nan
+    docstring: "Extract features from univariate or multivariate time series.\n\nParameters\n----------\nconfig : dict\n    A dictionary containing the settings for feature extraction.\ntimeseries : list, np.ndarray, pd.DataFrame, pd.Series\n    The input signal from which features will be extracted.\nfs : float, default=None\n    Sampling frequency of the input signal.\nwindow_size : int or None, optional, default=None\n    The size of the windows used to split the input signal, measured in the number of samples.\noverlap : float, optional, default=0\n    A value between 0 and 1 that defines the percentage of overlap between consecutive windows.\nn_jobs : int, optional\n    The number of jobs to run in parallel. \n        - ``None`` means 1 unless in a :obj:`joblib.parallel_backend` context.\n        - ``-1`` means using all available processors.\n        - default: ``None`` on Windows, ``-1`` for other systems\nverbose : int, default=1\n    The verbosity mode. 0 means silent, and 1 means showing a progress bar.\n\n**kwargs :\n    Additional keyword arguments, see below:\n\n    * *features_path* (str) --\n        Path to a script with custom features.\n    \n    * *header_names* (list or array-like) --\n        Names of each column window.\n\nReturns\n-------\npd.DataFrame\n    A DataFrame containing the extracted features, where:\n    - Columns represent the names of the features.\n    - Rows contain the feature values for each signal window."
+    params:
+      -
+        name: config
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: timeseries
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: overlap
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+      -
+        name: verbose
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 1
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.calc_features import time_series_features_extractor\n\nresult = time_series_features_extractor(\n    config=None  # TODO,\n    timeseries=None  # TODO,\n    fs=None,\n    window_size=None,\n    overlap=0,\n    verbose=1,\n)\n"
+  -
+    row_no: 80
+    id: 81
+    type: function
+    name: abs_energy
+    path: tsfel.feature_extraction.features.abs_energy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 49
+    event_like: False
+    return_type: nan
+    docstring: "Computes the absolute energy of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which the area under the curve is computed\n\nReturns\n-------\nfloat\n    Absolute energy"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import abs_energy\n\nresult = abs_energy(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 77
+    id: 78
+    type: function
+    name: auc
+    path: tsfel.feature_extraction.features.auc
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 46
+    event_like: False
+    return_type: nan
+    docstring: "Computes the area under the curve of the signal computed with trapezoid\nrule.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which the area under the curve is computed\nfs : float\n    Sampling Frequency\nReturns\n-------\nfloat\n    The area under the curve value"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import auc\n\nresult = auc(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 65
+    id: 66
+    type: function
+    name: autocorr
+    path: tsfel.feature_extraction.features.autocorr
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 35
+    event_like: False
+    return_type: nan
+    docstring: "Calculates the first 1/e crossing of the autocorrelation function (ACF).\nThe adjusted ACF is calculated using the `statsmodels.tsa.stattools.acf`.\nFollowing the recommendations for long time series (size > 450), we use the\nFFT convolution. This feature measures the first time lag at which the\nautocorrelation function drops below 1/e (= 0.3679).\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Input from which autocorrelation is computed\n\nReturns\n-------\nint\n    The first time lag at which the ACF drops below 1/e (= 0.3679)."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import autocorr\n\nresult = autocorr(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 81
+    id: 82
+    type: function
+    name: average_power
+    path: tsfel.feature_extraction.features.average_power
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 50
+    event_like: False
+    return_type: nan
+    docstring: "Computes the average power of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which average power is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Average power"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import average_power\n\nresult = average_power(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 66
+    id: 67
+    type: function
+    name: calc_centroid
+    path: tsfel.feature_extraction.features.calc_centroid
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 36
+    event_like: False
+    return_type: nan
+    docstring: "Computes the centroid along the time axis.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which centroid is computed\nfs: int\n    Signal sampling frequency\n\nReturns\n-------\nfloat\n    Temporal centroid"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_centroid\n\nresult = calc_centroid(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 87
+    id: 88
+    type: function
+    name: calc_max
+    path: tsfel.feature_extraction.features.calc_max
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 56
+    event_like: False
+    return_type: nan
+    docstring: "Computes the maximum value of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n   Input from which max is computed\n\nReturns\n-------\nfloat\n    Maximum result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_max\n\nresult = calc_max(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 89
+    id: 90
+    type: function
+    name: calc_mean
+    path: tsfel.feature_extraction.features.calc_mean
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 58
+    event_like: False
+    return_type: nan
+    docstring: "Computes mean value of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which mean is computed.\n\nReturns\n-------\nfloat\n    Mean result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_mean\n\nresult = calc_mean(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 90
+    id: 91
+    type: function
+    name: calc_median
+    path: tsfel.feature_extraction.features.calc_median
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 59
+    event_like: False
+    return_type: nan
+    docstring: "Computes median of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which median is computed\n\nReturns\n-------\nfloat\n    Median result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_median\n\nresult = calc_median(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 88
+    id: 89
+    type: function
+    name: calc_min
+    path: tsfel.feature_extraction.features.calc_min
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 57
+    event_like: False
+    return_type: nan
+    docstring: "Computes the minimum value of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which min is computed\n\nReturns\n-------\nfloat\n    Minimum result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_min\n\nresult = calc_min(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 94
+    id: 95
+    type: function
+    name: calc_std
+    path: tsfel.feature_extraction.features.calc_std
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 62
+    event_like: False
+    return_type: nan
+    docstring: "Computes standard deviation (std) of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which std is computed\n\nReturns\n-------\nfloat\n    Standard deviation result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_std\n\nresult = calc_std(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 95
+    id: 96
+    type: function
+    name: calc_var
+    path: tsfel.feature_extraction.features.calc_var
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 63
+    event_like: False
+    return_type: nan
+    docstring: "Computes variance of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n   Input from which var is computed\n\nReturns\n-------\nfloat\n    Variance result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import calc_var\n\nresult = calc_var(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 127
+    id: 128
+    type: function
+    name: dfa
+    path: tsfel.feature_extraction.features.dfa
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 95
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Detrended Fluctuation Analysis (DFA) of the signal.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\nalpha_dfa : float\n    Scaling exponent in DFA."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import dfa\n\nresult = dfa(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 73
+    id: 74
+    type: function
+    name: distance
+    path: tsfel.feature_extraction.features.distance
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 42
+    event_like: False
+    return_type: nan
+    docstring: "Computes signal traveled distance.\n\nCalculates the total distance traveled by the signal\nusing the hypotenuse between 2 datapoints.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which distance is computed\n\nReturns\n-------\nfloat\n    Signal distance"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import distance\n\nresult = distance(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 97
+    id: 98
+    type: function
+    name: ecdf
+    path: tsfel.feature_extraction.features.ecdf
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 65
+    event_like: False
+    return_type: nan
+    docstring: "Computes the values of ECDF (empirical cumulative distribution function)\nalong the time axis.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which ECDF is computed\nd: integer\n    Number of ECDF values to return\n\nReturns\n-------\nfloat\n    The values of the ECDF along the time axis"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: d
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import ecdf\n\nresult = ecdf(\n    signal=None  # TODO,\n    d=10,\n)\n"
+  -
+    row_no: 99
+    id: 100
+    type: function
+    name: ecdf_percentile
+    path: tsfel.feature_extraction.features.ecdf_percentile
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 67
+    event_like: False
+    return_type: nan
+    docstring: "Computes the percentile value of the ECDF.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which ECDF is computed\npercentile: list\n    Percentile value to be computed\n\nReturns\n-------\nfloat\n    The input value(s) of the ECDF"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: percentile
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import ecdf_percentile\n\nresult = ecdf_percentile(\n    signal=None  # TODO,\n    percentile=None,\n)\n"
+  -
+    row_no: 100
+    id: 101
+    type: function
+    name: ecdf_percentile_count
+    path: tsfel.feature_extraction.features.ecdf_percentile_count
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 68
+    event_like: False
+    return_type: nan
+    docstring: "Computes the cumulative sum of samples that are less than the\npercentile.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which ECDF is computed\npercentile: list\n    Percentile threshold\n\nReturns\n-------\nfloat\n    The cumulative sum of samples"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: percentile
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import ecdf_percentile_count\n\nresult = ecdf_percentile_count(\n    signal=None  # TODO,\n    percentile=None,\n)\n"
+  -
+    row_no: 98
+    id: 99
+    type: function
+    name: ecdf_slope
+    path: tsfel.feature_extraction.features.ecdf_slope
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 66
+    event_like: False
+    return_type: nan
+    docstring: "Computes the slope of the ECDF between two percentiles. Possibility to\nreturn infinity values.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which ECDF is computed\np_init : float\n    Initial percentile\np_end : float\n    End percentile\n\nReturns\n-------\nfloat\n    The slope of the ECDF between two percentiles"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: p_init
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0.5
+      -
+        name: p_end
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0.75
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import ecdf_slope\n\nresult = ecdf_slope(\n    signal=None  # TODO,\n    p_init=0.5,\n    p_end=0.75,\n)\n"
+  -
+    row_no: 82
+    id: 83
+    type: function
+    name: entropy
+    path: tsfel.feature_extraction.features.entropy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 51
+    event_like: False
+    return_type: nan
+    docstring: "Computes the entropy of the signal using the Shannon Entropy.\n\nDescription in Article:\nRegularities Unseen, Randomness Observed: Levels of Entropy Convergence\nAuthors: Crutchfield J. Feldman David\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which entropy is computed\nprob : string\n    Probability function (kde or gaussian functions are available)\n\nReturns\n-------\nfloat\n    The normalized entropy value"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: prob
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'standard'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import entropy\n\nresult = entropy(\n    signal=None  # TODO,\n    prob='standard',\n)\n"
+  -
+    row_no: 102
+    id: 103
+    type: function
+    name: fundamental_frequency
+    path: tsfel.feature_extraction.features.fundamental_frequency
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 70
+    event_like: False
+    return_type: nan
+    docstring: "Computes fundamental frequency of the signal.\n\nThe fundamental frequency integer multiple best explain\nthe content of the signal spectrum.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which fundamental frequency is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nf0: float\n   Predominant frequency of the signal"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import fundamental_frequency\n\nresult = fundamental_frequency(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 129
+    id: 130
+    type: function
+    name: higuchi_fractal_dimension
+    path: tsfel.feature_extraction.features.higuchi_fractal_dimension
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 97
+    event_like: False
+    return_type: nan
+    docstring: "Computes the fractal dimension of a signal using Higuchi's method (HFD).\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\nhfd : float\n   Fractal dimension."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import higuchi_fractal_dimension\n\nresult = higuchi_fractal_dimension(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 83
+    id: 84
+    type: function
+    name: hist_mode
+    path: tsfel.feature_extraction.features.hist_mode
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 52
+    event_like: False
+    return_type: nan
+    docstring: "Compute the mode of a histogram using a given number of (linearly\nspaced) bins.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal from which the histogram is computed.\nnbins : int\n    The number of equal-width bins in the given range, by default 10.\n\nReturns\n-------\nfloat\n    The mode of the histogram (the midpoint of the bin with the highest\n    count)."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: nbins
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import hist_mode\n\nresult = hist_mode(\n    signal=None  # TODO,\n    nbins=10,\n)\n"
+  -
+    row_no: 116
+    id: 117
+    type: function
+    name: human_range_energy
+    path: tsfel.feature_extraction.features.human_range_energy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 84
+    event_like: False
+    return_type: nan
+    docstring: "Computes the human range energy ratio.\n\nThe human range energy ratio is given by the ratio between the energy\nin frequency 0.6-2.5Hz and the whole energy band.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Signal from which human range energy ratio is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Human range energy ratio"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import human_range_energy\n\nresult = human_range_energy(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 128
+    id: 129
+    type: function
+    name: hurst_exponent
+    path: tsfel.feature_extraction.features.hurst_exponent
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 96
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Hurst exponent of the signal through the Rescaled range\n(R/S) analysis.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\nh_exp : float\n    Hurst exponent."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import hurst_exponent\n\nresult = hurst_exponent(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 84
+    id: 85
+    type: function
+    name: interq_range
+    path: tsfel.feature_extraction.features.interq_range
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 53
+    event_like: False
+    return_type: nan
+    docstring: "Computes interquartile range of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which interquartile range is computed\n\nReturns\n-------\nfloat\n    Interquartile range result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import interq_range\n\nresult = interq_range(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 85
+    id: 86
+    type: function
+    name: kurtosis
+    path: tsfel.feature_extraction.features.kurtosis
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 54
+    event_like: False
+    return_type: nan
+    docstring: "Computes kurtosis of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which kurtosis is computed\n\nReturns\n-------\nfloat\n    Kurtosis result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import kurtosis\n\nresult = kurtosis(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 79
+    id: 80
+    type: function
+    name: lempel_ziv
+    path: tsfel.feature_extraction.features.lempel_ziv
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 48
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Lempel-Ziv's (LZ) complexity index, normalized by the\nsignal's length.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\namp_thres : float, optional\n    Amplitude Threshold for the binarisation. If None, the mean of the signal is used.\n\nReturns\n-------\nlz_index : float\n    Lempel-Ziv complexity index"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: threshold
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import lempel_ziv\n\nresult = lempel_ziv(\n    signal=None  # TODO,\n    threshold=None,\n)\n"
+  -
+    row_no: 120
+    id: 121
+    type: function
+    name: lpcc
+    path: tsfel.feature_extraction.features.lpcc
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 88
+    event_like: False
+    return_type: nan
+    docstring: "Computes the linear prediction cepstral coefficients.\n\nImplementation details and description in:\nhttp://www.practicalcryptography.com/miscellaneous/machine-learning/tutorial-cepstrum-and-lpccs/\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from linear prediction cepstral coefficients are computed\nn_coeff : int\n    Number of coefficients\n\nReturns\n-------\nnd-array\n    Linear prediction cepstral coefficients"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: n_coeff
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 12
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import lpcc\n\nresult = lpcc(\n    signal=None  # TODO,\n    n_coeff=12,\n)\n"
+  -
+    row_no: 104
+    id: 105
+    type: function
+    name: max_frequency
+    path: tsfel.feature_extraction.features.max_frequency
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 72
+    event_like: False
+    return_type: nan
+    docstring: "Computes maximum frequency of the signal.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Input from which maximum frequency is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    0.95 of maximum frequency using cumsum"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import max_frequency\n\nresult = max_frequency(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 103
+    id: 104
+    type: function
+    name: max_power_spectrum
+    path: tsfel.feature_extraction.features.max_power_spectrum
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 71
+    event_like: False
+    return_type: nan
+    docstring: "Computes maximum power spectrum density of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which maximum power spectrum is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nnd-array\n    Max value of the power spectrum density"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import max_power_spectrum\n\nresult = max_power_spectrum(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 130
+    id: 131
+    type: function
+    name: maximum_fractal_length
+    path: tsfel.feature_extraction.features.maximum_fractal_length
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 98
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Maximum Fractal Length (MFL) of the signal, which is the\naverage length at the smallest scale, measured from the logarithmic plot\ndetermining FD. The Higuchi's method is used.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\nmfl : float\n   Maximum Fractal Length."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import maximum_fractal_length\n\nresult = maximum_fractal_length(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 91
+    id: 92
+    type: function
+    name: mean_abs_deviation
+    path: tsfel.feature_extraction.features.mean_abs_deviation
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 60
+    event_like: False
+    return_type: nan
+    docstring: "Computes mean absolute deviation of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which mean absolute deviation is computed\n\nReturns\n-------\nfloat\n    Mean absolute deviation result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import mean_abs_deviation\n\nresult = mean_abs_deviation(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 69
+    id: 70
+    type: function
+    name: mean_abs_diff
+    path: tsfel.feature_extraction.features.mean_abs_diff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: nan
+    docstring: "Computes mean absolute differences of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which mean absolute deviation is computed\n\nReturns\n-------\nfloat\n    Mean absolute difference result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import mean_abs_diff\n\nresult = mean_abs_diff(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 70
+    id: 71
+    type: function
+    name: mean_diff
+    path: tsfel.feature_extraction.features.mean_diff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 40
+    event_like: False
+    return_type: nan
+    docstring: "Computes mean of differences of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which mean of differences is computed\n\nReturns\n-------\nfloat\n    Mean difference result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import mean_diff\n\nresult = mean_diff(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 92
+    id: 93
+    type: function
+    name: median_abs_deviation
+    path: tsfel.feature_extraction.features.median_abs_deviation
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 60
+    event_like: False
+    return_type: nan
+    docstring: "Computes median absolute deviation of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which median absolute deviation is computed\n\nReturns\n-------\nfloat\n    Mean absolute deviation result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import median_abs_deviation\n\nresult = median_abs_deviation(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 71
+    id: 72
+    type: function
+    name: median_abs_diff
+    path: tsfel.feature_extraction.features.median_abs_diff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 39
+    event_like: False
+    return_type: nan
+    docstring: "Computes median absolute differences of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which median absolute difference is computed\n\nReturns\n-------\nfloat\n    Median absolute difference result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import median_abs_diff\n\nresult = median_abs_diff(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 72
+    id: 73
+    type: function
+    name: median_diff
+    path: tsfel.feature_extraction.features.median_diff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 41
+    event_like: False
+    return_type: nan
+    docstring: "Computes median of differences of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which median of differences is computed\n\nReturns\n-------\nfloat\n    Median difference result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import median_diff\n\nresult = median_diff(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 105
+    id: 106
+    type: function
+    name: median_frequency
+    path: tsfel.feature_extraction.features.median_frequency
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 73
+    event_like: False
+    return_type: nan
+    docstring: "Computes median frequency of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which median frequency is computed\nfs: int\n    Sampling frequency\n\nReturns\n-------\nf_median : int\n   0.50 of maximum frequency using cumsum."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import median_frequency\n\nresult = median_frequency(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 117
+    id: 118
+    type: function
+    name: mfcc
+    path: tsfel.feature_extraction.features.mfcc
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 85
+    event_like: False
+    return_type: nan
+    docstring: "Computes the MEL cepstral coefficients.\n\nIt provides the information about the power in each frequency band.\n\nImplementation details and description on:\nhttps://www.kaggle.com/ilyamich/mfcc-implementation-and-tutorial\nhttps://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html#fnref:1\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which MEL coefficients is computed\nfs : float\n    Sampling frequency\npre_emphasis : float\n    Pre-emphasis coefficient for pre-emphasis filter application\nnfft : int\n    Number of points of fft\nnfilt : int\n    Number of filters\nnum_ceps: int\n    Number of cepstral coefficients\ncep_lifter: int\n    Filter length\n\nReturns\n-------\nnd-array\n    MEL cepstral coefficients"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: pre_emphasis
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0.97
+      -
+        name: nfft
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 512
+      -
+        name: nfilt
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 40
+      -
+        name: num_ceps
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 12
+      -
+        name: cep_lifter
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 22
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import mfcc\n\nresult = mfcc(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    pre_emphasis=0.97,\n    nfft=512,\n    nfilt=40,\n    num_ceps=12,\n    cep_lifter=22,\n)\n"
+  -
+    row_no: 132
+    id: 133
+    type: function
+    name: mse
+    path: tsfel.feature_extraction.features.mse
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 100
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Multiscale entropy (MSE) of the signal, that performs the\nentropy analysis over multiple time scales.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\nm : int\n    Embedding dimension for the sample entropy, defaults to 3.\nmaxscale : int\n    Maximum scale factor, defaults to 1/13 of the length of the input signal.\ntolerance : float\n    Tolerance value, defaults to 0.2 times the standard deviation of the input signal.\n\nReturns\n-------\nmse_area : np.ndarray\n    Normalized area under the MSE curve."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: m
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 3
+      -
+        name: maxscale
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: tolerance
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import mse\n\nresult = mse(\n    signal=None  # TODO,\n    m=3,\n    maxscale=None,\n    tolerance=None,\n)\n"
+  -
+    row_no: 67
+    id: 68
+    type: function
+    name: negative_turning
+    path: tsfel.feature_extraction.features.negative_turning
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 37
+    event_like: False
+    return_type: nan
+    docstring: "Computes number of negative turning points of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which minimum number of negative turning points are counted\nReturns\n-------\nfloat\n    Number of negative turning points"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import negative_turning\n\nresult = negative_turning(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 78
+    id: 79
+    type: function
+    name: neighbourhood_peaks
+    path: tsfel.feature_extraction.features.neighbourhood_peaks
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 47
+    event_like: False
+    return_type: nan
+    docstring: "Computes the number of peaks from a defined neighbourhood of the signal.\n\nReference: Christ, M., Braun, N., Neuffer, J. and Kempa-Liehr A.W. (2018). Time Series FeatuRe Extraction on basis\n of Scalable Hypothesis tests (tsfresh -- A Python package). Neurocomputing 307 (2018) 72-77\n\nParameters\n----------\nsignal : nd-array\n     Input from which the number of neighbourhood peaks is computed\nn :  int\n    Number of peak's neighbours to the left and to the right\n\nReturns\n-------\nint\n    The number of peaks from a defined neighbourhood of the signal"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: n
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import neighbourhood_peaks\n\nresult = neighbourhood_peaks(\n    signal=None  # TODO,\n    n=10,\n)\n"
+  -
+    row_no: 131
+    id: 132
+    type: function
+    name: petrosian_fractal_dimension
+    path: tsfel.feature_extraction.features.petrosian_fractal_dimension
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 99
+    event_like: False
+    return_type: nan
+    docstring: "Computes the Petrosian Fractal Dimension of a signal.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\npfd : float\n   Petrosian Fractal Dimension."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import petrosian_fractal_dimension\n\nresult = petrosian_fractal_dimension(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 96
+    id: 97
+    type: function
+    name: pk_pk_distance
+    path: tsfel.feature_extraction.features.pk_pk_distance
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 64
+    event_like: False
+    return_type: nan
+    docstring: "Computes the peak to peak distance.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which peak to peak is computed\n\nReturns\n-------\nfloat\n    peak to peak distance"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import pk_pk_distance\n\nresult = pk_pk_distance(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 68
+    id: 69
+    type: function
+    name: positive_turning
+    path: tsfel.feature_extraction.features.positive_turning
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 38
+    event_like: False
+    return_type: nan
+    docstring: "Computes number of positive turning points of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which  positive turning points are counted\n\nReturns\n-------\nfloat\n    Number of positive turning points"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import positive_turning\n\nresult = positive_turning(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 118
+    id: 119
+    type: function
+    name: power_bandwidth
+    path: tsfel.feature_extraction.features.power_bandwidth
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 86
+    event_like: False
+    return_type: nan
+    docstring: "Computes power spectrum density bandwidth of the signal.\n\nIt corresponds to the width of the frequency band in which 95% of its power is located.\n\nDescription in article:\nPower Spectrum and Bandwidth Ulf Henriksson, 2003 Translated by Mikael Olofsson, 2005\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which the power bandwidth computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Occupied power in bandwidth"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import power_bandwidth\n\nresult = power_bandwidth(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 93
+    id: 94
+    type: function
+    name: rms
+    path: tsfel.feature_extraction.features.rms
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 61
+    event_like: False
+    return_type: nan
+    docstring: "Computes root mean square of the signal.\n\nSquare root of the arithmetic mean (average) of the squares of the original values.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which root mean square is computed\n\nReturns\n-------\nfloat\n    Root mean square"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import rms\n\nresult = rms(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 86
+    id: 87
+    type: function
+    name: skewness
+    path: tsfel.feature_extraction.features.skewness
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 55
+    event_like: False
+    return_type: nan
+    docstring: "Computes skewness of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which skewness is computed\n\nReturns\n-------\nint\n    Skewness result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import skewness\n\nresult = skewness(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 76
+    id: 77
+    type: function
+    name: slope
+    path: tsfel.feature_extraction.features.slope
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 45
+    event_like: False
+    return_type: nan
+    docstring: "Computes the slope of the signal.\n\nSlope is computed by fitting a linear equation to the observed data.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which linear equation is computed\n\nReturns\n-------\nfloat\n    Slope"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import slope\n\nresult = slope(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 106
+    id: 107
+    type: function
+    name: spectral_centroid
+    path: tsfel.feature_extraction.features.spectral_centroid
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 74
+    event_like: False
+    return_type: nan
+    docstring: "Barycenter of the spectrum.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral centroid is computed\nfs: int\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Centroid"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_centroid\n\nresult = spectral_centroid(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 107
+    id: 108
+    type: function
+    name: spectral_decrease
+    path: tsfel.feature_extraction.features.spectral_decrease
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 75
+    event_like: False
+    return_type: nan
+    docstring: "Represents the amount of decreasing of the spectra amplitude.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral decrease is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral decrease"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_decrease\n\nresult = spectral_decrease(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 101
+    id: 102
+    type: function
+    name: spectral_distance
+    path: tsfel.feature_extraction.features.spectral_distance
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 69
+    event_like: False
+    return_type: nan
+    docstring: "Computes the signal spectral distance.\n\nDistance of the signal's cumulative sum of the FFT elements to\nthe respective linear regression.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral distance is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    spectral distance"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_distance\n\nresult = spectral_distance(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 121
+    id: 122
+    type: function
+    name: spectral_entropy
+    path: tsfel.feature_extraction.features.spectral_entropy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 89
+    event_like: False
+    return_type: nan
+    docstring: "Computes the spectral entropy of the signal based on Fourier transform.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which spectral entropy is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    The normalized spectral entropy value"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_entropy\n\nresult = spectral_entropy(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 108
+    id: 109
+    type: function
+    name: spectral_kurtosis
+    path: tsfel.feature_extraction.features.spectral_kurtosis
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 76
+    event_like: False
+    return_type: nan
+    docstring: "Measures the flatness of a distribution around its mean value.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral kurtosis is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral Kurtosis"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_kurtosis\n\nresult = spectral_kurtosis(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 113
+    id: 114
+    type: function
+    name: spectral_positive_turning
+    path: tsfel.feature_extraction.features.spectral_positive_turning
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 81
+    event_like: False
+    return_type: nan
+    docstring: "Computes number of positive turning points of the fft magnitude signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which the number of positive turning points of the fft magnitude are computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Number of positive turning points"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_positive_turning\n\nresult = spectral_positive_turning(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 114
+    id: 115
+    type: function
+    name: spectral_roll_off
+    path: tsfel.feature_extraction.features.spectral_roll_off
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 82
+    event_like: False
+    return_type: nan
+    docstring: "Computes the spectral roll-off of the signal.\n\nThe spectral roll-off corresponds to the frequency where 95% of the signal magnitude is contained\nbelow of this value.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral roll-off is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral roll-off"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_roll_off\n\nresult = spectral_roll_off(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 115
+    id: 116
+    type: function
+    name: spectral_roll_on
+    path: tsfel.feature_extraction.features.spectral_roll_on
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 83
+    event_like: False
+    return_type: nan
+    docstring: "Computes the spectral roll-on of the signal.\n\nThe spectral roll-on corresponds to the frequency where 5% of the signal magnitude is contained\nbelow of this value.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral roll-on is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral roll-on"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_roll_on\n\nresult = spectral_roll_on(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 109
+    id: 110
+    type: function
+    name: spectral_skewness
+    path: tsfel.feature_extraction.features.spectral_skewness
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 77
+    event_like: False
+    return_type: nan
+    docstring: "Measures the asymmetry of a distribution around its mean value.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral skewness is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral Skewness"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_skewness\n\nresult = spectral_skewness(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 111
+    id: 112
+    type: function
+    name: spectral_slope
+    path: tsfel.feature_extraction.features.spectral_slope
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 79
+    event_like: False
+    return_type: nan
+    docstring: "Computes the spectral slope.\n\nSpectral slope is computed by finding constants m and b of the function aFFT = mf + b, obtained by linear regression\nof the spectral amplitude.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral slope is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral Slope"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_slope\n\nresult = spectral_slope(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 110
+    id: 111
+    type: function
+    name: spectral_spread
+    path: tsfel.feature_extraction.features.spectral_spread
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 78
+    event_like: False
+    return_type: nan
+    docstring: "Measures the spread of the spectrum around its mean value.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 2\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral spread is computed.\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral Spread"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_spread\n\nresult = spectral_spread(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 112
+    id: 113
+    type: function
+    name: spectral_variation
+    path: tsfel.feature_extraction.features.spectral_variation
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 80
+    event_like: False
+    return_type: nan
+    docstring: "Computes the amount of variation of the spectrum along time.\n\nSpectral variation is computed from the normalized cross-correlation between two consecutive amplitude spectra.\n\nDescription and formula in Article:\nThe Timbre Toolbox: Extracting audio descriptors from musicalsignals\nAuthors Peeters G., Giordano B., Misdariis P., McAdams S.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Signal from which spectral variation is computed.\nfs : float\n    Sampling frequency\n\nReturns\n-------\nfloat\n    Spectral Variation"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectral_variation\n\nresult = spectral_variation(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 119
+    id: 120
+    type: function
+    name: spectrogram_mean_coeff
+    path: tsfel.feature_extraction.features.spectrogram_mean_coeff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 87
+    event_like: False
+    return_type: nan
+    docstring: "Calculates the average power spectral density (PSD) for each frequency\nthroughout the entire signal duration provided by the spectrogram.\n\nThe values represent the average power spectral density computed on frequency bins. The feature name refers to the\nfrequency bin where the PSD was taken. Each bin is ``fs`` / (``bins`` * 2 - 2) Hz wide. The method relies on the\n`scipy.signal.spectrogram` and except for ``nperseg`` and ``fs``, all the other parameters are set to its defaults.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : array_like\n    Input from which the spectrogram average power spectral density coefficients are computed.\nfs : float\n    Sampling frequency of the ``signal``.\nbins : int, optional\n    The number of frequency bins.\n\nReturns\n-------\nnd-array\n    The power spectral density for each frequency bin averaged along the entire signal duration.\n\nNotes\n-----\nThe optimal number of frequency bins depend on the task at hand. Using a\nhigher number of bins with low sampling frequencies may result in excessive\nfrequency resolution and the loss of valuable coarse-grained information.\nThe default value should be suitable for most cases when working with the\ndefault sampling frequency. The number of frequency bins must be modified\nin the feature configuration file.\n\n.. versionadded:: 0.1.7"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: bins
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 32
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import spectrogram_mean_coeff\n\nresult = spectrogram_mean_coeff(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    bins=32,\n)\n"
+  -
+    row_no: 74
+    id: 75
+    type: function
+    name: sum_abs_diff
+    path: tsfel.feature_extraction.features.sum_abs_diff
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 43
+    event_like: False
+    return_type: nan
+    docstring: "Computes sum of absolute differences of the signal.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which sum absolute difference is computed\n\nReturns\n-------\nfloat\n    Sum absolute difference result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import sum_abs_diff\n\nresult = sum_abs_diff(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 123
+    id: 124
+    type: function
+    name: wavelet_abs_mean
+    path: tsfel.feature_extraction.features.wavelet_abs_mean
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 91
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT absolute mean value of each wavelet scale.\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nfs: int\n    Signal sampling frequency\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nmax_width : int\n    Maximum width to use for transformation, defaults to 10\n\nReturns\n-------\nnd-array\n    CWT absolute mean value"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: max_width
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import wavelet_abs_mean\n\nresult = wavelet_abs_mean(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    max_width=10,\n)\n"
+  -
+    row_no: 126
+    id: 127
+    type: function
+    name: wavelet_energy
+    path: tsfel.feature_extraction.features.wavelet_energy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 94
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT energy of each wavelet scale.\n\nImplementation details:\nhttps://stackoverflow.com/questions/37659422/energy-for-1-d-wavelet-in-python\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nfs: int\n    Signal sampling frequency\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nmax_width : int\n    Maximum width to use for transformation, defaults to 10\n\nReturns\n-------\nnd-array\n    CWT energy"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: max_width
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import wavelet_energy\n\nresult = wavelet_energy(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    max_width=10,\n)\n"
+  -
+    row_no: 122
+    id: 123
+    type: function
+    name: wavelet_entropy
+    path: tsfel.feature_extraction.features.wavelet_entropy
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 90
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT entropy of the signal.\n\nImplementation details in:\nhttps://dsp.stackexchange.com/questions/13055/how-to-calculate-cwt-shannon-entropy\nB.F. Yan, A. Miyamoto, E. Bruhwiler, Wavelet transform-based modal parameter identification considering uncertainty\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nfs: int\n    Signal sampling frequency\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nmax_width : int\n    Maximum width to use for transformation, defaults to 10\n\nReturns\n-------\nfloat\n    wavelet entropy"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: max_width
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import wavelet_entropy\n\nresult = wavelet_entropy(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    max_width=10,\n)\n"
+  -
+    row_no: 124
+    id: 125
+    type: function
+    name: wavelet_std
+    path: tsfel.feature_extraction.features.wavelet_std
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 92
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT std value of each wavelet scale.\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nfs: int\n    Signal sampling frequency\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nmax_width : int\n    Maximum width to use for transformation, defaults to 10\n\nReturns\n-------\nnd-array\n    CWT std"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: max_width
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import wavelet_std\n\nresult = wavelet_std(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    max_width=10,\n)\n"
+  -
+    row_no: 125
+    id: 126
+    type: function
+    name: wavelet_var
+    path: tsfel.feature_extraction.features.wavelet_var
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 93
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT variance value of each wavelet scale.\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nfs: int\n    Signal sampling frequency\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nmax_width : int\n    Maximum width to use for transformation, defaults to 10\n\nReturns\n-------\nnd-array\n    CWT variance"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: max_width
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 10
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import wavelet_var\n\nresult = wavelet_var(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    max_width=10,\n)\n"
+  -
+    row_no: 75
+    id: 76
+    type: function
+    name: zero_cross
+    path: tsfel.feature_extraction.features.zero_cross
+    module: tsfel.feature_extraction.features
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 44
+    event_like: False
+    return_type: nan
+    docstring: "Computes Zero-crossing rate of the signal.\n\nCorresponds to the total number of times that the signal changes from\npositive to negative or vice versa.\n\nFeature computational cost: 1\n\nParameters\n----------\nsignal : nd-array\n    Input from which the zero-crossing rate are computed\n\nReturns\n-------\nint\n    Number of times that signal value cross the zero axis"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features import zero_cross\n\nresult = zero_cross(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 138
+    id: 139
+    type: function
+    name: get_features_by_domain
+    path: tsfel.feature_extraction.features_settings.get_features_by_domain
+    module: tsfel.feature_extraction.features_settings
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 102
+    event_like: False
+    return_type: nan
+    docstring: "Creates a dictionary with the features settings by domain.\n\nParameters\n----------        \ndomain : str, list of str, or None, default=None\n    Specifies which feature domains to include in the dictionary.\n        - 'statistical', 'temporal', 'spectral', 'fractal': Includes the corresponding feature domain.\n        - 'all': Includes all available feature domains.\n        - list of str: A combination of the above strings, e.g., ['statistical', 'temporal'].\n        - None: By default, includes the 'statistical', 'temporal', and 'spectral' domains.\njson_path : string\n    Directory of json file. Default: package features.json directory\n\nReturns\n-------\nDict\n    Dictionary with the features settings"
+    params:
+      -
+        name: domain
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: json_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_settings import get_features_by_domain\n\nresult = get_features_by_domain(\n    domain=None,\n    json_path=None,\n)\n"
+  -
+    row_no: 139
+    id: 140
+    type: function
+    name: get_features_by_tag
+    path: tsfel.feature_extraction.features_settings.get_features_by_tag
+    module: tsfel.feature_extraction.features_settings
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 103
+    event_like: False
+    return_type: nan
+    docstring: "Creates a dictionary with the features settings by tag.\n\nParameters\n----------\ntag : string\n    Available tags: \"audio\"; \"inertial\", \"ecg\"; \"eeg\"; \"emg\".\n    If tag equals None then, all available features are returned.\njson_path : string\n    Directory of json file. Default: package features.json directory\n\nReturns\n-------\nDict\n    Dictionary with the features settings"
+    params:
+      -
+        name: tag
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+      -
+        name: json_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: None
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_settings import get_features_by_tag\n\nresult = get_features_by_tag(\n    tag=None,\n    json_path=None,\n)\n"
+  -
+    row_no: 140
+    id: 141
+    type: function
+    name: get_number_features
+    path: tsfel.feature_extraction.features_settings.get_number_features
+    module: tsfel.feature_extraction.features_settings
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 104
+    event_like: False
+    return_type: nan
+    docstring: "Count the total number of features based on input parameters of each\nfeature.\n\nParameters\n----------\ndict_features : dict\n    Dictionary with features settings\n\nReturns\n-------\nint\n    Feature vector size"
+    params:
+      -
+        name: dict_features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_settings import get_number_features\n\nresult = get_number_features(\n    dict_features=None  # TODO,\n)\n"
+  -
+    row_no: 137
+    id: 138
+    type: function
+    name: load_json
+    path: tsfel.feature_extraction.features_settings.load_json
+    module: tsfel.feature_extraction.features_settings
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: io_read
+    name_cluster: 101
+    event_like: False
+    return_type: nan
+    docstring: "A convenient method that wraps the built-in `json.load`. This method\nmight be handy to load customized feature configuration files.\n\nParameters\n----------\njson_path : file-like object, string, or pathlib.Path.\n    The json file to read.\n\nReturns\n-------\ndict\n    Data stored in the file."
+    params:
+      -
+        name: json_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_settings import load_json\n\nresult = load_json(\n    json_path=None  # TODO,\n)\n"
+  -
+    row_no: 43
+    id: 44
+    type: function
+    name: autocorr_norm
+    path: tsfel.feature_extraction.features_utils.autocorr_norm
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 19
+    event_like: False
+    return_type: nan
+    docstring: "Computes the autocorrelation.\n\nImplementation details and description in:\nhttps://ccrma.stanford.edu/~orchi/Documents/speaker_recognition_report.pdf\n\nParameters\n----------\nsignal : nd-array\n    Input from linear prediction coefficients are computed\n\nReturns\n-------\nnd-array\n    Autocorrelation result"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import autocorr_norm\n\nresult = autocorr_norm(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 50
+    id: 51
+    type: function
+    name: calc_ecdf
+    path: tsfel.feature_extraction.features_utils.calc_ecdf
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 26
+    event_like: False
+    return_type: nan
+    docstring: "Computes the ECDF of the signal.\n\nParameters\n----------\nsignal : nd-array\n    Input from which ECDF is computed\nReturns\n-------\nnd-array\n  Sorted signal and computed ECDF."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import calc_ecdf\n\nresult = calc_ecdf(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 41
+    id: 42
+    type: function
+    name: calc_fft
+    path: tsfel.feature_extraction.features_utils.calc_fft
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 17
+    event_like: False
+    return_type: nan
+    docstring: "This functions computes the fft of a signal.\n\nParameters\n----------\nsignal : nd-array\n    The input signal from which fft is computed\nfs : float\n    Sampling frequency\n\nReturns\n-------\nf: nd-array\n    Frequency values (xx axis)\nfmag: nd-array\n    Amplitude of the frequency values (yy axis)"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import calc_fft\n\nresult = calc_fft(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 57
+    id: 58
+    type: function
+    name: calc_lempel_ziv_complexity
+    path: tsfel.feature_extraction.features_utils.calc_lempel_ziv_complexity
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 33
+    event_like: False
+    return_type: nan
+    docstring: "Manual implementation of the Lempel-Ziv complexity.\n\nIt is defined as the number of different substrings encountered as\nthe stream is viewed from begining to the end.\n\nReference:\nhttps://github.com/Naereen/Lempel-Ziv_Complexity/blob/master/src/lempel_ziv_complexity.py\n\nParameters\n----------\nsequence : string\n    Binarised signal, as a string of characters\n\nReturns\n-------\n    LZ index"
+    params:
+      -
+        name: sequence
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import calc_lempel_ziv_complexity\n\nresult = calc_lempel_ziv_complexity(\n    sequence=None  # TODO,\n)\n"
+  -
+    row_no: 56
+    id: 57
+    type: function
+    name: calc_lengths_higuchi
+    path: tsfel.feature_extraction.features_utils.calc_lengths_higuchi
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 32
+    event_like: False
+    return_type: nan
+    docstring: "Computes the lengths for different subdivisions, using the Higuchi's\nmethod.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\n\nReturns\n-------\nlk : nd-array\n    Length of curve for different subdivisions"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import calc_lengths_higuchi\n\nresult = calc_lengths_higuchi(\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 54
+    id: 55
+    type: function
+    name: calc_rms
+    path: tsfel.feature_extraction.features_utils.calc_rms
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 30
+    event_like: False
+    return_type: nan
+    docstring: "Windowed Root Mean Square (RMS) with linear detrending.\n\nParameters\n----------\nsignal: nd-array\n    Signal\nwindow: int\n    Length of the window in which RMS will be calculated\n\nReturns\n-------\nrms : nd-array\n    RMS data in each window with length len(signal)//window"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: window
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import calc_rms\n\nresult = calc_rms(\n    signal=None  # TODO,\n    window=None  # TODO,\n)\n"
+  -
+    row_no: 51
+    id: 52
+    type: function
+    name: coarse_graining
+    path: tsfel.feature_extraction.features_utils.coarse_graining
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 27
+    event_like: False
+    return_type: nan
+    docstring: "Applies a coarse-graining process to a time series: for a given scale factor, it splits\nthe signal into non-overlapping windows and averages the data points.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\nscale : int\n    Scale factor, determines the length of the non-overlapping windows.\n\nReturns\n-------\ncoarsegrained_signal : np.ndarray\n    Coarse-grained signal."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: scale
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import coarse_graining\n\nresult = coarse_graining(\n    signal=None  # TODO,\n    scale=None  # TODO,\n)\n"
+  -
+    row_no: 55
+    id: 56
+    type: function
+    name: compute_rs
+    path: tsfel.feature_extraction.features_utils.compute_rs
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 31
+    event_like: False
+    return_type: nan
+    docstring: "Computes the average rescaled range for a window of length lag.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\nlag : int\n    Window length.\n\nReturns\n-------\nfloat\n    Average R/S."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: lag
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import compute_rs\n\nresult = compute_rs(\n    signal=None  # TODO,\n    lag=None  # TODO,\n)\n"
+  -
+    row_no: 39
+    id: 40
+    type: function
+    name: compute_time
+    path: tsfel.feature_extraction.features_utils.compute_time
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 15
+    event_like: False
+    return_type: nan
+    docstring: "Creates the signal correspondent time array.\n\nParameters\n----------\nsignal: nd-array\n    Input from which the time is computed.\nfs: int\n    Sampling Frequency\n\nReturns\n-------\ntime : float list\n    Signal time"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import compute_time\n\nresult = compute_time(\n    signal=None  # TODO,\n    fs=None  # TODO,\n)\n"
+  -
+    row_no: 49
+    id: 50
+    type: function
+    name: continuous_wavelet_transform
+    path: tsfel.feature_extraction.features_utils.continuous_wavelet_transform
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 25
+    event_like: False
+    return_type: nan
+    docstring: "Computes CWT (continuous wavelet transform) of the signal.\n\nParameters\n----------\nsignal : nd-array\n    Input from which CWT is computed\nwavelet : string\n    Wavelet to use, defaults to \"mexh\" which represents the mexican hat wavelet (Ricker wavelet)\nwidths :  nd-array\n    Widths to use for transformation\n    Default: np.arange(1,10)\n\nReturns\n-------\nnd-array\n    The result of the CWT along the time axis\n    matrix with size (len(widths),len(signal))"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: wavelet
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'mexh'"
+      -
+        name: widths
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "np.arange(1, 10)"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import continuous_wavelet_transform\n\nresult = continuous_wavelet_transform(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    wavelet='mexh',\n    widths=np.arange(1, 10),\n)\n"
+  -
+    row_no: 44
+    id: 45
+    type: function
+    name: create_symmetric_matrix
+    path: tsfel.feature_extraction.features_utils.create_symmetric_matrix
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 20
+    event_like: False
+    return_type: nan
+    docstring: "Computes a symmetric matrix.\n\nImplementation details and description in:\nhttps://ccrma.stanford.edu/~orchi/Documents/speaker_recognition_report.pdf\n\nParameters\n----------\nacf : nd-array\n    Input from which a symmetric matrix is computed\norder : int\n    Order\n\nReturns\n-------\nnd-array\n    Symmetric Matrix"
+    params:
+      -
+        name: acf
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: order
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 11
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import create_symmetric_matrix\n\nresult = create_symmetric_matrix(\n    acf=None  # TODO,\n    order=11,\n)\n"
+  -
+    row_no: 46
+    id: 47
+    type: function
+    name: create_xx
+    path: tsfel.feature_extraction.features_utils.create_xx
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 22
+    event_like: False
+    return_type: nan
+    docstring: "Computes the range of features amplitude for the probability density\nfunction calculus.\n\nParameters\n----------\nfeatures : nd-array\n    Input features\n\nReturns\n-------\nnd-array\n    range of features amplitude"
+    params:
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import create_xx\n\nresult = create_xx(\n    features=None  # TODO,\n)\n"
+  -
+    row_no: 42
+    id: 43
+    type: function
+    name: filterbank
+    path: tsfel.feature_extraction.features_utils.filterbank
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 18
+    event_like: False
+    return_type: nan
+    docstring: "Computes the MEL-spaced filterbank.\n\nIt provides the information about the power in each frequency band.\n\nImplementation details and description on:\nhttps://www.kaggle.com/ilyamich/mfcc-implementation-and-tutorial\nhttps://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html#fnref:1\n\nParameters\n----------\nsignal : nd-array\n    Input from which filterbank is computed\nfs : float\n    Sampling frequency\npre_emphasis : float\n    Pre-emphasis coefficient for pre-emphasis filter application\nnfft : int\n    Number of points of fft\nnfilt : int\n    Number of filters\n\nReturns\n-------\nnd-array\n    MEL-spaced filterbank"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: pre_emphasis
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0.97
+      -
+        name: nfft
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 512
+      -
+        name: nfilt
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 40
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import filterbank\n\nresult = filterbank(\n    signal=None  # TODO,\n    fs=None  # TODO,\n    pre_emphasis=0.97,\n    nfft=512,\n    nfilt=40,\n)\n"
+  -
+    row_no: 58
+    id: 59
+    type: function
+    name: find_plateau
+    path: tsfel.feature_extraction.features_utils.find_plateau
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 34
+    event_like: False
+    return_type: nan
+    docstring: "Finds a plateau (if it exists).\n\nParameters\n----------\ny : np.ndarray\n    Array of y-axis values.\nthreshold : float\n    Slope threshold to consider as a plateau (default is 0.1).\nconsecutive_points: int\n    Number of consecutive points with a small derivative to consider as a plateau (default is 5).\n\nReturns\n-------\n    Index of the beggining of the plateau if it is found, length of y otherwise."
+    params:
+      -
+        name: y
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: threshold
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0.1
+      -
+        name: consecutive_points
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 5
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import find_plateau\n\nresult = find_plateau(\n    y=None  # TODO,\n    threshold=0.1,\n    consecutive_points=5,\n)\n"
+  -
+    row_no: 48
+    id: 49
+    type: function
+    name: gaussian
+    path: tsfel.feature_extraction.features_utils.gaussian
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 24
+    event_like: False
+    return_type: nan
+    docstring: "Computes the probability density function of the input signal using a\nGaussian function.\n\nParameters\n----------\nfeatures : nd-array\n    Input from which probability density function is computed\nReturns\n-------\nnd-array\n    probability density values"
+    params:
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import gaussian\n\nresult = gaussian(\n    features=None  # TODO,\n)\n"
+  -
+    row_no: 52
+    id: 53
+    type: function
+    name: get_templates
+    path: tsfel.feature_extraction.features_utils.get_templates
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 28
+    event_like: False
+    return_type: nan
+    docstring: "Helper function for the sample entropy calculation. Divides a signal\ninto templates vectors of length m.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\nm : int\n    Embedding dimension that defines the length of the template vectors, defaults to 3.\n\nReturns\n-------\nnp.ndarray\n    Array of template vectors."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: m
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 3
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import get_templates\n\nresult = get_templates(\n    signal=None  # TODO,\n    m=3,\n)\n"
+  -
+    row_no: 47
+    id: 48
+    type: function
+    name: kde
+    path: tsfel.feature_extraction.features_utils.kde
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 23
+    event_like: False
+    return_type: nan
+    docstring: "Computes the probability density function of the input signal using a\nGaussian KDE (Kernel Density Estimate)\n\nParameters\n----------\nfeatures : nd-array\n    Input from which probability density function is computed\n\nReturns\n-------\nnd-array\n    probability density values"
+    params:
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import kde\n\nresult = kde(\n    features=None  # TODO,\n)\n"
+  -
+    row_no: 45
+    id: 46
+    type: function
+    name: lpc
+    path: tsfel.feature_extraction.features_utils.lpc
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 21
+    event_like: False
+    return_type: nan
+    docstring: "Computes the linear prediction coefficients.\n\nImplementation details and description in:\nhttps://ccrma.stanford.edu/~orchi/Documents/speaker_recognition_report.pdf\n\nParameters\n----------\nsignal : nd-array\n    Input from linear prediction coefficients are computed\nn_coeff : int\n    Number of coefficients\n\nReturns\n-------\nnd-array\n    Linear prediction coefficients"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: n_coeff
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 12
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import lpc\n\nresult = lpc(\n    signal=None  # TODO,\n    n_coeff=12,\n)\n"
+  -
+    row_no: 40
+    id: 41
+    type: function
+    name: safe_eval_string
+    path: tsfel.feature_extraction.features_utils.safe_eval_string
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: evaluate
+    name_cluster: 16
+    event_like: False
+    return_type: nan
+    docstring: "Safely evaluate a string containing a Python literal list of floats or\nintegers. This method is safer and faster on runtime than\n`ast.eval_literal`.\n\nParameters\n----------\nlist_string : str\n    A string representation of a list literal.\n\nReturns\n----------\nparsed_list\n    A list containing integers or floats."
+    params:
+      -
+        name: list_string
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import safe_eval_string\n\nresult = safe_eval_string(\n    list_string=None  # TODO,\n)\n"
+  -
+    row_no: 53
+    id: 54
+    type: function
+    name: sample_entropy
+    path: tsfel.feature_extraction.features_utils.sample_entropy
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: sampling
+    name_cluster: 29
+    event_like: False
+    return_type: nan
+    docstring: "Computes the sample entropy of a signal.\n\nParameters\n----------\nsignal : np.ndarray\n    Input signal.\nm : int\n    Embedding dimension that defines the length of the template vectors, defaults to 3.\ntolerance : float\n    Tolerance value, defaults to 0.2 times the standard deviation of the input signal.\n\nReturns\n-------\nfloat\n    Sample Entropy of a signal."
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: m
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: tolerance
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import sample_entropy\n\nresult = sample_entropy(\n    signal=None  # TODO,\n    m=None  # TODO,\n    tolerance=None  # TODO,\n)\n"
+  -
+    row_no: 38
+    id: 39
+    type: function
+    name: set_domain
+    path: tsfel.feature_extraction.features_utils.set_domain
+    module: tsfel.feature_extraction.features_utils
+    library: tsfel
+    top_group: tsfel.feature_extraction
+    role: other
+    name_cluster: 14
+    event_like: False
+    return_type: nan
+    docstring: nan
+    params:
+      -
+        name: key
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: value
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.feature_extraction.features_utils import set_domain\n\nresult = set_domain(\n    key=None  # TODO,\n    value=None  # TODO,\n)\n"
+  -
+    row_no: 30
+    id: 31
+    type: function
+    name: add_feature_json
+    path: tsfel.utils.add_personal_features.add_feature_json
+    module: tsfel.utils.add_personal_features
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 13
+    event_like: False
+    return_type: nan
+    docstring: "Adds new feature to features.json.\n\nParameters\n----------\nfeatures_path: string\n    Personal Python module directory containing new features implementation.\n\njson_path: string\n    Personal .json file directory containing existing features from TSFEL.\n    New customised features will be added to file in this directory."
+    params:
+      -
+        name: features_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: json_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.add_personal_features import add_feature_json\n\nresult = add_feature_json(\n    features_path=None  # TODO,\n    json_path=None  # TODO,\n)\n"
+  -
+    row_no: 24
+    id: 25
+    type: function
+    name: compute_complexity
+    path: tsfel.utils.calculate_complexity.compute_complexity
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 12
+    event_like: False
+    return_type: nan
+    docstring: "Computes the feature complexity.\n\nParameters\n----------\nfeature : string\n    Feature name\ndomain : string\n    Feature domain\njson_path: json\n    Features json file\n\\**kwargs:\nSee below:\n    * *features_path* (``string``) --\n        Directory of script with personal features\n\nReturns\n-------\nint\n    Feature complexity\n\nWrites complexity in json file"
+    params:
+      -
+        name: feature
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: domain
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: json_path
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: kwargs
+        kind: VAR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import compute_complexity\n\nresult = compute_complexity(\n    feature=None  # TODO,\n    domain=None  # TODO,\n    json_path=None  # TODO,\n)\n"
+  -
+    row_no: 23
+    id: 24
+    type: function
+    name: find_best_curve
+    path: tsfel.utils.calculate_complexity.find_best_curve
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 11
+    event_like: False
+    return_type: nan
+    docstring: "Finds the best curve.\n\nParameters\n----------\nt : nd-array\n    Log space\nsignal : nd-array\n    Mean execution time array\n\nReturns\n-------\nstr\n    Best fit curve name"
+    params:
+      -
+        name: t
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import find_best_curve\n\nresult = find_best_curve(\n    t=None  # TODO,\n    signal=None  # TODO,\n)\n"
+  -
+    row_no: 22
+    id: 23
+    type: function
+    name: n_constant
+    path: tsfel.utils.calculate_complexity.n_constant
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 10
+    event_like: False
+    return_type: nan
+    docstring: "The model function."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: no
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import n_constant\n\nresult = n_constant(\n    x=None  # TODO,\n    no=None  # TODO,\n)\n"
+  -
+    row_no: 20
+    id: 21
+    type: function
+    name: n_linear
+    path: tsfel.utils.calculate_complexity.n_linear
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 8
+    event_like: False
+    return_type: nan
+    docstring: "The model function."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: no
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import n_linear\n\nresult = n_linear(\n    x=None  # TODO,\n    no=None  # TODO,\n)\n"
+  -
+    row_no: 21
+    id: 22
+    type: function
+    name: n_log
+    path: tsfel.utils.calculate_complexity.n_log
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 9
+    event_like: False
+    return_type: nan
+    docstring: "The model function."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: no
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import n_log\n\nresult = n_log(\n    x=None  # TODO,\n    no=None  # TODO,\n)\n"
+  -
+    row_no: 19
+    id: 20
+    type: function
+    name: n_nlog
+    path: tsfel.utils.calculate_complexity.n_nlog
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 7
+    event_like: False
+    return_type: nan
+    docstring: "The model function."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: no
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import n_nlog\n\nresult = n_nlog(\n    x=None  # TODO,\n    no=None  # TODO,\n)\n"
+  -
+    row_no: 18
+    id: 19
+    type: function
+    name: n_squared
+    path: tsfel.utils.calculate_complexity.n_squared
+    module: tsfel.utils.calculate_complexity
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 6
+    event_like: False
+    return_type: nan
+    docstring: "The model function."
+    params:
+      -
+        name: x
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: no
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.calculate_complexity import n_squared\n\nresult = n_squared(\n    x=None  # TODO,\n    no=None  # TODO,\n)\n"
+  -
+    row_no: 14
+    id: 15
+    type: function
+    name: display_progress_bar
+    path: tsfel.utils.progress_bar.display_progress_bar
+    module: tsfel.utils.progress_bar
+    library: tsfel
+    top_group: tsfel.utils
+    role: visualize
+    name_cluster: 5
+    event_like: False
+    return_type: nan
+    docstring: "Displays progress bar according to python interface.\n\nParameters\n----------\niteration: int\n    current iteration\ntotal: int\n    total iterations\nout: progress bar notebook output"
+    params:
+      -
+        name: iteration
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: total
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: out
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.progress_bar import display_progress_bar\n\nresult = display_progress_bar(\n    iteration=None  # TODO,\n    total=None  # TODO,\n    out=None  # TODO,\n)\n"
+  -
+    row_no: 13
+    id: 14
+    type: function
+    name: progress_bar_notebook
+    path: tsfel.utils.progress_bar.progress_bar_notebook
+    module: tsfel.utils.progress_bar
+    library: tsfel
+    top_group: tsfel.utils
+    role: visualize
+    name_cluster: 4
+    event_like: False
+    return_type: nan
+    docstring: "Progress bar for notebooks.\n\nParameters\n----------\niteration: int\n    current iteration\ntotal: int\n    total iterations\n\nReturns\n-------\n    Progress bar for notebooks"
+    params:
+      -
+        name: iteration
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: total
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 100
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.progress_bar import progress_bar_notebook\n\nresult = progress_bar_notebook(\n    iteration=None  # TODO,\n    total=100,\n)\n"
+  -
+    row_no: 12
+    id: 13
+    type: function
+    name: progress_bar_terminal
+    path: tsfel.utils.progress_bar.progress_bar_terminal
+    module: tsfel.utils.progress_bar
+    library: tsfel
+    top_group: tsfel.utils
+    role: visualize
+    name_cluster: 3
+    event_like: False
+    return_type: nan
+    docstring: "Call in a loop to create terminal progress bar.\n\n    Parameters\n    ----------\n    iteration: int\n        current iteration\n    total: int\n        total iterations\n    prefix: str\n        prefix string\n    suffix: str\n        suffix string\n    decimals: int\n        positive number of decimals in percent complete\n    length: int\n        character length of bar\n    fill: str\n        bar fill character\n    printend: str\n        end character (e.g. \"\r\", \"\r\n\")\n    "
+    params:
+      -
+        name: iteration
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: total
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: prefix
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "''"
+      -
+        name: suffix
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "''"
+      -
+        name: decimals
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+      -
+        name: length
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 100
+      -
+        name: fill
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'█'"
+      -
+        name: printend
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: "'\\r'"
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.progress_bar import progress_bar_terminal\n\nresult = progress_bar_terminal(\n    iteration=None  # TODO,\n    total=None  # TODO,\n    prefix='',\n    suffix='',\n    decimals=0,\n    length=100,\n    fill='█',\n    printend='\\r',\n)\n"
+  -
+    row_no: 6
+    id: 7
+    type: function
+    name: correlated_features
+    path: tsfel.utils.signal_processing.correlated_features
+    module: tsfel.utils.signal_processing
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 2
+    event_like: False
+    return_type: "Union[List[str], Tuple[List[str], pd.DataFrame]]"
+    docstring: "Identify and optionally remove highly correlated features from a\nDataFrame.\n\nThis function computes the pairwise Pearson correlation of features using\npandas.corr() and identifies features that have an absolute value of the\ncorrelation coefficient higher than the specified threshold. Different\ncorrelation methods supported by such as 'pearson', 'spearman', or\n'kendall'.\n\n.. deprecated:: 0.1.11\n\n    tsfel.correlated_features will be deprecated in tsfel 0.1.11 and will be\n    removed in other upcoming releases. It will be replaced by a future\n    DropCorrelated feature class using fit and transform logic.\n\nParameters\n----------\nfeatures : pd.DataFrame\n    A DataFrame containing the feature data.\nthreshold : float\n    The correlation value for removing highly correlated features.\nmethod : str\n    Method to compute correlation. Must be one of {'pearson', 'kendall', 'spearman'}\ndrop_correlated : bool:\n    If True, drop the highly correlated features from the DataFrame.\n\nReturns\n-------\nUnion[List[str], Tuple[List[str], pd.DataFrame]]:\n    - A list of names of highly correlated features.\n    - If `drop_correlated` is True, a tuple containing the list of dropped feature names and the updated DataFrame with those features removed."
+    params:
+      -
+        name: features
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: pd.DataFrame
+        has_default: false
+        default_repr: ""
+      -
+        name: threshold
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: float
+        has_default: true
+        default_repr: 0.95
+      -
+        name: method
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: str
+        has_default: true
+        default_repr: "'pearson'"
+      -
+        name: drop_correlated
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: bool
+        has_default: true
+        default_repr: False
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.signal_processing import correlated_features\n\nresult = correlated_features(\n    features=None  # TODO: pd.DataFrame,\n    threshold=0.95,\n    method='pearson',\n    drop_correlated=False,\n)\n"
+  -
+    row_no: 5
+    id: 6
+    type: function
+    name: merge_time_series
+    path: tsfel.utils.signal_processing.merge_time_series
+    module: tsfel.utils.signal_processing
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 1
+    event_like: False
+    return_type: nan
+    docstring: "Time series data interpolation.\n\nParameters\n----------\ndata : dict\n    data to interpolate\nfs_resample :\n    resample sampling frequency\ntime_unit :\n    time unit in seconds\n\nReturns\n-------\nDataFrame\n    Interpolated data"
+    params:
+      -
+        name: data
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: fs_resample
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: time_unit
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.signal_processing import merge_time_series\n\nresult = merge_time_series(\n    data=None  # TODO,\n    fs_resample=None  # TODO,\n    time_unit=None  # TODO,\n)\n"
+  -
+    row_no: 4
+    id: 5
+    type: function
+    name: signal_window_splitter
+    path: tsfel.utils.signal_processing.signal_window_splitter
+    module: tsfel.utils.signal_processing
+    library: tsfel
+    top_group: tsfel.utils
+    role: other
+    name_cluster: 0
+    event_like: False
+    return_type: nan
+    docstring: "Splits the signal into windows.\n\nParameters\n----------\nsignal : nd-array or pandas DataFrame\n    input signal\nwindow_size : int\n    number of points of window size\noverlap : float\n    percentage of overlap, value between 0 and 1 (exclusive)\n    Default: 0\nReturns\n-------\nlist\n    list of signal windows"
+    params:
+      -
+        name: signal
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: window_size
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: false
+        default_repr: ""
+      -
+        name: overlap
+        kind: POSITIONAL_OR_KEYWORD
+        annotation: ""
+        has_default: true
+        default_repr: 0
+    code: "# Auto-generated call stub (CLE V10)\n\n# NOTE: TODO のところを埋めてください\n\nfrom tsfel.utils.signal_processing import signal_window_splitter\n\nresult = signal_window_splitter(\n    signal=None  # TODO,\n    window_size=None  # TODO,\n    overlap=0,\n)\n"
